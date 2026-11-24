@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#071311">
+  <meta name="theme-color" content="#061210">
   <title>CartePro Maroc — معرض البروفيلات الاحترافية | Essential • Business VIP • Signature 3D</title>
-  <meta name="description" content="تصفّح نماذج حقيقية ومستقلة لعروض CartePro Maroc: الأساسي (249 DH)، الأعمال VIP (399 DH)، وSignature 3D (599 DH). معاينة مجانية قبل الطباعة وتعديل في أي وقت.">
+  <meta name="description" content="معرض تفاعلي احترافي لبروفيلات CartePro Maroc: الأساسي (249 DH)، الأعمال VIP (399 DH)، وSignature 3D (599 DH) مع مختبر معاينة ذكي حسب المهنة والستايل.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23183A36'/%3E%3Cg transform='translate(8,14) rotate(-12 18 14)'%3E%3Crect x='2' y='4' width='30' height='20' rx='3.5' fill='none' stroke='%23E0BD7A' stroke-width='2.8'/%3E%3Cpath d='M4 15.5L30 11.5V16L4 18.5Z' fill='%23E0BD7A'/%3E%3C/g%3E%3Cpath d='M44 23C46.5 26.5 46.5 31.5 44 35M49 19C53 25 53 33 49 39' fill='none' stroke='%23E0BD7A' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     :root {
       --bg: #061210;
       --bg2: #0E2521;
-      --pan: linear-gradient(145deg, rgba(19, 48, 43, 0.92), rgba(7, 19, 17, 0.98));
+      --pan: linear-gradient(145deg, rgba(19, 48, 43, 0.93), rgba(7, 19, 17, 0.98));
       --sub: rgba(255, 255, 255, 0.045);
       --gold: #E0BD7A;
       --gold-hi: #FFF2CE;
@@ -50,9 +50,8 @@
       background-image:
         radial-gradient(circle at 86% 4%, rgba(224, 189, 122, 0.18), transparent 38%),
         radial-gradient(circle at 12% 20%, rgba(24, 88, 76, 0.28), transparent 44%),
-        radial-gradient(circle at 50% 60%, rgba(224, 189, 122, 0.06), transparent 50%),
         url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23E0BD7A' stroke-width='.5' stroke-opacity='.09'%3E%3Cpath d='M36 0L72 36L36 72L0 36Z'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3C/g%3E%3C/svg%3E");
-      background-size: 100% 100%, 100% 100%, 100% 100%, 72px 72px;
+      background-size: 100% 100%, 100% 100%, 72px 72px;
       overflow-x: hidden;
       transition: background-color 0.3s, color 0.3s;
     }
@@ -61,18 +60,14 @@
     .panel { background: var(--pan); border: 1.5px solid var(--bdr); box-shadow: var(--shd); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
     .t-gold {
       background: linear-gradient(135deg, #FFF7DF 0%, #E6C78A 48%, #C29648 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       filter: drop-shadow(0 2px 12px rgba(224, 189, 122, 0.25));
     }
     body.theme-ivory .t-gold {
       background: linear-gradient(135deg, #8F651D, #C5953D 50%, #7C5615);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: none;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: none;
     }
 
-    /* LUXURY ANIMATIONS (Matching Main Profile Energy) */
     @keyframes sheen3d { 0%, 38% { transform: translateX(0) skewX(-22deg); } 74%, 100% { transform: translateX(460%) skewX(-22deg); } }
     @keyframes aura3d { 0%, 100% { box-shadow: 0 8px 22px rgba(224,189,122,0.35); } 50% { box-shadow: 0 12px 34px rgba(224,189,122,0.78), 0 0 0 5px rgba(248,230,189,0.22); } }
     @keyframes floatFront { 0%, 100% { transform: rotateY(15deg) rotateZ(-4deg) translateY(0px); } 50% { transform: rotateY(20deg) rotateZ(-2deg) translateY(-7px); } }
@@ -89,26 +84,14 @@
     }
 
     /* Navbar */
-    .nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(6, 18, 16, 0.92);
-      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1.5px solid var(--bdr);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
-    }
+    .nav { position: sticky; top: 0; z-index: 100; background: rgba(6, 18, 16, 0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1.5px solid var(--bdr); box-shadow: 0 10px 30px rgba(0,0,0,0.45); }
     .nav-in { max-width: 1280px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; direction: ltr; }
     .wm { font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; font-size: 24px; line-height: 1; color: #fff; }
     .wm span { color: #E0BD7A; }
-    .wm-s { font-size: 9px; color: #E0BD7A; letter-spacing: 0.18em; font-weight: 700; display: block; text-align: center; margin-top: 2px; }
+    .wm-s { font-size: 9px; color: #E0BD7A; letter-spacing: .18em; font-weight: 700; display: block; text-align: center; margin-top: 2px; }
     .nav-acts { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .pill {
-      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-      padding: 7px 14px; border-radius: 999px;
-      background: rgba(224, 189, 122, 0.13); border: 1px solid var(--bdr-hi);
-      color: var(--gold-hi); font-size: 11.5px; font-weight: 800;
-      cursor: pointer; font-family: inherit; text-decoration: none; white-space: nowrap; transition: 0.2s;
-    }
+    .pill { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 14px; border-radius: 999px; background: rgba(224, 189, 122, 0.13); border: 1px solid var(--bdr-hi); color: var(--gold-hi); font-size: 11.5px; font-weight: 800; cursor: pointer; font-family: inherit; text-decoration: none; white-space: nowrap; transition: 0.2s; }
     .pill:hover { background: var(--gold); color: #061210; transform: translateY(-1px); }
     .pill svg { width: 14px; height: 14px; stroke: currentColor; fill: none; }
     .lsw { display: inline-flex; background: rgba(15, 39, 36, 0.95); border: 1px solid var(--bdr); border-radius: 999px; padding: 2.5px; direction: ltr; }
@@ -116,61 +99,18 @@
     .lsw button.active { background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036); color: #061210; box-shadow: 0 2px 10px rgba(224,189,122,0.4); }
 
     /* Hero */
-    .hero { padding: 38px 0 22px; text-align: center; }
-    .hero-tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 7px 18px; border-radius: 999px;
-      background: linear-gradient(90deg, rgba(20,53,48,0.9), rgba(31,81,73,0.9));
-      border: 1px solid var(--gold-hi); color: var(--gold-hi);
-      font-size: 12px; font-weight: 800; margin-bottom: 14px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 18px rgba(224,189,122,0.2);
-      animation: floatBadge 3.5s infinite ease-in-out;
-    }
-    .hero h1 { font-size: clamp(28px, 4.2vw, 46px); font-weight: 900; margin: 0 0 12px; line-height: 1.2; letter-spacing: -0.01em; }
+    .hero { padding: 36px 0 18px; text-align: center; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; padding: 7px 18px; border-radius: 999px; background: linear-gradient(90deg, rgba(20,53,48,0.9), rgba(31,81,73,0.9)); border: 1px solid var(--gold-hi); color: var(--gold-hi); font-size: 12px; font-weight: 800; margin-bottom: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 18px rgba(224,189,122,0.2); animation: floatBadge 3.5s infinite ease-in-out; }
+    .hero h1 { font-size: clamp(28px, 4.2vw, 46px); font-weight: 900; margin: 0 0 12px; line-height: 1.2; }
     .hero p { font-size: 15.5px; color: var(--txt2); max-width: 790px; margin: 0 auto 22px; line-height: 1.8; }
 
-    /* Guided 3-Step Bar */
-    .steps-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto 28px; max-width: 980px; }
-    .step-chip {
-      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px;
-      background: rgba(255,255,255,0.04); border: 1px solid var(--bdr);
-      font-size: 12.5px; font-weight: 800; color: var(--txt2);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    }
-    .step-num {
-      width: 22px; height: 22px; border-radius: 50%;
-      background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #061210;
-      font-size: 11.5px; font-weight: 900; display: inline-flex; align-items: center; justify-content: center;
-    }
-
-    /* =====================================================================
-       3 COMPLETELY DISTINCT TIER PERSONALITIES (SHARED BY TOP & BOTTOM)
-       ===================================================================== */
-    .tier-tabs, .cmp-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
-      max-width: 1160px; margin: 0 auto 20px; align-items: stretch;
-    }
-    .tier-box {
-      position: relative; overflow: hidden;
-      border-radius: 26px; padding: 22px 20px 20px;
-      cursor: pointer; font-family: inherit; text-align: start;
-      display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
-      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s, box-shadow 0.25s;
-    }
+    /* 3 DISTINCT TIER CARDS */
+    .tier-tabs, .cmp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1160px; margin: 0 auto 20px; align-items: stretch; }
+    .tier-box { position: relative; overflow: hidden; border-radius: 26px; padding: 22px 20px 20px; cursor: pointer; font-family: inherit; text-align: start; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s, box-shadow 0.25s; }
     .tier-box:hover { transform: translateY(-6px); }
 
-    /* TIER 1: ESSENTIAL (Clean Matte Slate / Practical Silver) */
-    .tier-box.t-essential {
-      background: linear-gradient(155deg, rgba(27, 36, 40, 0.94), rgba(14, 19, 22, 0.98));
-      border: 1.5px solid rgba(203, 213, 225, 0.3);
-      color: #F1F5F9;
-      box-shadow: 0 18px 40px -12px rgba(0,0,0,0.65);
-    }
-    body.theme-ivory .tier-box.t-essential {
-      background: linear-gradient(155deg, #FFFFFF, #F1F5F9);
-      border-color: rgba(100, 116, 139, 0.35);
-      color: #0F172A;
-    }
+    .tier-box.t-essential { background: linear-gradient(155deg, rgba(27, 36, 40, 0.94), rgba(14, 19, 22, 0.98)); border: 1.5px solid rgba(203, 213, 225, 0.3); color: #F1F5F9; box-shadow: 0 18px 40px -12px rgba(0,0,0,0.65); }
+    body.theme-ivory .tier-box.t-essential { background: linear-gradient(155deg, #FFFFFF, #F1F5F9); border-color: rgba(100, 116, 139, 0.35); color: #0F172A; }
     .tier-box.t-essential .tt-tag { background: rgba(203, 213, 225, 0.14); border: 1px solid rgba(203, 213, 225, 0.35); color: #E2E8F0; }
     body.theme-ivory .tier-box.t-essential .tt-tag { background: rgba(15, 23, 42, 0.08); color: #334155; }
     .tier-box.t-essential .tt-price { color: #E2E8F0; }
@@ -178,56 +118,22 @@
     .tier-box.t-essential .tt-pts { color: #CBD5E1; }
     body.theme-ivory .tier-box.t-essential .tt-pts { color: #334155; }
     .tier-box.t-essential .tt-pts li span:first-child { color: #94A3B8; }
-    .tier-box.t-essential.active {
-      border: 2.2px solid #E2E8F0;
-      box-shadow: 0 22px 48px -10px rgba(0,0,0,0.75), 0 0 24px rgba(226, 232, 240, 0.25);
-    }
+    .tier-box.t-essential.active { border: 2.2px solid #E2E8F0; box-shadow: 0 22px 48px -10px rgba(0,0,0,0.75), 0 0 24px rgba(226, 232, 240, 0.25); }
 
-    /* TIER 2: BUSINESS VIP (Rich Royal Emerald + Glowing Gold Popular) */
-    .tier-box.t-vip {
-      background: radial-gradient(circle at 85% 10%, rgba(16, 185, 129, 0.22), transparent 52%), linear-gradient(155deg, #164C43 0%, #0C2E28 58%, #061A17 100%);
-      border: 1.8px solid rgba(224, 189, 122, 0.65);
-      color: #FAF7F2;
-      box-shadow: 0 22px 48px -12px rgba(0,0,0,0.75), inset 0 1px 1px rgba(255,255,255,0.2);
-    }
-    .tier-box.t-vip .tt-tag {
-      background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #061A17;
-      border: 1px solid #FFF7E0; box-shadow: 0 4px 14px rgba(224,189,122,0.35);
-    }
+    .tier-box.t-vip { background: radial-gradient(circle at 85% 10%, rgba(16, 185, 129, 0.22), transparent 52%), linear-gradient(155deg, #164C43 0%, #0C2E28 58%, #061A17 100%); border: 1.8px solid rgba(224, 189, 122, 0.65); color: #FAF7F2; box-shadow: 0 22px 48px -12px rgba(0,0,0,0.75), inset 0 1px 1px rgba(255,255,255,0.2); }
+    .tier-box.t-vip .tt-tag { background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #061A17; border: 1px solid #FFF7E0; }
     .tier-box.t-vip .tt-price { color: #F8E6BD; }
     .tier-box.t-vip .tt-pts { color: #D7ECE7; }
     .tier-box.t-vip .tt-pts li span:first-child { color: #34D399; }
-    .tier-box.t-vip.active {
-      border: 2.4px solid #FFF2CE;
-      box-shadow: 0 26px 56px -10px rgba(0,0,0,0.82), 0 0 32px rgba(224, 189, 122, 0.36);
-    }
+    .tier-box.t-vip.active { border: 2.4px solid #FFF2CE; box-shadow: 0 26px 56px -10px rgba(0,0,0,0.82), 0 0 32px rgba(224, 189, 122, 0.36); }
 
-    /* TIER 3: SIGNATURE 3D (Obsidian Black + 24K Liquid Gold Sheen) */
-    .tier-box.t-signature {
-      background: radial-gradient(circle at 90% 8%, rgba(245, 200, 110, 0.26), transparent 48%), linear-gradient(155deg, #1B1813 0%, #0E0D0B 55%, #040404 100%);
-      border: 2px solid rgba(248, 230, 189, 0.78);
-      color: #FFF9EC;
-      box-shadow: 0 24px 54px -12px rgba(0,0,0,0.88), inset 0 1px 1px rgba(248,230,189,0.3);
-    }
-    .tier-box.t-signature::after {
-      content: ""; position: absolute; top: 0; left: -120%; width: 55%; height: 100%;
-      background: linear-gradient(110deg, transparent, rgba(248,230,189,0.16), transparent);
-      transform: skewX(-22deg); animation: sheen3d 3.8s infinite ease-in-out; pointer-events: none;
-    }
-    .tier-box.t-signature .tt-tag {
-      background: linear-gradient(135deg, #FFF5DB, #D4A244); color: #090806;
-      border: 1px solid #FFF7E0; box-shadow: 0 4px 16px rgba(248,230,189,0.4);
-    }
-    .tier-box.t-signature .tt-price {
-      background: linear-gradient(135deg, #FFF7DF, #E6C78A 50%, #C29648);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
+    .tier-box.t-signature { background: radial-gradient(circle at 90% 8%, rgba(245, 200, 110, 0.26), transparent 48%), linear-gradient(155deg, #1B1813 0%, #0E0D0B 55%, #040404 100%); border: 2px solid rgba(248, 230, 189, 0.78); color: #FFF9EC; box-shadow: 0 24px 54px -12px rgba(0,0,0,0.88), inset 0 1px 1px rgba(248,230,189,0.3); }
+    .tier-box.t-signature::after { content: ""; position: absolute; top: 0; left: -120%; width: 55%; height: 100%; background: linear-gradient(110deg, transparent, rgba(248,230,189,0.16), transparent); transform: skewX(-22deg); animation: sheen3d 3.8s infinite ease-in-out; pointer-events: none; }
+    .tier-box.t-signature .tt-tag { background: linear-gradient(135deg, #FFF5DB, #D4A244); color: #090806; border: 1px solid #FFF7E0; }
+    .tier-box.t-signature .tt-price { background: linear-gradient(135deg, #FFF7DF, #E6C78A 50%, #C29648); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .tier-box.t-signature .tt-pts { color: #EFE5CF; }
     .tier-box.t-signature .tt-pts li span:first-child { color: #F8E6BD; }
-    .tier-box.t-signature.active {
-      border: 2.5px solid #FFF6DC;
-      box-shadow: 0 28px 60px -10px rgba(0,0,0,0.92), 0 0 38px rgba(248, 230, 189, 0.44);
-    }
+    .tier-box.t-signature.active { border: 2.5px solid #FFF6DC; box-shadow: 0 28px 60px -10px rgba(0,0,0,0.92), 0 0 38px rgba(248, 230, 189, 0.44); }
 
     .tt-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
     .tt-tag { font-size: 11px; font-weight: 900; padding: 4px 12px; border-radius: 999px; }
@@ -236,81 +142,74 @@
     .tt-pts { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; font-size: 12.5px; line-height: 1.5; }
     .tt-pts li { display: flex; align-items: flex-start; gap: 8px; }
     .tt-pts li span:first-child { font-weight: 900; }
-
-    /* Interactive Action Bar Inside Tier Card */
-    .tt-action {
-      margin-top: 4px; padding: 10px 14px; border-radius: 13px;
-      font-size: 12.5px; font-weight: 900; text-align: center;
-      display: flex; align-items: center; justify-content: center; gap: 7px;
-      border: 1.2px dashed rgba(248, 230, 189, 0.45);
-      background: rgba(255, 255, 255, 0.06); color: #F8E6BD;
-      transition: 0.2s;
-    }
+    .tt-action { margin-top: 4px; padding: 10px 14px; border-radius: 13px; font-size: 12.5px; font-weight: 900; text-align: center; display: flex; align-items: center; justify-content: center; gap: 7px; border: 1.2px dashed rgba(248, 230, 189, 0.45); background: rgba(255, 255, 255, 0.06); color: #F8E6BD; transition: 0.2s; }
     .tier-box.t-essential .tt-action { color: #E2E8F0; border-color: rgba(203,213,225,0.4); }
     body.theme-ivory .tier-box.t-essential:not(.active) .tt-action { color: #0F172A; background: rgba(15,23,42,0.06); border-color: rgba(15,23,42,0.25); }
-    .tier-box:hover:not(.active) .tt-action { background: rgba(255, 255, 255, 0.14); border-style: solid; }
-    .tier-box.active .tt-action {
-      background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036);
-      color: #061210; border: 1px solid #FFF7E0;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
-    }
+    .tier-box.active .tt-action { background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036); color: #061210; border: 1px solid #FFF7E0; }
 
-    /* Single-Line Risk Reversal Strip */
-    .trust-strip {
-      max-width: 1160px; margin: 0 auto 22px; border-radius: 16px; padding: 12px 18px;
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px;
-      background: rgba(224, 189, 122, 0.09); border: 1px solid var(--bdr);
-      font-size: 12.5px; font-weight: 800; color: var(--txt2);
-    }
+    .trust-strip { max-width: 1160px; margin: 0 auto 24px; border-radius: 16px; padding: 12px 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; background: rgba(224, 189, 122, 0.09); border: 1px solid var(--bdr); font-size: 12.5px; font-weight: 800; color: var(--txt2); }
     .trust-item { display: inline-flex; align-items: center; gap: 6px; }
     .trust-item span:first-child { color: var(--gold); font-weight: 900; }
 
-    /* Personalization Bar */
-    .controls {
-      border-radius: 24px; padding: 18px 20px; margin-bottom: 28px;
-      display: grid; grid-template-columns: 1.15fr 1fr auto; gap: 14px; align-items: end;
+    /* =====================================================================
+       SMART PERSONALIZED LIVE LAB (SEPARATE FROM STATIC CATALOG)
+       ===================================================================== */
+    .lab-box {
+      border-radius: 28px; padding: 26px 24px; margin-bottom: 44px;
+      border: 2px solid var(--gold-hi);
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 28px; align-items: center;
     }
+    .lab-title { font-size: 22px; font-weight: 900; margin: 0 0 4px; color: var(--gold-hi); }
+    body.theme-ivory .lab-title { color: #8F651D; }
+    .lab-sub { font-size: 13.5px; color: var(--mut); margin: 0 0 18px; line-height: 1.65; }
     .lbl { display: block; font-size: 12px; font-weight: 800; color: var(--gold); margin-bottom: 6px; }
-    .inp {
-      width: 100%; padding: 11px 15px; border-radius: 13px; background: var(--bg);
+    body.theme-ivory .lbl { color: #8F651D; }
+    .inp, .sel {
+      width: 100%; padding: 11px 14px; border-radius: 13px; background: var(--bg);
       border: 1.5px solid var(--bdr); color: var(--txt); font-family: inherit;
-      font-size: 14px; font-weight: 700; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+      font-size: 13.5px; font-weight: 700; outline: none;
     }
-    .inp:focus { border-color: var(--gold-hi); box-shadow: 0 0 0 3px rgba(224,189,122,0.18); }
+    .inp:focus, .sel:focus { border-color: var(--gold-hi); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+
+    .style-pills { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+    .st-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 6px 11px; border-radius: 999px; cursor: pointer; font-family: inherit;
+      font-size: 11.5px; font-weight: 800; background: var(--sub); border: 1px solid var(--bdr);
+      color: var(--txt2); transition: 0.2s;
+    }
+    .st-pill:hover { border-color: var(--gold-hi); }
+    .st-pill.active {
+      background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #061210;
+      border-color: #FFF7E0; box-shadow: 0 4px 14px rgba(224,189,122,0.35);
+    }
+    .st-dot { width: 11px; height: 11px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.6); flex-shrink: 0; }
+
+    .lab-phone-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .lab-iphone {
+      width: 100%; max-width: 310px; border-radius: 36px; padding: 8px;
+      background: linear-gradient(145deg, #75674E, #171D1B 48%, #070A09);
+      border: 2px solid rgba(248, 230, 189, 0.78);
+      box-shadow: 0 24px 52px rgba(0,0,0,0.75);
+    }
 
     /* Gallery Grid (3x3 = 8 Models + 1 Golden Custom Card) */
+    .sec-hdr-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .sec-hdr-bar h2 { font-size: 22px; font-weight: 900; margin: 0; }
+    .sec-hdr-bar span { font-size: 13px; color: var(--mut); font-weight: 700; }
+
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-bottom: 48px; }
-    .g-card {
-      border-radius: 30px; padding: 16px; display: flex; flex-direction: column;
-      justify-content: space-between; gap: 14px; transition: transform 0.28s, border-color 0.25s, box-shadow 0.25s;
-    }
+    .g-card { border-radius: 30px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; transition: transform 0.28s, border-color 0.25s, box-shadow 0.25s; }
     .g-card:hover { transform: translateY(-7px); border-color: var(--gold-hi); box-shadow: 0 30px 60px -14px rgba(0,0,0,0.85), 0 0 24px rgba(224,189,122,0.16); }
     .gc-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 2px 4px; }
-    .gc-code {
-      font-size: 11px; font-weight: 900; padding: 4px 11px; border-radius: 999px;
-      background: rgba(224, 189, 122, 0.16); border: 1px solid var(--bdr); color: var(--gold-hi); direction: ltr;
-    }
+    .gc-code { font-size: 11px; font-weight: 900; padding: 4px 11px; border-radius: 999px; background: rgba(224, 189, 122, 0.16); border: 1px solid var(--bdr); color: var(--gold-hi); direction: ltr; }
     body.theme-ivory .gc-code { color: #8F651D; }
     .gc-sector { font-size: 12px; font-weight: 700; color: var(--mut); }
 
-    /* Card #9: Golden Custom Design Card */
-    .g-card.custom-gold-card {
-      background: linear-gradient(155deg, #1E4D45 0%, #0E2622 55%, #071412 100%);
-      border: 2px solid var(--gold-hi);
-      color: #FAF7F2; justify-content: center; text-align: center;
-      padding: 28px 22px; position: relative; overflow: hidden;
-    }
-    .g-card.custom-gold-card::before {
-      content: ""; position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(circle at 50% 0%, rgba(248,230,189,0.24), transparent 60%);
-    }
-    .cgc-icon {
-      width: 74px; height: 74px; border-radius: 50%; margin: 0 auto 14px;
-      background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036);
-      color: #061210; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 14px 32px rgba(0,0,0,0.5), 0 0 24px rgba(248,230,189,0.35);
-      animation: floatBadge 3.2s infinite ease-in-out;
-    }
+    .g-card.custom-gold-card { background: linear-gradient(155deg, #1E4D45 0%, #0E2622 55%, #071412 100%); border: 2px solid var(--gold-hi); color: #FAF7F2; justify-content: center; text-align: center; padding: 28px 22px; position: relative; overflow: hidden; }
+    .g-card.custom-gold-card::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 50% 0%, rgba(248,230,189,0.24), transparent 60%); }
+    .cgc-icon { width: 74px; height: 74px; border-radius: 50%; margin: 0 auto 14px; background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036); color: #061210; display: flex; align-items: center; justify-content: center; box-shadow: 0 14px 32px rgba(0,0,0,0.5), 0 0 24px rgba(248,230,189,0.35); animation: floatBadge 3.2s infinite ease-in-out; }
     .cgc-icon svg { width: 34px; height: 34px; stroke: currentColor; fill: none; stroke-width: 2; }
     .cgc-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(248,230,189,0.16); border: 1px solid var(--gold-hi); color: #F8E6BD; font-size: 11px; font-weight: 800; margin-bottom: 12px; }
     .cgc-title { font-size: 22px; font-weight: 900; margin: 0 0 10px; color: #FFF6DF; line-height: 1.3; }
@@ -319,26 +218,15 @@
     .cgc-list li { display: flex; align-items: center; gap: 8px; }
     .cgc-list li span:first-child { color: #E0BD7A; font-weight: 900; }
 
-    /* Realistic iPhone Shell in Gallery */
-    .iphone-mini {
-      border-radius: 36px; padding: 7px;
-      background: linear-gradient(145deg, #75674E, #171D1B 48%, #070A09);
-      border: 1.5px solid rgba(248, 230, 189, 0.72);
-      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.68);
-      cursor: pointer; transition: transform 0.3s;
-    }
+    .iphone-mini { border-radius: 36px; padding: 7px; background: linear-gradient(145deg, #75674E, #171D1B 48%, #070A09); border: 1.5px solid rgba(248, 230, 189, 0.72); box-shadow: 0 24px 48px rgba(0, 0, 0, 0.68); cursor: pointer; transition: transform 0.3s; }
     .iphone-mini:hover { transform: scale(1.018); }
-    .screen-mini {
-      border-radius: 29px; overflow: hidden; min-height: 505px;
-      position: relative; display: flex; flex-direction: column; justify-content: space-between;
-      text-align: center;
-    }
+    .screen-mini { border-radius: 29px; overflow: hidden; min-height: 500px; position: relative; display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
 
-    /* Rich Background Patterns */
+    /* Patterns */
     .bg-pat { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
     .pat-zellige { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23E0BD7A' stroke-width='0.95' stroke-opacity='0.24'%3E%3Cpath d='M30 0L38 22L60 30L38 38L30 60L22 38L0 30L22 22Z'/%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3C/g%3E%3C/svg%3E"); }
-    .pat-marble { background-image: url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40 Q60 10 120 70 T240 30 M0 160 Q80 120 150 190 T240 140' fill='none' stroke='%23D4AF63' stroke-width='1.5' stroke-opacity='0.34'/%3E%3Cpath d='M20 0 Q70 90 40 240 M180 0 Q140 120 210 240' fill='none' stroke='%23B88E40' stroke-width='0.9' stroke-opacity='0.22'/%3E%3C/svg%3E"); }
-    .pat-waves { background-image: url("data:image/svg+xml,%3Csvg width='300' height='200' viewBox='0 0 300 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-20 40 C60 10, 140 90, 320 30 M-20 80 C80 40, 180 130, 320 70 M-20 150 C90 110, 190 190, 320 130' fill='none' stroke='%23E879F9' stroke-width='1.5' stroke-opacity='0.3'/%3E%3C/svg%3E"); background-size: cover; }
+    .pat-marble { background-image: url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40 Q60 10 120 70 T240 30 M0 160 Q80 120 150 190 T240 140' fill='none' stroke='%23D4AF63' stroke-width='1.5' stroke-opacity='0.34'/%3E%3C/svg%3E"); }
+    .pat-waves { background-image: url("data:image/svg+xml,%3Csvg width='300' height='200' viewBox='0 0 300 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-20 40 C60 10, 140 90, 320 30 M-20 80 C80 40, 180 130, 320 70' fill='none' stroke='%23E879F9' stroke-width='1.5' stroke-opacity='0.3'/%3E%3C/svg%3E"); background-size: cover; }
     .pat-arch { background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 80 V35 Q40 0 80 35 V80' fill='none' stroke='%23E0BD7A' stroke-width='1' stroke-opacity='0.22'/%3E%3C/svg%3E"); }
     .pat-grid { background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0H0V36' fill='none' stroke='%23FFFFFF' stroke-width='0.6' stroke-opacity='0.09'/%3E%3C/svg%3E"); }
 
@@ -348,16 +236,17 @@
 
     /* ESSENTIAL */
     .es-arch-hdr { margin: 0 -12px 10px; padding: 14px 12px 24px; background: var(--coverBg); border-bottom: 2px solid var(--acc); border-radius: 0 0 50% 50% / 0 0 26px 26px; position: relative; }
-    .es-glass-box { border-radius: 20px; padding: 14px 11px 12px; background: var(--glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1.5px solid var(--line); box-shadow: 0 14px 30px rgba(0,0,0,0.28); }
-    .emblem-circle { width: 66px; height: 66px; border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; border: 2.5px solid var(--acc); background: var(--cardBg); color: var(--acc); box-shadow: 0 12px 24px rgba(0,0,0,0.4), 0 0 0 3px rgba(224,189,122,0.16); position: relative; z-index: 3; }
-    .emblem-circle svg { width: 31px; height: 31px; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
-    .p-nm { font-family: "Amiri", "Playfair Display", serif; font-size: 21px; font-weight: 700; line-height: 1.2; margin: 0 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .es-glass-box { border-radius: 20px; padding: 14px 11px 12px; background: var(--glass); backdrop-filter: blur(12px); border: 1.5px solid var(--line); box-shadow: 0 14px 30px rgba(0,0,0,0.28); }
+    .emblem-circle { width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; border: 2.5px solid var(--acc); background: var(--cardBg); color: var(--acc); box-shadow: 0 12px 24px rgba(0,0,0,0.4), 0 0 0 3px rgba(224,189,122,0.16); position: relative; z-index: 3; }
+    .emblem-circle svg { width: 30px; height: 30px; stroke: currentColor; fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+    .mono-txt { font-family: "Playfair Display", serif; font-size: 28px; font-weight: 700; font-style: italic; line-height: 1; }
+    .p-nm { font-family: "Amiri", "Playfair Display", serif; font-size: 20.5px; font-weight: 700; line-height: 1.2; margin: 0 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .p-rl { font-size: 10.5px; font-weight: 800; color: var(--acc); margin: 0 0 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .orn-line { width: 100px; height: 1.5px; margin: 0 auto 10px; background: linear-gradient(90deg, transparent, var(--acc), transparent); position: relative; }
     .orn-line::after { content: ""; position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; background: var(--acc); transform: translate(-50%, -50%) rotate(45deg); }
 
     .act-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 8px; }
-    .act-tile { padding: 8px 4px; border-radius: 12px; border: 1.2px solid var(--line); background: var(--glass); display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 9px; font-weight: 800; box-shadow: 0 4px 10px rgba(0,0,0,0.14); }
+    .act-tile { padding: 8px 4px; border-radius: 12px; border: 1.2px solid var(--line); background: var(--glass); display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 9px; font-weight: 800; }
     .act-tile svg { width: 15px; height: 15px; stroke: var(--acc); fill: none; stroke-width: 2; }
     .map-bar { padding: 8px 11px; border-radius: 12px; border: 1.2px solid var(--line); background: var(--glass); display: flex; align-items: center; justify-content: space-between; gap: 6px; font-size: 10px; font-weight: 800; margin-bottom: 8px; text-align: start; }
     .map-bar svg { width: 14px; height: 14px; stroke: var(--acc); fill: none; stroke-width: 2; flex-shrink: 0; }
@@ -369,126 +258,73 @@
 
     /* BUSINESS VIP */
     .vip-cover { margin: -12px -12px 0; padding: 12px 12px 26px; background: var(--coverBg); border-bottom: 2px solid var(--acc); border-radius: 0 0 50% 50% / 0 0 22px 22px; position: relative; }
-    .vip-live-pill {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 2px 8px; border-radius: 999px; font-size: 8.5px; font-weight: 800;
-      background: rgba(16, 185, 129, 0.16); border: 1px solid rgba(52, 211, 153, 0.5); color: #10B981;
-      margin-bottom: 5px;
-    }
+    .vip-live-pill { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; font-size: 8.5px; font-weight: 800; background: rgba(16, 185, 129, 0.16); border: 1px solid rgba(52, 211, 153, 0.5); color: #10B981; margin-bottom: 5px; }
     .vip-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #10B981; animation: pulseDot 1.8s infinite; }
-    .vip-gg-widget { padding: 8px 10px; border-radius: 13px; border: 1.5px solid var(--acc); background: var(--glass); display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.14); }
+    .vip-gg-widget { padding: 8px 10px; border-radius: 13px; border: 1.5px solid var(--acc); background: var(--glass); display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; }
     .gg-stars { color: #F59E0B; font-size: 11px; letter-spacing: 1px; }
     .gg-badge { padding: 3px 8px; border-radius: 999px; font-size: 9.5px; font-weight: 900; background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #071311; }
     .bento-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-bottom: 8px; }
     .bento-box { padding: 7px 4px; border-radius: 10px; border: 1px solid var(--line); background: var(--glass); font-size: 8.5px; font-weight: 800; line-height: 1.3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; }
     .bento-box svg { width: 13px; height: 13px; stroke: var(--acc); fill: none; stroke-width: 2; }
 
-    /* SIGNATURE 3D (REAL FLOATING 3D MOTION + SPINNING HALO) */
+    /* SIGNATURE 3D WITH REAL SVG QR CODE */
     .s3d-stage { position: relative; height: 114px; margin: 2px 0 8px; display: flex; align-items: center; justify-content: center; perspective: 800px; }
-    .s3d-card-back {
-      position: absolute; width: 134px; height: 82px; border-radius: 11px;
-      right: 10px; top: 4px; padding: 8px;
-      background: var(--cardBg); border: 1.4px solid var(--acc); color: #FAF7F2;
-      opacity: 0.92; box-shadow: 0 14px 26px rgba(0,0,0,0.6); text-align: start; font-size: 7px;
-      display: flex; flex-direction: column; justify-content: space-between;
-      animation: floatBack 4.6s infinite ease-in-out;
-    }
-    .s3d-card-front {
-      position: absolute; width: 148px; height: 90px; border-radius: 12px;
-      left: 10px; top: 8px; padding: 9px 10px;
-      background: var(--cardBg); border: 1.8px solid var(--acc); color: #FAF7F2;
-      box-shadow: 0 18px 36px rgba(0,0,0,0.75), 0 0 20px rgba(224,189,122,0.28);
-      text-align: start; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;
-      animation: floatFront 4.2s infinite ease-in-out;
-    }
-    .s3d-card-front::after {
-      content: ""; position: absolute; top: 0; left: -120%; width: 65%; height: 100%;
-      background: linear-gradient(115deg, transparent, rgba(255,255,255,0.34), transparent);
-      transform: skewX(-22deg); animation: sheen3d 3.6s infinite ease-in-out; pointer-events: none;
-    }
+    .s3d-card-back { position: absolute; width: 136px; height: 84px; border-radius: 11px; right: 10px; top: 4px; padding: 7px 8px; background: var(--cardBg); border: 1.4px solid var(--acc); color: #FAF7F2; opacity: 0.96; box-shadow: 0 14px 26px rgba(0,0,0,0.65); text-align: start; font-size: 7px; display: flex; align-items: center; justify-content: space-between; gap: 6px; animation: floatBack 4.6s infinite ease-in-out; }
+    .qr-svg-box { width: 42px; height: 42px; border-radius: 6px; background: #FFFFFF; padding: 3px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .qr-svg-box svg { width: 100%; height: 100%; display: block; }
+    .s3d-card-front { position: absolute; width: 148px; height: 90px; border-radius: 12px; left: 10px; top: 8px; padding: 9px 10px; background: var(--cardBg); border: 1.8px solid var(--acc); color: #FAF7F2; box-shadow: 0 18px 36px rgba(0,0,0,0.75), 0 0 20px rgba(224,189,122,0.28); text-align: start; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; animation: floatFront 4.2s infinite ease-in-out; }
+    .s3d-card-front::after { content: ""; position: absolute; top: 0; left: -120%; width: 65%; height: 100%; background: linear-gradient(115deg, transparent, rgba(255,255,255,0.34), transparent); transform: skewX(-22deg); animation: sheen3d 3.6s infinite ease-in-out; pointer-events: none; }
     .s3d-pedestal-wrap { position: relative; width: 64px; height: 64px; margin: -24px auto 6px; z-index: 5; display: flex; align-items: center; justify-content: center; }
-    .s3d-halo {
-      position: absolute; inset: 0; border-radius: 50%;
-      border: 1.5px dashed var(--acc); opacity: 0.85;
-      animation: spinHalo 12s linear infinite;
-    }
-    .s3d-pedestal-emblem {
-      width: 52px; height: 52px; border-radius: 50%;
-      border: 2px solid var(--acc); background: var(--cardBg); color: var(--acc);
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 12px 26px rgba(0,0,0,0.75), 0 0 20px rgba(224,189,122,0.38);
-    }
+    .s3d-halo { position: absolute; inset: 0; border-radius: 50%; border: 1.5px dashed var(--acc); opacity: 0.85; animation: spinHalo 12s linear infinite; }
+    .s3d-pedestal-emblem { width: 52px; height: 52px; border-radius: 50%; border: 2px solid var(--acc); background: var(--cardBg); color: var(--acc); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 26px rgba(0,0,0,0.75), 0 0 20px rgba(224,189,122,0.38); }
     .s3d-pedestal-emblem svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.8; }
     .s3d-split { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
-    .s3d-mini-dock {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
-      padding: 5px; border-radius: 999px;
-      background: rgba(5, 13, 18, 0.92); border: 1.3px solid var(--acc);
-      font-size: 7.5px; font-weight: 800; color: #FAF7F2;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6), 0 0 12px rgba(224,189,122,0.2);
-    }
+    .s3d-mini-dock { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 5px; border-radius: 999px; background: rgba(5, 13, 18, 0.92); border: 1.3px solid var(--acc); font-size: 7.5px; font-weight: 800; color: #FAF7F2; }
     .s3d-mini-dock span { padding: 4px 2px; border-radius: 999px; background: rgba(255,255,255,0.09); }
     .s3d-mini-dock span.g { background: var(--cta); color: var(--ctaT); }
 
-    /* Card Footer & Tactile Buttons */
     .gc-title { font-size: 17px; font-weight: 900; margin: 0 0 3px; }
     .gc-desc { font-size: 12.5px; color: var(--mut); margin: 0; line-height: 1.55; }
     .gc-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-      padding: 11px 14px; border-radius: 13px; font-family: inherit;
-      font-size: 12.5px; font-weight: 800; cursor: pointer; text-decoration: none;
-      border: none; transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
-    }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 14px; border-radius: 13px; font-family: inherit; font-size: 12.5px; font-weight: 800; cursor: pointer; text-decoration: none; border: none; transition: transform 0.2s, filter 0.2s; }
     .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
     .btn-gold { background: linear-gradient(135deg, #FFF5DB, #E0BD7A 52%, #AA8036); color: #061210; border: 1px solid #FFF7E0; box-shadow: 0 8px 20px rgba(224,189,122,0.28); }
     .btn-out { background: var(--sub); color: var(--txt); border: 1.5px solid var(--bdr-hi); }
     .btn-wa { background: linear-gradient(135deg, #14754F, #0B412C); color: #fff; border: 1px solid rgba(110, 231, 183, 0.55); box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2); }
 
-    /* Compact Comparison Section (Uses Same 3 Distinct Tier Personalities) */
+    /* Comparison & Consultation */
     .cmp-sec { border-radius: 28px; padding: 30px 24px; margin-bottom: 30px; }
     .cmp-sec h2 { font-size: clamp(21px, 3vw, 30px); font-weight: 900; margin: 0 0 6px; text-align: center; }
     .cmp-sec p.sub { font-size: 14px; color: var(--mut); text-align: center; margin: 0 0 24px; }
-
-    /* Consultation CTA Banner */
-    .consult-box {
-      border-radius: 26px; padding: 28px 26px; margin-bottom: 50px;
-      background: radial-gradient(circle at 85% 20%, rgba(224,189,122,0.2), transparent 50%), linear-gradient(135deg, #16443B, #091E1B);
-      border: 1.8px solid var(--gold-hi); color: #FAF7F2;
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;
-      box-shadow: 0 24px 50px -12px rgba(0,0,0,0.75);
-    }
+    .consult-box { border-radius: 26px; padding: 28px 26px; margin-bottom: 50px; background: radial-gradient(circle at 85% 20%, rgba(224,189,122,0.2), transparent 50%), linear-gradient(135deg, #16443B, #091E1B); border: 1.8px solid var(--gold-hi); color: #FAF7F2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; box-shadow: 0 24px 50px -12px rgba(0,0,0,0.75); }
     .consult-box h3 { font-size: 22px; font-weight: 900; margin: 0 0 6px; color: #FFF5DB; }
     .consult-box p { font-size: 14px; color: #D4E4E0; margin: 0; max-width: 650px; line-height: 1.7; }
 
-    /* FULL INTERACTIVE PREVIEW MODAL */
+    /* Modal */
     .mb { position: fixed; inset: 0; z-index: 200; background: rgba(4, 11, 10, 0.92); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 14px; }
     .mb.open { display: flex; }
     .modal-shell { width: 100%; max-width: 1020px; max-height: 94vh; overflow-y: auto; border-radius: 28px; padding: 24px; border: 2px solid var(--gold-hi); background: #0B1F1C; color: #FAF7F2; position: relative; display: grid; grid-template-columns: 390px 1fr; gap: 28px; align-items: start; }
     .m-close { position: absolute; top: 14px; inset-inline-end: 14px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); border: 1px solid var(--bdr); color: #fff; font-size: 16px; cursor: pointer; z-index: 10; }
     .device-frame { width: 100%; max-width: 380px; margin: 0 auto; border-radius: 42px; padding: 10px; background: linear-gradient(145deg, #75674E, #121817 48%, #070A09); border: 2px solid rgba(248, 230, 189, 0.78); box-shadow: 0 30px 64px rgba(0, 0, 0, 0.82); }
-    .device-screen { border-radius: 32px; height: 645px; overflow-y: auto; position: relative; scrollbar-width: thin; }
+    .device-screen { border-radius: 32px; height: 645px; overflow-y: auto; position: relative; }
     .full-prof { padding: 16px 15px 22px; min-height: 100%; position: relative; display: flex; flex-direction: column; gap: 12px; text-align: center; }
     .full-prof.has-dock { padding-bottom: 76px; }
     .fp-nav { display: flex; justify-content: space-between; align-items: center; padding-bottom: 9px; border-bottom: 1px solid var(--line); font-size: 10.5px; font-weight: 800; position: relative; z-index: 2; }
     .fp-pill { padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--glass); font-size: 9.5px; font-weight: 800; }
-    .fp-bio { font-size: 12px; line-height: 1.7; padding: 11px 13px; border-radius: 13px; border: 1px solid var(--line); background: var(--glass); margin: 0; text-align: start; position: relative; z-index: 2; backdrop-filter: blur(8px); }
+    .fp-bio { font-size: 12px; line-height: 1.7; padding: 11px 13px; border-radius: 13px; border: 1px solid var(--line); background: var(--glass); margin: 0; text-align: start; position: relative; z-index: 2; }
     .fp-3d-wrap { perspective: 1200px; position: relative; z-index: 2; }
     .fp-3d-card { width: 100%; aspect-ratio: 85.6 / 53.98; position: relative; transform-style: preserve-3d; transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); cursor: pointer; }
     .fp-3d-card.flipped { transform: rotateY(180deg); }
     .fp-3d-face { position: absolute; inset: 0; border-radius: 15px; padding: 14px 16px; backface-visibility: hidden; -webkit-backface-visibility: hidden; border: 2px solid var(--acc); background: var(--cardBg); color: #FAF7F2; display: flex; flex-direction: column; justify-content: space-between; text-align: start; box-shadow: 0 18px 36px rgba(0, 0, 0, 0.58); overflow: hidden; }
-    .fp-3d-face::after { content: ""; position: absolute; inset: 0; background: linear-gradient(125deg, transparent 25%, rgba(255,255,255,0.2) 50%, transparent 75%); pointer-events: none; }
-    .fp-3d-face.back { transform: rotateY(180deg); align-items: center; justify-content: center; text-align: center; }
-    .fp-tilt-wrap { perspective: 900px; display: flex; justify-content: center; position: relative; z-index: 2; }
-    .fp-tilt-box { transition: transform 0.16s ease-out; cursor: pointer; }
-    .fp-btn { width: 100%; padding: 11px 13px; border-radius: 12px; border: 1.2px solid var(--line); background: var(--glass); color: inherit; font-family: inherit; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: space-between; cursor: pointer; position: relative; z-index: 2; backdrop-filter: blur(8px); }
+    .fp-3d-face.back { transform: rotateY(180deg); align-items: center; justify-content: center; text-align: center; gap: 8px; }
+    .fp-btn { width: 100%; padding: 11px 13px; border-radius: 12px; border: 1.2px solid var(--line); background: var(--glass); color: inherit; font-family: inherit; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: space-between; cursor: pointer; position: relative; z-index: 2; }
     .fp-btn-l { display: flex; align-items: center; gap: 9px; }
     .fp-btn svg { width: 16px; height: 16px; stroke: var(--acc); fill: none; stroke-width: 2; }
-    .fp-save-cta { width: 100%; padding: 13px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.3); background: var(--cta); color: var(--ctaT); font-family: inherit; font-size: 13px; font-weight: 900; cursor: pointer; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35); }
+    .fp-save-cta { width: 100%; padding: 13px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.3); background: var(--cta); color: var(--ctaT); font-family: inherit; font-size: 13px; font-weight: 900; cursor: pointer; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .fp-save-cta svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 2.2; }
     .fp-trust-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; position: relative; z-index: 2; }
     .fp-trust-pill { padding: 6px 4px; border-radius: 999px; border: 1px solid var(--line); background: var(--glass); font-size: 9px; font-weight: 800; }
-    .fp-vip-dock { position: sticky; bottom: 8px; z-index: 20; margin: 0 4px; padding: 5px; border-radius: 999px; background: rgba(5, 13, 20, 0.94); backdrop-filter: blur(12px); border: 1.5px solid var(--acc); display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; box-shadow: 0 14px 30px rgba(0,0,0,0.85); }
+    .fp-vip-dock { position: sticky; bottom: 8px; z-index: 20; margin: 0 4px; padding: 5px; border-radius: 999px; background: rgba(5, 13, 20, 0.94); backdrop-filter: blur(12px); border: 1.5px solid var(--acc); display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
     .fp-dock-btn { padding: 8px 4px; border-radius: 999px; border: none; cursor: pointer; font-family: inherit; font-size: 9.5px; font-weight: 800; color: #fff; background: rgba(255,255,255,0.1); }
     .fp-dock-btn.gold { background: var(--cta); color: var(--ctaT); }
     .m-side { text-align: start; display: flex; flex-direction: column; gap: 14px; }
@@ -499,26 +335,15 @@
     .m-feats li { display: flex; align-items: flex-start; gap: 8px; }
     .m-feats li span:first-child { color: #E0BD7A; font-weight: 900; }
 
-    /* Floating Sticky WhatsApp Button */
-    .wa-float {
-      position: fixed; bottom: 20px; inset-inline-end: 20px; z-index: 150;
-      display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px;
-      background: linear-gradient(135deg, #168055, #0B462E); color: #fff;
-      border: 1.5px solid rgba(110, 231, 183, 0.7); font-family: inherit; font-size: 13px; font-weight: 800;
-      cursor: pointer; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65); transition: transform 0.2s;
-    }
-    .wa-float:hover { transform: translateY(-3px); }
+    .wa-float { position: fixed; bottom: 20px; inset-inline-end: 20px; z-index: 150; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: linear-gradient(135deg, #168055, #0B462E); color: #fff; border: 1.5px solid rgba(110, 231, 183, 0.7); font-family: inherit; font-size: 13px; font-weight: 800; cursor: pointer; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65); }
     .wa-float svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.2; }
-
-    /* Footer & Toast */
     .ft { background: #040D0B; border-top: 1.5px solid var(--bdr); padding: 34px 20px 84px; text-align: center; color: #A9BEB9; font-size: 13px; }
     .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #061210; font-weight: 800; font-size: 12.5px; padding: 10px 22px; border-radius: 999px; z-index: 300; opacity: 0; pointer-events: none; transition: 0.25s; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65); text-align: center; max-width: 92%; }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     @media (max-width: 1060px) {
+      .lab-box { grid-template-columns: 1fr; }
       .grid { grid-template-columns: repeat(2, 1fr); }
-      .controls { grid-template-columns: 1fr 1fr; }
-      .controls .btn { grid-column: 1 / -1; }
       .cmp-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 860px) {
@@ -527,8 +352,8 @@
       .device-screen { height: 570px; }
     }
     @media (max-width: 620px) {
+      .two-col { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
-      .controls { grid-template-columns: 1fr; }
       .nav-in { flex-wrap: wrap; justify-content: center; }
       .wa-float span { display: none; }
       .wa-float { padding: 13px; }
@@ -571,9 +396,6 @@
     <h1 id="lblTitle">اختر مستوى <span class="t-gold">حضورك الرقمي الفاخر</span> مع CartePro Maroc</h1>
     <p id="lblSub">النماذج أسفله أمثلة تعريفية تُظهر المستوى الهندسي لكل عرض — عند طلبك، نقوم بتخصيص التصميم بشعارك، ألوان مكتبك أو نشاطك، ومعلوماتك الكاملة مع معاينة مجانية قبل الطباعة.</p>
 
-    <div class="steps-bar" id="stepsBar"></div>
-
-    <!-- TOP 3 DISTINCT TIER SWITCHER CARDS -->
     <div class="tier-tabs">
       <button type="button" class="tier-box t-essential active" id="tab-essential" onclick="setTier('essential')">
         <div>
@@ -615,24 +437,49 @@
     <div class="trust-strip" id="trustStrip"></div>
   </section>
 
-  <section class="controls panel">
+  <!-- SMART PERSONALIZED PREVIEW LAB (SEPARATE FROM CATALOG) -->
+  <section class="lab-box panel">
     <div>
-      <label class="lbl" for="customName" id="lblNameInp">جرّب اسمك أو اسم مكتبك / علامتك فوراً على النماذج:</label>
-      <input type="text" id="customName" class="inp" oninput="renderGrid()" placeholder="مثلاً: د. سلمى بنعلي / مكتب المنصوري / دار الأصالة...">
+      <h2 class="lab-title" id="labTitle">مختبر معاينتك الخاصة (يتكيّف مع مهنتك وستايلك)</h2>
+      <p class="lab-sub" id="labSub">اكتب اسمك، اختر مجالك من 20 مهنة، واختر ستايلك المفضل — لترى بروفيلك الخاص دون تغيير النماذج الثابتة في المعرض.</p>
+
+      <div class="two-col">
+        <div>
+          <label class="lbl" for="labName" id="lblLabName">اسمك أو اسم علامتك / مكتبك:</label>
+          <input type="text" id="labName" class="inp" oninput="renderLab()" placeholder="مثلاً: صالون الأناقة / د. يوسف / مكتب النور...">
+        </div>
+        <div>
+          <label class="lbl" for="labProf" id="lblLabProf">مجال عملك أو مهنتك:</label>
+          <select id="labProf" class="sel" onchange="renderLab()"></select>
+        </div>
+      </div>
+
+      <span class="lbl" id="lblLabStyle">اختر الستايل والهوية اللونية (مغربية أصيلة وأوروبية فاخرة):</span>
+      <div class="style-pills" id="stylePills"></div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <button type="button" class="btn btn-gold spot-3d" onclick="orderLabDesign()" id="btnLabOrder">اطلب هذا التصور الخاص بيك على واتساب</button>
+        <button type="button" class="btn btn-out" onclick="resetLab()" id="btnLabReset">إعادة ضبط</button>
+      </div>
     </div>
-    <div>
-      <label class="lbl" for="customRole" id="lblRoleInp">مهنتك أو تخصصك (اختياري):</label>
-      <input type="text" id="customRole" class="inp" oninput="renderGrid()" placeholder="مثلاً: محامي، طبيبة أسنان، مهندس معماري، وكالة عقارية...">
+
+    <div class="lab-phone-wrap">
+      <div class="lab-iphone" id="labPhoneFrame"></div>
+      <div style="font-size:11.5px;color:var(--mut);font-weight:700;" id="labHint">معاينة فورية خاصة باسمك ومجالك</div>
     </div>
-    <button type="button" class="btn btn-gold spot-3d" style="padding:12px 20px;" onclick="orderCustomDesign()" id="btnTryOrder">اطلب معاينة حقيقية باسمك</button>
   </section>
 
+  <!-- STATIC DEDICATED CATALOG GRID -->
+  <div class="sec-hdr-bar">
+    <h2 id="catTitle">نماذج هذا العرض الجاهزة</h2>
+    <span id="catSub">8 نماذج مستقلة + تصميم خاص بك 100%</span>
+  </div>
   <section class="grid" id="demoGrid"></section>
 
-  <!-- BOTTOM COMPARISON SECTION (MATCHING THE 3 DISTINCT PERSONALITIES) -->
+  <!-- COMPARISON -->
   <section class="cmp-sec panel" id="cmpSection"></section>
 
-  <!-- Free Consultation CTA -->
+  <!-- CONSULTATION -->
   <section class="consult-box">
     <div>
       <h3 id="consTitle">محتار شمن عرض أو تصميم غادي يليق بمهنتك؟</h3>
@@ -642,26 +489,21 @@
   </section>
 </main>
 
-<!-- FULL INTERACTIVE PREVIEW MODAL -->
+<!-- FULL PREVIEW MODAL -->
 <div class="mb" id="previewModal" role="dialog" aria-modal="true">
   <div class="modal-shell">
     <button type="button" class="m-close" onclick="closePreview()">✕</button>
-
     <div class="device-frame">
       <div class="device-screen" id="liveScreen"></div>
     </div>
-
     <div class="m-side">
       <div>
         <span class="gc-code" id="mCode">ES-01</span>
         <h3 id="mTitle">اسم النموذج</h3>
         <p id="mDesc">وصف النموذج</p>
       </div>
-
       <div class="m-tier-note" id="mNote"></div>
-
       <ul class="m-feats" id="mFeats"></ul>
-
       <div style="display:flex;flex-direction:column;gap:9px;margin-top:4px;">
         <button type="button" class="btn btn-gold spot-3d" style="padding:13px 16px;font-size:13.5px;" id="mOrderBtn">اطلب هذا النموذج عبر واتساب</button>
         <button type="button" class="btn btn-out" style="padding:11px 16px;" onclick="closePreview()" id="mCloseBtn">العودة لتصفح النماذج</button>
@@ -688,6 +530,10 @@
 const WA_NUM = "212669256706";
 let currentLang = "ar";
 let currentTier = "essential";
+let currentStyleIdx = 0;
+
+// REAL SVG QR CODE MATRIX
+const QR_SVG = `<svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" fill="#061210"><path d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm7-1h2v2H9zm3 0h1v3h-1zm2 2h2v1h-2zm8-3h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM8 5h1v2H8zm3 1h2v1h-2zm4 0h1v2h-1zm3 0h2v1h-2zM0 8h2v1H0zm3 0h3v1H3zm4 1h2v2H7zm3 0h3v1h-3zm4 0h1v3h-1zm2 1h3v1h-3zm4-1h2v2h-2zm3 0h2v1h-2zm3 0h1v2h-1zM2 10h2v2H2zm4 2h2v1H6zm3 0h2v2H9zm5 1h3v1h-3zm4-1h2v2h-2zm4 1h3v1h-3zM0 13h1v3H0zm2 1h2v1H2zm3 0h1v3H5zm4 1h2v1H9zm3 0h2v2h-2zm6 0h1v3h-1zm2 0h2v1h-2zm4 1h3v2h-3zM2 17h2v1H2zm5 0h2v2H7zm4 1h3v1h-3zm4-1h2v2h-2zm4 1h2v1h-2zM0 22h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zm7-2h1v3H9zm2 1h2v2h-2zm3-1h2v2h-2zm3 1h3v1h-3zm4-1h1v3h-1zm2 0h2v2h-2zm3 1h2v2h-2zM8 24h1v2H8zm4 2h2v2h-2zm3 0h1v3h-1zm2 0h3v1h-3zm3 0h2v3h-2zm4 0h3v2h-3zM10 28h3v1h-3zm5 0h2v1h-2zm7 0h2v1h-2z"/></svg>`;
 
 const SVG = {
   phone: '<svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.37 1.6.72 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.35 1.53.6 2.34.72A2 2 0 0 1 22 16.92z"/></svg>',
@@ -725,29 +571,66 @@ const LOGOS = {
   arch: '<svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>',
   crown: '<svg viewBox="0 0 24 24"><path d="M3 18h18M4 15l2-9 6 4 6-4 2 9H4z"/></svg>',
   code: '<svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>',
-  nexa: '<svg viewBox="0 0 24 24"><polygon points="12 2 21 7 21 17 12 22 3 17 3 7 12 2"/><circle cx="12" cy="12" r="3"/></svg>'
+  nexa: '<svg viewBox="0 0 24 24"><polygon points="12 2 21 7 21 17 12 22 3 17 3 7 12 2"/><circle cx="12" cy="12" r="3"/></svg>',
+  scissors: '<svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>',
+  camera: '<svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>',
+  shop: '<svg viewBox="0 0 24 24"><path d="M3 9l1-5h16l1 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9z"/><path d="M9 21V12h6v9"/></svg>'
 };
+
+// 20 PROFESSIONS FOR THE SMART LAB
+const PROFESSIONS = [
+  { id: "barber", logo: "scissors", ar: ["حلاقة رجالية وعناية", ["قص احترافي", "تهذيب اللحية", "حجز موعد"]], fr: ["Barbier & Soins Homme", ["Coupe Moderne", "Taille Barbe", "Réservation"]], en: ["Men's Grooming & Barber", ["Precision Cut", "Beard Styling", "Book Slot"]] },
+  { id: "beauty", logo: "lotus", ar: ["تجميل وسبا نسائي", ["عناية بالبشرة", "شعر وتسريحات", "سبا وراحة"]], fr: ["Institut Beauté & Spa", ["Soins Visage", "Coiffure", "Spa Détente"]], en: ["Beauty & Spa Lounge", ["Skincare", "Hair Styling", "Spa Rituals"]] },
+  { id: "doctor", logo: "medical", ar: ["عيادة طبية متخصصة", ["استشارات طبية", "تشخيص دقيق", "أوقات العمل"]], fr: ["Cabinet Médical", ["Consultations", "Diagnostic", "Horaires"]], en: ["Medical Clinic", ["Consultations", "Diagnostics", "Clinic Hours"]] },
+  { id: "dental", logo: "dental", ar: ["طب وجراحة الأسنان", ["زراعة الأسنان", "تقويم الابتسامة", "تبييض الأسنان"]], fr: ["Clinique Dentaire", ["Implants", "Orthodontie", "Blanchiment"]], en: ["Dental Clinic", ["Implants", "Orthodontics", "Whitening"]] },
+  { id: "pharmacy", logo: "medical", ar: ["صيدلية وشبه صيدلية", ["استشارة دوائية", "منتجات طبية", "مواعيد الخدمة"]], fr: ["Pharmacie & Parapharmacie", ["Conseil Santé", "Parapharmacie", "Garde & Horaires"]], en: ["Pharmacy & Wellness", ["Health Advice", "Dermocosmetics", "Hours & Care"]] },
+  { id: "lawyer", logo: "legal", ar: ["مكتب محاماة واستشارة", ["قضايا الشركات", "العقود والاتفاقيات", "استشارة قانونية"]], fr: ["Cabinet d'Avocat", ["Droit Sociétés", "Contrats", "Consultation"]], en: ["Law & Legal Advisory", ["Corporate Law", "Contracts", "Legal Counsel"]] },
+  { id: "notary", logo: "legal", ar: ["مكتب توثيق رسمي", ["العقود العقارية", "تأسيس الشركات", "حجز موعد"]], fr: ["Étude Notariale", ["Actes Immo", "Sociétés", "Prise de RDV"]], en: ["Notary Office", ["Property Deeds", "Corporate Acts", "Appointments"]] },
+  { id: "accounting", logo: "finance", ar: ["محاسبة وتدقيق مالي", ["محاسبة وضرائب", "تدقيق مالي", "تأسيس شركات"]], fr: ["Expertise Comptable", ["Comptabilité", "Audit Fiscal", "Création"]], en: ["Accounting & Tax Audit", ["Accounting", "Tax Audit", "Company Setup"]] },
+  { id: "estate", logo: "estate", ar: ["وكالة عقارية واستثمار", ["فيلات وشقق", "استثمار عقاري", "مرافقة شراء"]], fr: ["Agence Immobilière", ["Biens Luxe", "Investissement", "Conseil"]], en: ["Real Estate Agency", ["Luxury Estates", "Investments", "Advisory"]] },
+  { id: "arch", logo: "arch", ar: ["هندسة معمارية وتصميم", ["تصميم معماري", "تتبع الأوراش", "ديكور داخلي"]], fr: ["Architecture & Design", ["Conception", "Suivi Chantier", "Design Intérieur"]], en: ["Architecture & Design", ["Architectural Plan", "Site Supervision", "Interior Design"]] },
+  { id: "decor", logo: "prism", ar: ["تصميم داخلي وديكور", ["مشاريع سكنية", "تجهيز عصري", "استشارة ديكور"]], fr: ["Design Intérieur & Décor", ["Résidentiel", "Aménagement", "Conseil Déco"]], en: ["Interior Design & Decor", ["Residential", "Space Styling", "Design Consult"]] },
+  { id: "resto", logo: "food", ar: ["مطعم وضيافة راقية", ["قائمة الطعام", "حجز الطاولات", "مناسبات خاصة"]], fr: ["Restaurant & Gastronomie", ["La Carte", "Réservation", "Événements"]], en: ["Fine Dining & Restaurant", ["Menu", "Table Booking", "Private Events"]] },
+  { id: "cafe", logo: "coffee", ar: ["مقهى ومخبزة فاخرة", ["قهوة مختصة", "مخبوزات وحلويات", "طلب وحجز"]], fr: ["Café & Pâtisserie", ["Café Spécialité", "Pâtisserie", "Commande"]], en: ["Specialty Cafe & Bakery", ["Specialty Coffee", "Pastries", "Order & Visit"]] },
+  { id: "auto", logo: "auto", ar: ["كراء وبيع السيارات", ["سيارات فاخرة", "توصيل المطار", "عروض الكراء"]], fr: ["Location & Auto VIP", ["Véhicules VIP", "Aéroport 24/7", "Réservation"]], en: ["Luxury Car Rental & Auto", ["Premium Fleet", "Airport Delivery", "Instant Booking"]] },
+  { id: "shop", logo: "shop", ar: ["متجر وعلامة تجارية", ["المنتجات", "عروض خاصة", "طلب مباشر"]], fr: ["Boutique & Marque", ["Catalogue", "Offres", "Commande"]], en: ["Retail Store & Brand", ["Collection", "Featured Offers", "Direct Order"]] },
+  { id: "jewelry", logo: "diamond", ar: ["مجوهرات وساعات فاخرة", ["تصاميم حصرية", "ساعات فاخرة", "استشارة خاصة"]], fr: ["Joaillerie & Horlogerie", ["Créations", "Montres Luxe", "RDV Privé"]], en: ["Fine Jewelry & Watches", ["Bespoke Pieces", "Luxury Timepieces", "Private Viewing"]] },
+  { id: "photo", logo: "camera", ar: ["تصوير وإنتاج مرئي", ["تصوير المناسبات", "إنتاج فيديو", "حجز جلسة"]], fr: ["Photo & Production Vidéo", ["Événements", "Vidéo & Clip", "Réservation"]], en: ["Photography & Video", ["Event Shoots", "Video Production", "Book Session"]] },
+  { id: "tech", logo: "code", ar: ["خدمات رقمية وبرمجة", ["تطوير مواقع وتطبيقات", "حلول رقمية", "استشارة تقنية"]], fr: ["Digital, Web & IA", ["Web & Apps", "Solutions Tech", "Conseil"]], en: ["Digital, Web & AI", ["Web & Apps", "Tech Solutions", "Consulting"]] },
+  { id: "craft", logo: "zellige", ar: ["صناعة تقليدية وحرفية", ["إبداعات يدوية", "طلبات خاصة", "توصيل سريع"]], fr: ["Artisanat & Métiers", ["Créations Main", "Sur-Mesure", "Livraison"]], en: ["Craftsmanship & Artisans", ["Handcrafted", "Custom Orders", "Delivery"]] },
+  { id: "general", logo: "monogram", ar: ["نشاط مهني حر / مقاولة", ["خدماتنا", "تواصل سريع", "معلومات كاملة"]], fr: ["Activité Professionnelle", ["Nos Services", "Contact Direct", "Infos Claires"]], en: ["Professional & Business", ["Our Services", "Direct Contact", "Full Details"]] }
+];
+
+// 10 MOROCCAN & EUROPEAN LUXURY STYLES FOR THE LAB
+const LAB_STYLES = [
+  { name: { ar: "الزمردي المغربي", fr: "Émeraude Maroc", en: "Moroccan Emerald" }, dot: "#184A2F", bg: "linear-gradient(165deg,#FBF8F0 0%,#F2EBDC 60%,#E5D7BC 100%)", coverBg: "linear-gradient(135deg,#184A2F,#0C2919)", cardBg: "linear-gradient(135deg,#184A2F,#0A2919)", txt: "#0E2D1D", acc: "#C5963E", line: "rgba(197,150,62,0.48)", glass: "rgba(20,69,43,0.075)", cta: "linear-gradient(135deg,#14452B,#092416)", ctaT: "#F8E5BC", pat: "pat-arch" },
+  { name: { ar: "الفاسي الملكي", fr: "Fassi Royal", en: "Royal Fassi" }, dot: "#0D2E5E", bg: "linear-gradient(165deg,#FBF3E2 0%,#EFE0C2 60%,#E3CCA3 100%)", coverBg: "linear-gradient(135deg,#0D2E5E,#071A38)", cardBg: "linear-gradient(135deg,#0E2F61,#071A38)", txt: "#13233A", acc: "#C59438", line: "rgba(197,148,56,0.52)", glass: "rgba(14,46,92,0.08)", cta: "linear-gradient(135deg,#F8DF9F,#D4A244,#A67922)", ctaT: "#121E33", pat: "pat-zellige" },
+  { name: { ar: "الجلد الأسود الفاخر", fr: "Cuir Noir Luxe", en: "Obsidian Leather" }, dot: "#1A1A1D", bg: "linear-gradient(160deg,#1F2024 0%,#121316 60%,#08080A 100%)", coverBg: "linear-gradient(135deg,#2A2823,#12110E)", cardBg: "linear-gradient(135deg,#2D281E,#11100D)", txt: "#FAFAFA", acc: "#E8C374", line: "rgba(232,195,116,0.45)", glass: "rgba(255,255,255,0.08)", cta: "linear-gradient(135deg,#FFF1C9,#D9AE5B,#9E7527)", ctaT: "#0A0A0C", pat: "pat-grid" },
+  { name: { ar: "القرمزي المغربي", fr: "Pourpre Palais", en: "Palais Crimson" }, dot: "#7A121D", bg: "linear-gradient(160deg,#5C0E17 0%,#38070D 60%,#1F0306 100%)", coverBg: "linear-gradient(135deg,#851623,#3D080E)", cardBg: "linear-gradient(135deg,#851623,#3D080E)", txt: "#FFF8EC", acc: "#F2C879", line: "rgba(242,200,121,0.48)", glass: "rgba(255,248,236,0.085)", cta: "linear-gradient(135deg,#FFF1C9,#E0B25A,#A87A24)", ctaT: "#240407", pat: "pat-zellige" },
+  { name: { ar: "رخام إيطالي ذهبي", fr: "Marbre Doré", en: "Gold Marble" }, dot: "#D8CFC0", bg: "linear-gradient(165deg,#FFFFFF 0%,#F7F3EA 58%,#ECE4D3 100%)", coverBg: "linear-gradient(135deg,#183A36,#0B211E)", cardBg: "linear-gradient(135deg,#183A36,#0B211E)", txt: "#0F2623", acc: "#B88E40", line: "rgba(184,142,64,0.46)", glass: "rgba(15,38,35,0.06)", cta: "linear-gradient(135deg,#1A453F,#0C2420)", ctaT: "#F7E4B8", pat: "pat-marble" },
+  { name: { ar: "زجاجي أوروبي ليلي", fr: "Verre Nordique", en: "Nordic Glass" }, dot: "#274469", bg: "radial-gradient(circle at 50% 10%,rgba(245,158,11,0.3),transparent 46%),linear-gradient(160deg,#1F3654 0%,#112238 55%,#091321 100%)", coverBg: "linear-gradient(135deg,#274469,#102036)", cardBg: "linear-gradient(135deg,#274469,#102036)", txt: "#FAF7F2", acc: "#F5CE82", line: "rgba(245,206,130,0.48)", glass: "rgba(255,255,255,0.12)", cta: "linear-gradient(135deg,#FFF2CE,#E5B962,#B0802A)", ctaT: "#091321", pat: "pat-grid" },
+  { name: { ar: "الطنجاوي المتوسطي", fr: "Azuré Tanger", en: "Tangier Azure" }, dot: "#0B5E7A", bg: "linear-gradient(165deg,#F8FDFF 0%,#EBF7FB 60%,#D9EFF7 100%)", coverBg: "linear-gradient(135deg,#0B5E7A,#063547)", cardBg: "linear-gradient(135deg,#0B5E7A,#063547)", txt: "#082C36", acc: "#0B5E7A", line: "rgba(11,94,122,0.28)", glass: "rgba(11,94,122,0.07)", cta: "linear-gradient(135deg,#0B5E7A,#063547)", ctaT: "#FFFFFF", pat: "pat-arch" },
+  { name: { ar: "الأمازيغي الأطلسي", fr: "Atlas Terracotta", en: "Atlas Terracotta" }, dot: "#8F3D1E", bg: "linear-gradient(165deg,#FCF7F0 0%,#F3E6D8 60%,#E6D2BC 100%)", coverBg: "linear-gradient(135deg,#7A3217,#3D1608)", cardBg: "linear-gradient(135deg,#7A3217,#3D1608)", txt: "#2B1208", acc: "#B8772B", line: "rgba(184,119,43,0.44)", glass: "rgba(122,50,23,0.07)", cta: "linear-gradient(135deg,#7A3217,#421809)", ctaT: "#FFF3D6", pat: "pat-arch" },
+  { name: { ar: "وردي ذهبي باريسي", fr: "Rose Gold Paris", en: "Parisian Rose" }, dot: "#A4535B", bg: "linear-gradient(165deg,#FFF8F6 0%,#FBECE7 60%,#F4DDD5 100%)", coverBg: "linear-gradient(135deg,#99545B,#613136)", cardBg: "linear-gradient(135deg,#99545B,#613136)", txt: "#3D1D20", acc: "#A4535B", line: "rgba(164,83,91,0.34)", glass: "rgba(164,83,91,0.075)", cta: "linear-gradient(135deg,#9E535A,#6E3338)", ctaT: "#FFF7F5", pat: "pat-marble" },
+  { name: { ar: "نيون تنفيذي كحلي", fr: "Cyber Nuit", en: "Executive Cyber" }, dot: "#1E337A", bg: "radial-gradient(circle at 80% 15%,rgba(99,102,241,0.34),transparent 45%),linear-gradient(160deg,#12183B 0%,#090D24 60%,#040612 100%)", coverBg: "linear-gradient(135deg,#24337A,#0D1336)", cardBg: "linear-gradient(135deg,#24337A,#0D1336)", txt: "#F2F5FF", acc: "#F4C97A", line: "rgba(129,140,248,0.45)", glass: "rgba(129,140,248,0.1)", cta: "linear-gradient(135deg,#FFF1C9,#E0B25A,#A87A24)", ctaT: "#070A1A", pat: "pat-waves" }
+];
 
 const UI = {
   ar: {
-    back: "← العودة للبروفيل الرئيسي",
-    theme: "مظهر الصفحة",
+    back: "← العودة للبروفيل الرئيسي", theme: "مظهر الصفحة",
     badge: "((( NFC ))) • تخيّل رد فعل زبونك عند لمس بطاقتك",
     title: 'اختر مستوى <span class="t-gold">حضورك الرقمي الفاخر</span> مع CartePro Maroc',
     sub: "النماذج أسفله أمثلة تعريفية تُظهر المستوى الهندسي لكل عرض — عند طلبك، نقوم بتخصيص التصميم بشعارك، ألوان مكتبك أو نشاطك، ومعلوماتك الكاملة مع معاينة مجانية قبل الطباعة.",
-    steps: ["اضغط على العرض المناسب", "جرّب اسمك وشاهد النماذج", "اطلب نموذجك أو تصميماً خاصاً"],
-    trust: ["معاينة مجانية 100% قبل الطباعة", "دفعة واحدة مدى الحياة (0 اشتراك)", "تعديل معلوماتك في أي وقت", "يعمل على iPhone و Android بدون تطبيق"],
-    nameInp: "جرّب اسمك أو اسم مكتبك / علامتك فوراً على النماذج:",
-    namePh: "مثلاً: د. سلمى بنعلي / مكتب المنصوري / دار الأصالة...",
-    roleInp: "مهنتك أو تخصصك (اختياري):",
-    rolePh: "مثلاً: محامي، طبيبة أسنان، مهندس معماري، وكالة عقارية...",
-    tryOrder: "اطلب معاينة حقيقية باسمك",
-    btnPreview: "معاينة كاملة",
-    btnOrder: "اطلب هذا النموذج",
-    btnOrderFull: "اطلب هذا النموذج عبر واتساب",
-    btnOther: "العودة لتصفح النماذج",
-    waFloat: "تواصل معنا",
-    activeLbl: "✓ نماذج هذا العرض معروضة الآن",
+    trust: ["معاينة مجانية 100% قبل الطباعة", "دفعة واحدة مدى الحياة (0 اشتراك)", "تعديل معلوماتك في أي وقت", "توافق 100% NFC + QR بدون تطبيق"],
+    labTitle: "مختبر معاينتك الخاصة (يتكيّف مع مهنتك وستايلك)",
+    labSub: "اكتب اسمك، اختر مجالك من 20 مهنة، واختر ستايلك المفضل — لترى بروفيلك الخاص دون تغيير النماذج الثابتة في المعرض.",
+    labName: "اسمك أو اسم علامتك / مكتبك:", labNamePh: "مثلاً: صالون الأناقة / د. يوسف / مكتب النور...",
+    labProf: "مجال عملك أو مهنتك:", labStyle: "اختر الستايل والهوية اللونية (مغربية وأوروبية):",
+    labOrder: "اطلب هذا التصور الخاص بيك على واتساب", labReset: "إعادة ضبط",
+    labHint: "معاينة فورية خاصة باسمك ومجالك",
+    catTitle: "نماذج هذا العرض الجاهزة", catSub: "8 نماذج مستقلة + تصميم خاص بك 100%",
+    btnPreview: "معاينة كاملة", btnOrder: "اطلب هذا النموذج", btnOrderFull: "اطلب هذا النموذج عبر واتساب", btnOther: "العودة لتصفح النماذج",
+    waFloat: "تواصل معنا", activeLbl: "✓ نماذج هذا العرض معروضة الآن",
     consTitle: "محتار شمن عرض أو تصميم غادي يليق بمهنتك؟",
     consSub: "صيفط لينا غير مهنتك واللوغو ديالك (إلا كان عندك) في واتساب، وغادي نقترحو عليك أحسن فكرة وتصميم يناسب نشاطك في أقل من 5 دقائق — بدون أي التزام.",
     consBtn: "استشارة مجانية عبر واتساب",
@@ -756,47 +639,41 @@ const UI = {
     footer: 'بطاقات NFC ذكية وملفات رقمية احترافية — دفعة واحدة مدى الحياة بدون اشتراكات • واتساب: <span dir="ltr">+212 669 256 706</span>',
     tiers: {
       essential: {
-        price: "249 DH", tag: "للبداية العملية", name: "العرض الأساسي (Essential)",
-        switchLbl: "اضغط لعرض نماذج Essential ←",
-        pts: ["قالب احترافي مكيّف حسب مهنتك", "اتصال + واتساب + إيميل + Google Maps", "أيقونات السوشيال ميديا + حفظ الرقم"],
+        price: "249 DH", tag: "للبداية العملية", name: "العرض الأساسي (Essential)", switchLbl: "اضغط لعرض نماذج Essential ←",
+        pts: ["قالب احترافي مكيّف حسب مهنتك", "اتصال + واتساب + إيميل + Google Maps", "أيقونات السوشيال ميديا + حفظ الرقم + QR"],
         note: "ملاحظة مهمة: هذا النموذج مثال توضيحي فقط — عند الطلب نقوم بتكييف القالب حسب مهنتك بشعارك وألوانك، ونرسل لك معاينة كاملة للموافقة قبل الطباعة.",
-        customBadge: "تصميم مكيّف حسب مهنتك",
-        customTitle: "ما لقيتيش مهنتك هنا؟",
+        customBadge: "تصميم مكيّف حسب مهنتك", customTitle: "ما لقيتيش مهنتك هنا؟",
         customDesc: "نكيّف ليك قالب Essential احترافي خاص بمهنتك، بشعارك وألوانك — غير صيفط لينا سمية نشاطك في واتساب.",
-        customList: ["قالب أنيق يناسب قطاعك 100%", "أزرار التواصل + Google Maps + سوشيال ميديا", "معاينة مجانية قبل الطباعة"],
+        customList: ["قالب أنيق يناسب قطاعك 100%", "أزرار التواصل + Google Maps + سوشيال ميديا + QR", "معاينة مجانية قبل الطباعة"],
         customBtn: "اطلب قالباً خاصاً بمهنتك (249 DH)",
-        chips: ["بطاقة PVC NFC مخصصة 100%", "قالب احترافي مكيّف حسب مهنتك", "اتصال + واتساب + إيميل + Google Maps", "أيقونات شبكات التواصل + حفظ الرقم (vCard)", "تعديل المعلومات في أي وقت"]
+        chips: ["بطاقة PVC NFC مخصصة 100%", "قالب احترافي مكيّف حسب مهنتك", "اتصال + واتساب + إيميل + Google Maps", "أيقونات شبكات التواصل + حفظ الرقم (vCard) + QR", "تعديل المعلومات في أي وقت"]
       },
       vip: {
-        price: "399 DH", tag: "★ الأكثر طلباً", name: "عرض الأعمال (Business VIP)",
-        switchLbl: "اضغط لعرض نماذج VIP ←",
+        price: "399 DH", tag: "★ الأكثر طلباً", name: "عرض الأعمال (Business VIP)", switchLbl: "اضغط لعرض نماذج VIP ←",
         pts: ["تصميم مخصص 100% لهوية مكتبك أو محلك", "تقييمات Google 5★ + قسم الخدمات Bento", "خرائط GPS/Waze + حجز موعد + 3 لغات"],
         note: "ملاحظة مهمة: هذه النماذج أمثلة تعريفية فقط — في عرض Business VIP نصمّم ملفك بالكامل من الصفر بألوان شعارك ومكتبك أو عيادتك مع معاينة مجانية قبل الطباعة.",
-        customBadge: "تخصيص 100% لهويتك البصرية",
-        customTitle: "بغيتي تصميم مخصص لمكتبك أو محلك؟",
+        customBadge: "تخصيص 100% لهويتك البصرية", customTitle: "بغيتي تصميم مخصص لمكتبك أو محلك؟",
         customDesc: "هذه النماذج أمثلة فقط! في عرض Business VIP كنبنيو ليك بروفيل مخصص 100% بألوان شعارك، خدماتك، وتقييمات Google 5★.",
         customList: ["ألوان وهوية مطابقة لشعارك ومحلك", "تقييمات Google 5 نجوم لجذب زبناء جدد", "معاينة مجانية قبل الطباعة"],
         customBtn: "صمّم بروفيل هويتي الخاصة (399 DH)",
         chips: ["تصميم مخصص 100% حسب هويتك البصرية", "قسم الخدمات والتخصصات وأوقات العمل", "تقييمات Google 5 نجوم المباشرة", "خرائط GPS & Waze + حجز موعد عبر واتساب", "3 لغات + تعديل المعلومات في أي وقت"]
       },
       signature: {
-        price: "599 DH", tag: "✦ القمة التنفيذية 3D", name: "عرض Signature 3D",
-        switchLbl: "اضغط لعرض نماذج 3D ←",
-        pts: ["بطاقة NFC 3D عائمة (وجه وخلف) داخل البروفيل", "منصة شعار 3D دوّارة + شريط تحكم VIP Dock", "تخصيص 100% + كل مزايا Business VIP"],
+        price: "599 DH", tag: "✦ القمة التنفيذية 3D", name: "عرض Signature 3D", switchLbl: "اضغط لعرض نماذج 3D ←",
+        pts: ["بطاقة NFC 3D عائمة (وجه وخلف برمز QR)", "منصة شعار 3D دوّارة + شريط تحكم VIP Dock", "تخصيص 100% + كل مزايا Business VIP"],
         note: "ملاحظة مهمة: هذه النماذج أمثلة تعريفية فقط — في عرض القمة Signature 3D نبتكر لك تجربة 3D حصرية مصممة خصيصاً لهويتك البصرية الفاخرة مع معاينة قبل الطباعة.",
-        customBadge: "هندسة 3D حصرية على مقاسك",
-        customTitle: "بغيتي تجربة 3D حصرية تبهر زبناءك؟",
-        customDesc: "نصمّم لك بروفيل Signature 3D فريد من نوعه بشعارك، بطاقة NFC 3D (وجه وخلف)، وألوانك الفاخرة لتتميز بوضوح عن جميع المنافسين.",
-        customList: ["بطاقة NFC 3D تفاعلية (وجه وخلف)", "منصة شعار 3D + شريط تحكم VIP Dock", "معاينة مجانية 100% قبل الطباعة"],
+        customBadge: "هندسة 3D حصرية على مقاسك", customTitle: "بغيتي تجربة 3D حصرية تبهر زبناءك؟",
+        customDesc: "نصمّم لك بروفيل Signature 3D فريد من نوعه بشعارك، بطاقة NFC 3D (وجه وخلف برمز QR)، وألوانك الفاخرة لتتميز بوضوح عن جميع المنافسين.",
+        customList: ["بطاقة NFC 3D تفاعلية (وجه وخلف + رمز QR)", "منصة شعار 3D + شريط تحكم VIP Dock", "معاينة مجانية 100% قبل الطباعة"],
         customBtn: "صمّم بروفيل Signature 3D الخاص بي (599 DH)",
-        chips: ["بطاقة NFC 3D تفاعلية (وجه وخلف) داخل البروفيل", "تصميم تنفيذي 3D مخصص 100% لهويتك", "تقييمات Google 5 نجوم + خدمات موسعة", "شريط تحكم سفلي عائم (VIP Dock) + شارات ثقة", "3 لغات + تعديل المعلومات في أي وقت"]
+        chips: ["بطاقة NFC 3D تفاعلية (وجه وخلف + رمز QR)", "تصميم تنفيذي 3D مخصص 100% لهويتك", "تقييمات Google 5 نجوم + خدمات موسعة", "شريط تحكم سفلي عائم (VIP Dock) + شارات ثقة", "3 لغات + تعديل المعلومات في أي وقت"]
       }
     },
     sim: {
       live: "متاح الآن", call: "اتصال", wa: "واتساب", mail: "بريد", loc: "الموقع على Google Maps",
       save: "حفظ جهة الاتصال +", ggTitle: "تقييمات عملائنا على Google",
-      book: "حجز موعد / استشارة عبر واتساب", flipHint: "اضغط على البطاقة لقلبها 3D (الوجه / الخلف)",
-      backTitle: "بطاقة NFC + رمز QR مدمج", backSub: "توافق 100% مع iPhone و Android",
+      book: "حجز موعد / استشارة عبر واتساب", flipHint: "اضغط على البطاقة لقلبها 3D (الوجه / الخلف + QR)",
+      backTitle: "رمز QR + NFC مدمج", backSub: "توافق 100% مع iPhone و Android",
       trust: ["هوية موثقة", "3 لغات", "دعم فوري"], dock: ["اتصال", "موعد", "واتساب", "حفظ"],
       tCall: "اتصال هاتفي مباشر بضغطة زر.", tWa: "فتح محادثة واتساب مباشرة.",
       tLoc: "فتح الموقع الدقيق على Google Maps و Waze.", tGg: "فتح نافذة تقييم 5 نجوم على Google Maps.",
@@ -804,24 +681,20 @@ const UI = {
     }
   },
   fr: {
-    back: "← Retour au profil principal",
-    theme: "Style de page",
+    back: "← Retour au profil principal", theme: "Style Page",
     badge: "((( NFC ))) • Imaginez la réaction de votre client au 1er scan",
     title: 'Choisissez votre niveau de <span class="t-gold">Présence Digitale</span>',
     sub: "Ces modèles illustrent le niveau de finition de chaque offre — lors de votre commande, nous personnalisons tout avec votre logo, vos couleurs et vos infos, avec aperçu gratuit avant impression.",
-    steps: ["Cliquez sur votre offre", "Testez votre nom en direct", "Commandez ou demandez du sur-mesure"],
-    trust: ["Aperçu gratuit avant impression", "Paiement unique à vie (0 abonnement)", "Modifiable à tout moment", "Sans application (iPhone & Android)"],
-    nameInp: "Testez votre nom ou marque en direct sur les modèles :",
-    namePh: "Ex : Dr. Salma Benali / Me Mansouri / Dar Al Assala...",
-    roleInp: "Votre profession ou spécialité (optionnel) :",
-    rolePh: "Ex : Avocat, Dentiste, Architecte, Agence Immobilière...",
-    tryOrder: "Demander un aperçu à mon nom",
-    btnPreview: "Aperçu Complet",
-    btnOrder: "Commander",
-    btnOrderFull: "Commander ce modèle sur WhatsApp",
-    btnOther: "Retour à la galerie",
-    waFloat: "Contactez-nous",
-    activeLbl: "✓ Modèles affichés actuellement",
+    trust: ["Aperçu gratuit avant impression", "Paiement unique à vie (0 abonnement)", "Modifiable à tout moment", "100% NFC + QR sans application"],
+    labTitle: "Votre Labo Perso (Adapté à votre métier & style)",
+    labSub: "Saisissez votre nom, choisissez parmi 20 métiers et 10 styles marocains & européens — sans modifier la galerie.",
+    labName: "Votre nom ou marque :", labNamePh: "Ex : Salon Élégance / Dr. Youssef...",
+    labProf: "Votre métier / secteur :", labStyle: "Style & palette (Maroc & Europe) :",
+    labOrder: "Commander ce design perso sur WhatsApp", labReset: "Réinitialiser",
+    labHint: "Aperçu en direct à votre nom et métier",
+    catTitle: "Modèles dédiés à cette offre", catSub: "8 modèles indépendants + création 100% sur-mesure",
+    btnPreview: "Aperçu Complet", btnOrder: "Commander", btnOrderFull: "Commander ce modèle sur WhatsApp", btnOther: "Retour à la galerie",
+    waFloat: "Contactez-nous", activeLbl: "✓ Modèles affichés actuellement",
     consTitle: "Vous hésitez sur l'offre idéale pour votre activité ?",
     consSub: "Envoyez-nous simplement votre métier et votre logo sur WhatsApp, nous vous proposons la meilleure idée en moins de 5 minutes — sans engagement.",
     consBtn: "Conseil gratuit sur WhatsApp",
@@ -830,47 +703,41 @@ const UI = {
     footer: 'Cartes NFC & Profils Digitaux Sur-Mesure — Paiement unique à vie • WhatsApp : <span dir="ltr">+212 669 256 706</span>',
     tiers: {
       essential: {
-        price: "249 DH", tag: "Démarrage Malin", name: "Offre Essentielle (Essential)",
-        switchLbl: "Voir les modèles Essential →",
-        pts: ["Modèle élégant adapté à votre métier", "Appel + WhatsApp + Email + Google Maps", "Réseaux sociaux + vCard 1 clic"],
+        price: "249 DH", tag: "Démarrage Malin", name: "Offre Essentielle (Essential)", switchLbl: "Voir les modèles Essential →",
+        pts: ["Modèle adapté à votre métier", "Appel + WhatsApp + Email + Google Maps", "Réseaux sociaux + vCard + QR Code"],
         note: "Note importante : Ce modèle est un exemple — nous l'adaptons à votre métier avec votre logo et vos couleurs, avec aperçu gratuit avant impression.",
-        customBadge: "Adapté à votre métier",
-        customTitle: "Votre métier n'est pas listé ?",
+        customBadge: "Adapté à votre métier", customTitle: "Votre métier n'est pas listé ?",
         customDesc: "Nous adaptons un modèle Essential élégant spécialement pour votre activité avec votre logo et vos couleurs.",
-        customList: ["Design adapté à votre secteur", "Contact + Google Maps + Réseaux sociaux", "Aperçu gratuit avant impression"],
+        customList: ["Design adapté à votre secteur", "Contact + Google Maps + Réseaux + QR", "Aperçu gratuit avant impression"],
         customBtn: "Demander mon modèle métier (249 DH)",
-        chips: ["Carte PVC NFC 100% personnalisée", "Modèle adapté à votre profession", "Appel + WhatsApp + Email + Google Maps", "Réseaux sociaux + vCard 1 clic", "Modifiable à tout moment"]
+        chips: ["Carte PVC NFC 100% personnalisée", "Modèle adapté à votre profession", "Appel + WhatsApp + Email + Google Maps", "Réseaux sociaux + vCard + QR Code", "Modifiable à tout moment"]
       },
       vip: {
-        price: "399 DH", tag: "★ La Plus Demandée", name: "Offre Business (VIP)",
-        switchLbl: "Voir les modèles VIP →",
+        price: "399 DH", tag: "★ La Plus Demandée", name: "Offre Business (VIP)", switchLbl: "Voir les modèles VIP →",
         pts: ["100% sur-mesure à votre charte graphique", "Avis Google 5★ + Services Bento", "GPS/Waze + RDV WhatsApp + 3 langues"],
         note: "Note importante : Ces modèles sont des exemples — en Business VIP, nous créons votre profil aux couleurs exactes de votre marque avec aperçu gratuit avant impression.",
-        customBadge: "100% à votre charte graphique",
-        customTitle: "Besoin d'un design unique pour votre marque ?",
+        customBadge: "100% à votre charte graphique", customTitle: "Besoin d'un design unique pour votre marque ?",
         customDesc: "En Business VIP, nous concevons votre profil sur-mesure aux couleurs exactes de votre cabinet ou entreprise avec Avis Google 5★.",
         customList: ["Couleurs exactes de votre logo/local", "Avis Google 5★ pour attirer plus de clients", "Aperçu gratuit avant impression"],
         customBtn: "Créer mon profil sur-mesure (399 DH)",
         chips: ["Design 100% selon votre identité visuelle", "Services, Spécialités & Horaires", "Avis Google 5 Étoiles intégrés", "GPS & Waze + Prise de RDV WhatsApp", "3 Langues + Modifiable à tout moment"]
       },
       signature: {
-        price: "599 DH", tag: "✦ Prestige Exécutif 3D", name: "Offre Signature 3D",
-        switchLbl: "Voir les modèles 3D →",
-        pts: ["Carte NFC 3D flottante (Recto/Verso)", "Scène Logo 3D + VIP Dock flottant", "100% sur-mesure + tout Business VIP"],
+        price: "599 DH", tag: "✦ Prestige Exécutif 3D", name: "Offre Signature 3D", switchLbl: "Voir les modèles 3D →",
+        pts: ["Carte NFC 3D flottante (Recto/Verso + QR)", "Scène Logo 3D + VIP Dock flottant", "100% sur-mesure + tout Business VIP"],
         note: "Note importante : En Signature 3D, nous créons une expérience 3D exclusive dédiée à votre image de marque haut standing avec aperçu gratuit avant impression.",
-        customBadge: "Expérience 3D Exclusive",
-        customTitle: "Envie d'un profil 3D qui marque les esprits ?",
-        customDesc: "Nous concevons votre expérience Signature 3D unique avec votre carte 3D Recto/Verso, votre logo et vos couleurs prestige.",
-        customList: ["Carte NFC 3D interactive (Recto/Verso)", "Scène Logo 3D + VIP Dock flottant", "Aperçu 100% gratuit avant impression"],
+        customBadge: "Expérience 3D Exclusive", customTitle: "Envie d'un profil 3D qui marque les esprits ?",
+        customDesc: "Nous concevons votre expérience Signature 3D unique avec votre carte 3D Recto/Verso + QR, votre logo et vos couleurs prestige.",
+        customList: ["Carte NFC 3D interactive (Recto/Verso + QR)", "Scène Logo 3D + VIP Dock flottant", "Aperçu 100% gratuit avant impression"],
         customBtn: "Créer mon Signature 3D (599 DH)",
-        chips: ["Carte NFC 3D interactive (Recto/Verso)", "Design exécutif 3D 100% sur-mesure", "Avis Google 5★ + Services détaillés", "VIP Dock flottant + Badges de confiance", "3 Langues + Modifiable à tout moment"]
+        chips: ["Carte NFC 3D interactive (Recto/Verso + QR)", "Design exécutif 3D 100% sur-mesure", "Avis Google 5★ + Services détaillés", "VIP Dock flottant + Badges de confiance", "3 Langues + Modifiable à tout moment"]
       }
     },
     sim: {
       live: "Disponible", call: "Appel", wa: "WhatsApp", mail: "E-mail", loc: "Localisation Google Maps",
       save: "Enregistrer le contact +", ggTitle: "Avis Clients sur Google",
-      book: "Réserver / Consultation WhatsApp", flipHint: "Cliquez pour retourner la carte en 3D",
-      backTitle: "Carte NFC + QR Code Intégré", backSub: "Compatible 100% iPhone & Android",
+      book: "Réserver / Consultation WhatsApp", flipHint: "Cliquez pour retourner la carte en 3D (Recto / Verso + QR)",
+      backTitle: "QR Code + NFC Intégré", backSub: "Compatible 100% iPhone & Android",
       trust: ["Vérifié", "3 Langues", "Support VIP"], dock: ["Appel", "RDV", "WhatsApp", "Sauver"],
       tCall: "Appel téléphonique direct en 1 clic.", tWa: "Ouvre une discussion WhatsApp.",
       tLoc: "Lance l'itinéraire Google Maps & Waze.", tGg: "Ouvre votre lien d'Avis Google 5 étoiles.",
@@ -878,24 +745,20 @@ const UI = {
     }
   },
   en: {
-    back: "← Back to Main Profile",
-    theme: "Page Theme",
+    back: "← Back to Main Profile", theme: "Page Theme",
     badge: "((( NFC ))) • Imagine your client's reaction on first tap",
     title: 'Choose Your <span class="t-gold">Executive Digital Presence</span>',
     sub: "These models showcase the craftsmanship of each tier — when you order, we tailor everything to your logo, brand colors, and details with a free preview before printing.",
-    steps: ["Click your preferred tier", "Test your name live", "Order or request bespoke design"],
-    trust: ["100% Free Preview Before Printing", "One-Time Lifetime Payment", "Edit Your Info Anytime", "No App Needed (iPhone & Android)"],
-    nameInp: "Preview your name or brand live across the templates:",
-    namePh: "e.g., Dr. Salma Benali / Mansouri Law / Dar Al Assala...",
-    roleInp: "Your profession or specialty (optional):",
-    rolePh: "e.g., Attorney, Dentist, Architect, Real Estate...",
-    tryOrder: "Request Free Live Preview",
-    btnPreview: "Full Preview",
-    btnOrder: "Order Model",
-    btnOrderFull: "Order This Model on WhatsApp",
-    btnOther: "Back to Gallery",
-    waFloat: "Chat With Us",
-    activeLbl: "✓ Currently Viewing This Tier",
+    trust: ["100% Free Preview Before Printing", "One-Time Lifetime Payment", "Edit Your Info Anytime", "100% NFC + QR No App Needed"],
+    labTitle: "Personal Preview Lab (Tailored to Your Trade & Style)",
+    labSub: "Type your name, pick from 20 professions and 10 Moroccan & European styles — without altering the static gallery.",
+    labName: "Your name or brand:", labNamePh: "e.g., Salon Élégance / Dr. Youssef...",
+    labProf: "Your profession / field:", labStyle: "Style & palette (Moroccan & European):",
+    labOrder: "Order This Custom Look on WhatsApp", labReset: "Reset",
+    labHint: "Live preview tailored to your name & field",
+    catTitle: "Ready Models for This Tier", catSub: "8 dedicated models + 100% custom design",
+    btnPreview: "Full Preview", btnOrder: "Order", btnOrderFull: "Order This Model on WhatsApp", btnOther: "Back to Gallery",
+    waFloat: "Chat With Us", activeLbl: "✓ Currently Viewing This Tier",
     consTitle: "Not sure which tier or style fits your business best?",
     consSub: "Just send us your profession and logo on WhatsApp — we'll recommend the best concept for your brand in under 5 minutes, obligation-free.",
     consBtn: "Free WhatsApp Consultation",
@@ -904,47 +767,41 @@ const UI = {
     footer: 'Smart NFC Cards & Custom Digital Profiles — One-time lifetime payment • WhatsApp: <span dir="ltr">+212 669 256 706</span>',
     tiers: {
       essential: {
-        price: "249 DH", tag: "Smart Start", name: "Essential Package",
-        switchLbl: "View Essential Models →",
-        pts: ["Sleek template adapted to your field", "Call + WhatsApp + Email + Google Maps", "Social icons + 1-tap vCard save"],
+        price: "249 DH", tag: "Smart Start", name: "Essential Package", switchLbl: "View Essential Models →",
+        pts: ["Template adapted to your field", "Call + WhatsApp + Email + Google Maps", "Social icons + vCard + QR Code"],
         note: "Note: This is an illustrative example — we adapt the template to your profession, logo, and colors with a free preview before printing.",
-        customBadge: "Adapted to Your Field",
-        customTitle: "Don't see your profession here?",
+        customBadge: "Adapted to Your Field", customTitle: "Don't see your profession here?",
         customDesc: "We tailor a sleek Essential template specifically for your business with your logo and brand colors.",
-        customList: ["Clean layout tailored to your field", "Contact + Google Maps + Social Media", "Free preview before printing"],
+        customList: ["Clean layout tailored to your field", "Contact + Google Maps + Social + QR", "Free preview before printing"],
         customBtn: "Request My Field Template (249 DH)",
-        chips: ["100% Custom PVC NFC Card", "Template adapted to your profession", "Call + WhatsApp + Email + Google Maps", "Social Icons + 1-Tap vCard", "Edit Your Info Anytime"]
+        chips: ["100% Custom PVC NFC Card", "Template adapted to your profession", "Call + WhatsApp + Email + Google Maps", "Social Icons + 1-Tap vCard + QR Code", "Edit Your Info Anytime"]
       },
       vip: {
-        price: "399 DH", tag: "★ Most Popular", name: "Business VIP Package",
-        switchLbl: "View VIP Models →",
+        price: "399 DH", tag: "★ Most Popular", name: "Business VIP Package", switchLbl: "View VIP Models →",
         pts: ["100% tailored to your brand identity", "5★ Google Reviews + Bento Services", "GPS/Waze + WhatsApp Booking + 3 Languages"],
         note: "Note: These are illustrative examples — Business VIP is custom-built around your exact brand colors and logo with a free preview before printing.",
-        customBadge: "100% Custom Brand Identity",
-        customTitle: "Want a bespoke design for your brand?",
+        customBadge: "100% Custom Brand Identity", customTitle: "Want a bespoke design for your brand?",
         customDesc: "In Business VIP, we build your profile from scratch in your exact office or brand colors with 5★ Google Reviews.",
         customList: ["Exact brand & logo color matching", "5★ Google Reviews to win new clients", "Free preview before printing"],
         customBtn: "Build My Custom Profile (399 DH)",
         chips: ["100% Custom Brand Identity Design", "Services, Specialties & Working Hours", "Direct 5-Star Google Reviews Widget", "GPS & Waze + WhatsApp Booking", "3 Languages + Edit Info Anytime"]
       },
       signature: {
-        price: "599 DH", tag: "✦ Executive 3D", name: "Signature 3D Package",
-        switchLbl: "View 3D Models →",
-        pts: ["Floating 3D NFC Card (Front/Back)", "3D Spinning Halo + Floating VIP Dock", "100% bespoke + all Business VIP features"],
+        price: "599 DH", tag: "✦ Executive 3D", name: "Signature 3D Package", switchLbl: "View 3D Models →",
+        pts: ["Floating 3D NFC Card (Front/Back + QR)", "3D Spinning Halo + Floating VIP Dock", "100% bespoke + all Business VIP features"],
         note: "Note: In Signature 3D, we craft an exclusive 3D executive showcase tailored 100% to your luxury brand identity with a free preview before printing.",
-        customBadge: "Exclusive 3D Craftsmanship",
-        customTitle: "Ready for a 3D showcase that wows?",
-        customDesc: "We craft a one-of-a-kind Signature 3D experience with your dual-sided 3D NFC card, logo stage, and luxury palette.",
-        customList: ["Interactive 3D NFC Card (Front/Back)", "3D Tilt Logo Stage + Floating VIP Dock", "100% free preview before printing"],
+        customBadge: "Exclusive 3D Craftsmanship", customTitle: "Ready for a 3D showcase that wows?",
+        customDesc: "We craft a one-of-a-kind Signature 3D experience with your dual-sided 3D NFC card + QR, logo stage, and luxury palette.",
+        customList: ["Interactive 3D NFC Card (Front/Back + QR)", "3D Tilt Logo Stage + Floating VIP Dock", "100% free preview before printing"],
         customBtn: "Create My Signature 3D (599 DH)",
-        chips: ["Interactive 3D NFC Card (Front/Back)", "100% Bespoke 3D Executive Design", "5-Star Google Reviews + Full Services", "Floating Glass VIP Dock + Trust Badges", "3 Languages + Edit Info Anytime"]
+        chips: ["Interactive 3D NFC Card (Front/Back + QR)", "100% Bespoke 3D Executive Design", "5-Star Google Reviews + Full Services", "Floating Glass VIP Dock + Trust Badges", "3 Languages + Edit Info Anytime"]
       }
     },
     sim: {
       live: "Available", call: "Call", wa: "WhatsApp", mail: "Email", loc: "Location on Google Maps",
       save: "Save Contact +", ggTitle: "Customer Reviews on Google",
-      book: "Book Appointment via WhatsApp", flipHint: "Tap the card to flip in 3D (Front / Back)",
-      backTitle: "NFC + Built-in QR Code", backSub: "100% compatible with iPhone & Android",
+      book: "Book Appointment via WhatsApp", flipHint: "Tap the card to flip in 3D (Front / Back + QR)",
+      backTitle: "QR Code + Built-in NFC", backSub: "100% compatible with iPhone & Android",
       trust: ["Verified", "3 Languages", "VIP Support"], dock: ["Call", "Book", "WhatsApp", "Save"],
       tCall: "Instant 1-tap phone call.", tWa: "Opens direct WhatsApp chat.",
       tLoc: "Opens exact office location in Google Maps & Waze.", tGg: "Opens your 5-star Google Review window.",
@@ -955,276 +812,34 @@ const UI = {
 
 const CATALOG = {
   essential: [
-    {
-      code: "ES-01", sector: { ar: "تراث وفنون فاسية", fr: "Artisanat Fassi", en: "Fassi Heritage" },
-      logo: "zellige", pat: "pat-zellige", arch: true, glass: false,
-      ar: ["دار الفنون الفاسية", "للصناعة التقليدية والتحف الفنية", "تصميم فاسي أصيل بزخرفة الزليج الأزرق والذهبي"],
-      fr: ["Dar Al Founoun Fès", "Artisanat & Objets d'Art", "Style fassi authentique au zellige bleu et or"],
-      en: ["Dar Al Founoun Fes", "Traditional Crafts & Art", "Authentic Fassi zellige blue & gold aesthetic"],
-      bg: "linear-gradient(165deg,#FBF3E2 0%,#EFE0C2 60%,#E3CCA3 100%)",
-      coverBg: "linear-gradient(135deg,#0D2E5E,#071A38)", cardBg: "linear-gradient(135deg,#0E2F61,#071A38)",
-      txt: "#13233A", acc: "#C59438", line: "rgba(197,148,56,0.52)", glassBg: "rgba(14,46,92,0.08)",
-      cta: "linear-gradient(135deg,#F8DF9F,#D4A244,#A67922)", ctaT: "#121E33"
-    },
-    {
-      code: "ES-02", sector: { ar: "منتجات طبيعية", fr: "Cosmétique Bio", en: "Organic Brand" },
-      logo: "leaf", pat: "pat-arch", arch: true, glass: false,
-      ar: ["أركان بيو المغرب", "منتجات طبيعية مغربية أصلية", "أسلوب عضوي عاجي وأخضر زمردي هادئ مع قوس مغربي"],
-      fr: ["Argan Bio Maroc", "Produits Naturels Authentiques", "Style organique ivoire et vert émeraude apaisant"],
-      en: ["Argan Bio Morocco", "Authentic Organic Products", "Serene botanical ivory and deep forest green arch"],
-      bg: "linear-gradient(165deg,#FBF8F0 0%,#F3EBDC 60%,#E6D9C0 100%)",
-      coverBg: "linear-gradient(135deg,#184A2F,#0C2919)", cardBg: "linear-gradient(135deg,#14452B,#0A2919)",
-      txt: "#0E2D1D", acc: "#C5963E", line: "rgba(197,150,62,0.48)", glassBg: "rgba(20,69,43,0.075)",
-      cta: "linear-gradient(135deg,#14452B,#092416)", ctaT: "#F8E5BC"
-    },
-    {
-      code: "ES-03", sector: { ar: "ضيافة ورياضات", fr: "Riad & Hospitalité", en: "Boutique Riad" },
-      logo: "zellige", pat: "pat-marble", arch: true, glass: false,
-      ar: ["دار الأصالة", "رياض ضيافة مغربي أصيل", "رخام أبيض بعروق ذهبية مع أخضر زمردي فاخر"],
-      fr: ["Dar Al Assala", "Riad d'Hospitalité Marocaine", "Marbre blanc veiné d'or et vert émeraude royal"],
-      en: ["Dar Al Assala", "Authentic Moroccan Riad", "Gold-veined white marble with royal emerald accents"],
-      bg: "linear-gradient(165deg,#FFFFFF 0%,#F7F3EA 58%,#ECE4D3 100%)",
-      coverBg: "linear-gradient(135deg,#183A36,#0B211E)", cardBg: "linear-gradient(135deg,#183A36,#0B211E)",
-      txt: "#0F2623", acc: "#B88E40", line: "rgba(184,142,64,0.46)", glassBg: "rgba(15,38,35,0.06)",
-      cta: "linear-gradient(135deg,#1A453F,#0C2420)", ctaT: "#F7E4B8"
-    },
-    {
-      code: "ES-04", sector: { ar: "تصميم داخلي وديكور", fr: "Design & Décor", en: "Interior Studio" },
-      logo: "prism", pat: "pat-grid", arch: false, glass: true,
-      ar: ["استوديو أطلس", "تصميم داخلي • ديكور • تجهيز", "زجاجي داكن بحدود ذهبية وإضاءة ليلية راقية"],
-      fr: ["Studio Atlas", "Design Intérieur & Décor", "Glassmorphism sombre aux finitions or champagne"],
-      en: ["Atlas Studio", "Interior Design & Decor", "Midnight frosted glass with warm gold framing"],
-      bg: "radial-gradient(circle at 80% 15%,rgba(224,189,122,0.25),transparent 45%),linear-gradient(160deg,#162436 0%,#0C1624 58%,#060B14 100%)",
-      coverBg: "linear-gradient(135deg,#1E334D,#0C1726)", cardBg: "linear-gradient(135deg,#1F3652,#0B1624)",
-      txt: "#FAF7F2", acc: "#F2CF84", line: "rgba(242,207,132,0.45)", glassBg: "rgba(255,255,255,0.09)",
-      cta: "linear-gradient(135deg,#FFF2CE,#E5B962,#B0802A)", ctaT: "#091321"
-    },
-    {
-      code: "ES-05", sector: { ar: "مقهى ومطعم", fr: "Café & Restaurant", en: "Cafe & Bistro" },
-      logo: "coffee", pat: "pat-arch", arch: true, glass: false,
-      ar: ["مقهى ومطعم الياسمين", "مأكولات مغربية ومشروبات فاخرة", "أسلوب برونزي دافئ بلمسة مغربية للمقاهي والمطاعم"],
-      fr: ["Café & Table Yasmine", "Saveurs Marocaines & Café", "Palette espresso bronze et or chaleureuse"],
-      en: ["Yasmine Cafe & Table", "Moroccan Cuisine & Coffee", "Warm espresso bronze and gold Moroccan ambiance"],
-      bg: "linear-gradient(160deg,#4A2416 0%,#2E150C 60%,#1C0C07 100%)",
-      coverBg: "linear-gradient(135deg,#6E3620,#381A0E)", cardBg: "linear-gradient(135deg,#66311D,#2E150C)",
-      txt: "#FFF8F2", acc: "#F2C085", line: "rgba(242,192,133,0.44)", glassBg: "rgba(255,248,242,0.09)",
-      cta: "linear-gradient(135deg,#FBD6A8,#D99B58)", ctaT: "#240E09"
-    },
-    {
-      code: "ES-06", sector: { ar: "إدارة فنية ومينيمال", fr: "Minimal & Décor", en: "Minimal Studio" },
-      logo: "safa", pat: "pat-marble", arch: false, glass: false,
-      ar: ["استوديو صفا", "التصميم الداخلي والديكور العصري", "أسلوب لؤلؤي أبيض وفحمي هادئ للعلامات العصرية"],
-      fr: ["Studio Safa", "Design Intérieur Contemporain", "Style perle minimaliste blanc et anthracite"],
-      en: ["Safa Studio", "Modern Interior & Decor", "Ultra-clean pearl white and matte charcoal minimalism"],
-      bg: "linear-gradient(165deg,#FFFFFF 0%,#F4F2EE 60%,#E7E3DC 100%)",
-      coverBg: "linear-gradient(135deg,#27272A,#18181B)", cardBg: "linear-gradient(135deg,#2B2B2E,#141416)",
-      txt: "#18181B", acc: "#3F3F46", line: "rgba(24,24,27,0.22)", glassBg: "rgba(24,24,27,0.055)",
-      cta: "linear-gradient(135deg,#27272A,#09090B)", ctaT: "#FFFFFF"
-    },
-    {
-      code: "ES-07", sector: { ar: "مجوهرات وساعات", fr: "Haute Joaillerie", en: "Fine Jewelry" },
-      logo: "diamond", pat: "pat-waves", arch: false, glass: false,
-      ar: ["ميزون دياموند", "مجوهرات وساعات فاخرة", "موجات ضوئية بنفسجية وإطار ذهبي للعلامات الفاخرة"],
-      fr: ["Maison Diamond", "Joaillerie & Horlogerie", "Ondes lumineuses violettes et finitions or"],
-      en: ["Maison Diamond", "Fine Jewelry & Watches", "Luminous violet light waves with metallic gold trim"],
-      bg: "radial-gradient(circle at 80% 20%,rgba(192,38,211,0.34),transparent 46%),linear-gradient(160deg,#2A083E 0%,#150321 60%,#0A0112 100%)",
-      coverBg: "linear-gradient(135deg,#4A106E,#1E0530)", cardBg: "linear-gradient(135deg,#4A106E,#1E0530)",
-      txt: "#FDF4FF", acc: "#F3C776", line: "rgba(243,199,118,0.48)", glassBg: "rgba(255,255,255,0.09)",
-      cta: "linear-gradient(135deg,#FFF1C9,#E5B962,#B0802A)", ctaT: "#150321"
-    },
-    {
-      code: "ES-08", sector: { ar: "استثمار واستشارة", fr: "Conseil & Projets", en: "Advisory" },
-      logo: "mountain", pat: "pat-grid", arch: false, glass: true,
-      ar: ["أطلس للاستثمار", "مواكبة المشاريع والاستشارة", "بطاقة زجاجية شفافة بإضاءة ذهبية دافئة وعصرية"],
-      fr: ["Atlas Investment", "Conseil & Projets Stratégiques", "Carte verre dépoli avec reflets or chaleureux"],
-      en: ["Atlas Investment", "Strategic Venture Advisory", "Frosted glassmorphism card with warm sunset gold glow"],
-      bg: "radial-gradient(circle at 50% 10%,rgba(245,158,11,0.32),transparent 46%),linear-gradient(160deg,#1F3654 0%,#112238 55%,#091321 100%)",
-      coverBg: "linear-gradient(135deg,#274469,#102036)", cardBg: "linear-gradient(135deg,#274469,#102036)",
-      txt: "#FAF7F2", acc: "#F5CE82", line: "rgba(245,206,130,0.48)", glassBg: "rgba(255,255,255,0.12)",
-      cta: "linear-gradient(135deg,#FFF2CE,#E5B962,#B0802A)", ctaT: "#091321"
-    }
+    { code: "ES-01", sector: { ar: "تراث وفنون فاسية", fr: "Artisanat Fassi", en: "Fassi Heritage" }, logo: "zellige", pat: "pat-zellige", arch: true, glass: false, ar: ["دار الفنون الفاسية", "للصناعة التقليدية والتحف الفنية", "تصميم فاسي أصيل بزخرفة الزليج الأزرق والذهبي"], fr: ["Dar Al Founoun Fès", "Artisanat & Objets d'Art", "Style fassi authentique au zellige bleu et or"], en: ["Dar Al Founoun Fes", "Traditional Crafts & Art", "Authentic Fassi zellige blue & gold aesthetic"], bg: "linear-gradient(165deg,#FBF3E2 0%,#EFE0C2 60%,#E3CCA3 100%)", coverBg: "linear-gradient(135deg,#0D2E5E,#071A38)", cardBg: "linear-gradient(135deg,#0E2F61,#071A38)", txt: "#13233A", acc: "#C59438", line: "rgba(197,148,56,0.52)", glassBg: "rgba(14,46,92,0.08)", cta: "linear-gradient(135deg,#F8DF9F,#D4A244,#A67922)", ctaT: "#121E33" },
+    { code: "ES-02", sector: { ar: "منتجات طبيعية", fr: "Cosmétique Bio", en: "Organic Brand" }, logo: "leaf", pat: "pat-arch", arch: true, glass: false, ar: ["أركان بيو المغرب", "منتجات طبيعية مغربية أصلية", "أسلوب عضوي عاجي وأخضر زمردي هادئ مع قوس مغربي"], fr: ["Argan Bio Maroc", "Produits Naturels Authentiques", "Style organique ivoire et vert émeraude apaisant"], en: ["Argan Bio Morocco", "Authentic Organic Products", "Serene botanical ivory and deep forest green arch"], bg: "linear-gradient(165deg,#FBF8F0 0%,#F3EBDC 60%,#E6D9C0 100%)", coverBg: "linear-gradient(135deg,#184A2F,#0C2919)", cardBg: "linear-gradient(135deg,#14452B,#0A2919)", txt: "#0E2D1D", acc: "#C5963E", line: "rgba(197,150,62,0.48)", glassBg: "rgba(20,69,43,0.075)", cta: "linear-gradient(135deg,#14452B,#092416)", ctaT: "#F8E5BC" },
+    { code: "ES-03", sector: { ar: "ضيافة ورياضات", fr: "Riad & Hospitalité", en: "Boutique Riad" }, logo: "zellige", pat: "pat-marble", arch: true, glass: false, ar: ["دار الأصالة", "رياض ضيافة مغربي أصيل", "رخام أبيض بعروق ذهبية مع أخضر زمردي فاخر"], fr: ["Dar Al Assala", "Riad d'Hospitalité Marocaine", "Marbre blanc veiné d'or et vert émeraude royal"], en: ["Dar Al Assala", "Authentic Moroccan Riad", "Gold-veined white marble with royal emerald accents"], bg: "linear-gradient(165deg,#FFFFFF 0%,#F7F3EA 58%,#ECE4D3 100%)", coverBg: "linear-gradient(135deg,#183A36,#0B211E)", cardBg: "linear-gradient(135deg,#183A36,#0B211E)", txt: "#0F2623", acc: "#B88E40", line: "rgba(184,142,64,0.46)", glassBg: "rgba(15,38,35,0.06)", cta: "linear-gradient(135deg,#1A453F,#0C2420)", ctaT: "#F7E4B8" },
+    { code: "ES-04", sector: { ar: "تصميم داخلي وديكور", fr: "Design & Décor", en: "Interior Studio" }, logo: "prism", pat: "pat-grid", arch: false, glass: true, ar: ["استوديو أطلس", "تصميم داخلي • ديكور • تجهيز", "زجاجي داكن بحدود ذهبية وإضاءة ليلية راقية"], fr: ["Studio Atlas", "Design Intérieur & Décor", "Glassmorphism sombre aux finitions or champagne"], en: ["Atlas Studio", "Interior Design & Decor", "Midnight frosted glass with warm gold framing"], bg: "radial-gradient(circle at 80% 15%,rgba(224,189,122,0.25),transparent 45%),linear-gradient(160deg,#162436 0%,#0C1624 58%,#060B14 100%)", coverBg: "linear-gradient(135deg,#1E334D,#0C1726)", cardBg: "linear-gradient(135deg,#1F3652,#0B1624)", txt: "#FAF7F2", acc: "#F2CF84", line: "rgba(242,207,132,0.45)", glassBg: "rgba(255,255,255,0.09)", cta: "linear-gradient(135deg,#FFF2CE,#E5B962,#B0802A)", ctaT: "#091321" },
+    { code: "ES-05", sector: { ar: "مقهى ومطعم", fr: "Café & Restaurant", en: "Cafe & Bistro" }, logo: "coffee", pat: "pat-arch", arch: true, glass: false, ar: ["مقهى ومطعم الياسمين", "مأكولات مغربية ومشروبات فاخرة", "أسلوب برونزي دافئ بلمسة مغربية للمقاهي والمطاعم"], fr: ["Café & Table Yasmine", "Saveurs Marocaines & Café", "Palette espresso bronze et or chaleureuse"], en: ["Yasmine Cafe & Table", "Moroccan Cuisine & Coffee", "Warm espresso bronze and gold Moroccan ambiance"], bg: "linear-gradient(160deg,#4A2416 0%,#2E150C 60%,#1C0C07 100%)", coverBg: "linear-gradient(135deg,#6E3620,#381A0E)", cardBg: "linear-gradient(135deg,#66311D,#2E150C)", txt: "#FFF8F2", acc: "#F2C085", line: "rgba(242,192,133,0.44)", glassBg: "rgba(255,248,242,0.09)", cta: "linear-gradient(135deg,#FBD6A8,#D99B58)", ctaT: "#240E09" },
+    { code: "ES-06", sector: { ar: "إدارة فنية ومينيمال", fr: "Minimal & Décor", en: "Minimal Studio" }, logo: "safa", pat: "pat-marble", arch: false, glass: false, ar: ["استوديو صفا", "التصميم الداخلي والديكور العصري", "أسلوب لؤلؤي أبيض وفحمي هادئ للعلامات العصرية"], fr: ["Studio Safa", "Design Intérieur Contemporain", "Style perle minimaliste blanc et anthracite"], en: ["Safa Studio", "Modern Interior & Decor", "Ultra-clean pearl white and matte charcoal minimalism"], bg: "linear-gradient(165deg,#FFFFFF 0%,#F4F2EE 60%,#E7E3DC 100%)", coverBg: "linear-gradient(135deg,#27272A,#18181B)", cardBg: "linear-gradient(135deg,#2B2B2E,#141416)", txt: "#18181B", acc: "#3F3F46", line: "rgba(24,24,27,0.22)", glassBg: "rgba(24,24,27,0.055)", cta: "linear-gradient(135deg,#27272A,#09090B)", ctaT: "#FFFFFF" },
+    { code: "ES-07", sector: { ar: "مجوهرات وساعات", fr: "Haute Joaillerie", en: "Fine Jewelry" }, logo: "diamond", pat: "pat-waves", arch: false, glass: false, ar: ["ميزون دياموند", "مجوهرات وساعات فاخرة", "موجات ضوئية بنفسجية وإطار ذهبي للعلامات الفاخرة"], fr: ["Maison Diamond", "Joaillerie & Horlogerie", "Ondes lumineuses violettes et finitions or"], en: ["Maison Diamond", "Fine Jewelry & Watches", "Luminous violet light waves with metallic gold trim"], bg: "radial-gradient(circle at 80% 20%,rgba(192,38,211,0.34),transparent 46%),linear-gradient(160deg,#2A083E 0%,#150321 60%,#0A0112 100%)", coverBg: "linear-gradient(135deg,#4A106E,#1E0530)", cardBg: "linear-gradient(135deg,#4A106E,#1E0530)", txt: "#FDF4FF", acc: "#F3C776", line: "rgba(243,199,118,0.48)", glassBg: "rgba(255,255,255,0.09)", cta: "linear-gradient(135deg,#FFF1C9,#E5B962,#B0802A)", ctaT: "#150321" },
+    { code: "ES-08", sector: { ar: "استثمار واستشارة", fr: "Conseil & Projets", en: "Advisory" }, logo: "mountain", pat: "pat-grid", arch: false, glass: true, ar: ["أطلس للاستثمار", "مواكبة المشاريع والاستشارة", "بطاقة زجاجية شفافة بإضاءة ذهبية دافئة وعصرية"], fr: ["Atlas Investment", "Conseil & Projets Stratégiques", "Carte verre dépoli avec reflets or chaleureux"], en: ["Atlas Investment", "Strategic Venture Advisory", "Frosted glassmorphism card with warm sunset gold glow"], bg: "radial-gradient(circle at 50% 10%,rgba(245,158,11,0.32),transparent 46%),linear-gradient(160deg,#1F3654 0%,#112238 55%,#091321 100%)", coverBg: "linear-gradient(135deg,#274469,#102036)", cardBg: "linear-gradient(135deg,#274469,#102036)", txt: "#FAF7F2", acc: "#F5CE82", line: "rgba(245,206,130,0.48)", glassBg: "rgba(255,255,255,0.12)", cta: "linear-gradient(135deg,#FFF2CE,#E5B962,#B0802A)", ctaT: "#091321" }
   ],
-
   vip: [
-    {
-      code: "VIP-01", sector: { ar: "عيادة طبية متخصصة", fr: "Cabinet Médical", en: "Medical Clinic" },
-      logo: "medical", pat: "pat-marble", city: "فاس • المدينة الجديدة",
-      ar: ["د. سلمى بنعلي", "طبيبة أخصائية — عيادة طبية", "واجهة طبية عاجية وزمردية مع تقييمات غوغل وحجز موعد", "تشخيص دقيق، متابعة طبية متكاملة، ورعاية صحية وفق أحدث البروتوكولات الطبية.", ["استشارات طبية", "تشخيص ومتابعة", "أوقات العمل"]],
-      fr: ["Dr. Salma Benali", "Médecin Spécialiste", "Mini-site médical ivoire & émeraude avec Avis Google et RDV", "Consultations spécialisées, suivi personnalisé et prise en charge médicale moderne.", ["Consultations", "Diagnostic", "Horaires"]],
-      en: ["Dr. Salma Benali", "Specialist Physician", "Ivory & emerald medical mini-site with Google Reviews & booking", "Accurate diagnostics, personalized patient care, and modern clinical follow-up.", ["Consultations", "Diagnostics", "Hours"]],
-      bg: "linear-gradient(165deg,#FFFFFF 0%,#F2F8F6 60%,#E4F1ED 100%)",
-      coverBg: "linear-gradient(135deg,#124E45,#0A2E29)", cardBg: "linear-gradient(135deg,#124E45,#0A2E29)",
-      txt: "#0B2C27", acc: "#C5963E", line: "rgba(18,78,69,0.25)", glassBg: "rgba(18,78,69,0.06)",
-      cta: "linear-gradient(135deg,#135248,#0A2F29)", ctaT: "#FFF5DB"
-    },
-    {
-      code: "VIP-02", sector: { ar: "طب وجراحة الأسنان", fr: "Clinique Dentaire", en: "Dental Clinic" },
-      logo: "dental", pat: "pat-grid", city: "الدار البيضاء • المعاريف",
-      ar: ["د. يوسف الإدريسي", "جراح وتجميل الأسنان", "تصميم سماوي ولؤلؤي مخصص لعيادات الأسنان وتقويم الابتسامة", "زراعة الأسنان، تقويم الابتسامة الرقمي، وتبييض الأسنان بأحدث التقنيات.", ["زراعة الأسنان", "تقويم الأسنان", "تبييض الأسنان"]],
-      fr: ["Dr. Youssef Idrissi", "Chirurgien-Dentiste", "Design cyan & perle sur-mesure pour cliniques dentaires", "Implantologie, esthétique du sourire et soins dentaires numériques.", ["Implants", "Orthodontie", "Blanchiment"]],
-      en: ["Dr. Youssef Idrissi", "Cosmetic Dentist", "Bright cyan & pearl layout tailored for dental clinics", "Dental implants, digital smile design, and painless cosmetic care.", ["Implants", "Braces", "Whitening"]],
-      bg: "linear-gradient(165deg,#F8FDFF 0%,#EBF7FB 60%,#D9EFF7 100%)",
-      coverBg: "linear-gradient(135deg,#0B6A7A,#063F4A)", cardBg: "linear-gradient(135deg,#0B6A7A,#063F4A)",
-      txt: "#082C36", acc: "#0B6A7A", line: "rgba(11,106,122,0.28)", glassBg: "rgba(11,106,122,0.07)",
-      cta: "linear-gradient(135deg,#0B6A7A,#063F4A)", ctaT: "#FFFFFF"
-    },
-    {
-      code: "VIP-03", sector: { ar: "وكالة عقارية فاخرة", fr: "Immobilier Luxe", en: "Real Estate" },
-      logo: "estate", pat: "pat-arch", city: "مراكش • كليز",
-      ar: ["إيمو بريستيج المغرب", "وكالة عقارية متخصصة", "هوية عاجية وذهبية للوكالات العقارية مع بطاقات العقارات", "بيع، شراء، كراء، واستثمار عقاري للفيلات والشقق الفاخرة في أبرز المدن.", ["فيلات فاخرة", "شقق راقية", "استثمار عقاري"]],
-      fr: ["Immo Prestige Maroc", "Agence Immobilière", "Charte sable & or pour agences immobilières et promoteurs", "Vente, location et conseil en investissement pour biens d'exception.", ["Villas Luxe", "Appartements", "Investissement"]],
-      en: ["Immo Prestige", "Luxury Real Estate", "Warm sand & gold agency mini-site with property services", "Premier brokerage for luxury villas, residences, and high-yield investments.", ["Luxury Villas", "Apartments", "Investments"]],
-      bg: "linear-gradient(165deg,#FCF9F2 0%,#F5EDE0 60%,#EAE0CE 100%)",
-      coverBg: "linear-gradient(135deg,#3A2717,#1E130A)", cardBg: "linear-gradient(135deg,#3A2717,#1E130A)",
-      txt: "#21150B", acc: "#B88938", line: "rgba(184,137,56,0.42)", glassBg: "rgba(58,39,23,0.06)",
-      cta: "linear-gradient(135deg,#134E42,#0A2E27)", ctaT: "#FAF7F2"
-    },
-    {
-      code: "VIP-04", sector: { ar: "تجميل وعناية وسبا", fr: "Beauté & Spa", en: "Beauty & Spa" },
-      logo: "lotus", pat: "pat-marble", city: "الدار البيضاء • غوتييه",
-      ar: ["ميزون نور للتجميل والسبا", "جمالك • راحتك • أولويتنا", "أسلوب وردي ذهبي حريري مخصص لمراكز التجميل والسبا", "علاجات البشرة، تصفيف الشعر، وتجربة سبا فاخرة بأرقى المنتجات العالمية.", ["عناية بالبشرة", "شعر وتسريحات", "سبا واسترخاء"]],
-      fr: ["Maison Nour Beauté", "Institut de Beauté & Spa", "Palette rose gold soyeuse pour instituts de beauté et spas", "Soins du visage, coiffure haut de gamme et rituels bien-être.", ["Soins Visage", "Coiffure", "Spa & Détente"]],
-      en: ["Nour Beauty & Spa", "Beauty & Wellness Lounge", "Silky rose-gold layout tailored for salons and luxury spas", "Bespoke skincare treatments, hair styling, and tranquil spa rituals.", ["Skincare", "Hair Styling", "Luxury Spa"]],
-      bg: "linear-gradient(165deg,#FFF8F6 0%,#FBECE7 60%,#F4DDD5 100%)",
-      coverBg: "linear-gradient(135deg,#99545B,#613136)", cardBg: "linear-gradient(135deg,#99545B,#613136)",
-      txt: "#3D1D20", acc: "#A4535B", line: "rgba(164,83,91,0.34)", glassBg: "rgba(164,83,91,0.075)",
-      cta: "linear-gradient(135deg,#9E535A,#6E3338)", ctaT: "#FFF7F5"
-    },
-    {
-      code: "VIP-05", sector: { ar: "محاسبة وتدقيق مالي", fr: "Expertise Comptable", en: "Accounting Firm" },
-      logo: "finance", pat: "pat-arch", city: "الدار البيضاء • وسط المدينة",
-      ar: ["مكتب الوفاق للاستشارة", "محاسبة وتدقيق مالي وضريبي", "تصميم عنابي وعاجي بوقار كلاسيكي للمحاسبين والخبراء الماليين", "مواكبة محاسبية شاملة، تدقيق مالي، وتأسيس الشركات وفق القوانين المغربية.", ["محاسبة وضرائب", "تدقيق مالي", "تأسيس شركات"]],
-      fr: ["Cabinet Al Wifaq", "Expertise Comptable & Audit", "Style bordeaux & ivoire classique pour experts-comptables", "Tenue comptable, audit financier, conseil fiscal et création d'entreprise.", ["Comptabilité", "Audit Financier", "Création"]],
-      en: ["Al Wifaq Advisory", "Accounting & Tax Audit", "Classic burgundy & ivory corporate profile for accountants", "Comprehensive accounting, financial auditing, and company formation.", ["Accounting", "Financial Audit", "Formation"]],
-      bg: "linear-gradient(165deg,#FFFDFB 0%,#F8F1EC 60%,#EFE4DC 100%)",
-      coverBg: "linear-gradient(135deg,#5E1524,#330912)", cardBg: "linear-gradient(135deg,#5E1524,#330912)",
-      txt: "#2B0A11", acc: "#9C243C", line: "rgba(156,36,60,0.3)", glassBg: "rgba(94,21,36,0.06)",
-      cta: "linear-gradient(135deg,#691728,#3B0A14)", ctaT: "#FFF5DB"
-    },
-    {
-      code: "VIP-06", sector: { ar: "كراء السيارات الفاخرة", fr: "Location Auto VIP", en: "Luxury Car Rental" },
-      logo: "auto", pat: "pat-grid", city: "مراكش • مطار المنارة",
-      ar: ["بريستيج أوتو المغرب", "وكالة لكراء السيارات الفاخرة", "أسلوب كاربون أسود وأحمر ديناميكي لكراء السيارات وتوصيل المطار", "أسطول حديث من السيارات الفاخرة مع خدمة التوصيل للمطار والفنادق 24/7.", ["سيارات فاخرة", "توصيل المطار", "سائق خاص"]],
-      fr: ["Prestige Auto Maroc", "Location Véhicules VIP", "Look carbone & rouge dynamique pour agences auto", "Flotte récente de véhicules premium avec livraison aéroport 24/7.", ["Véhicules VIP", "Aéroport 24/7", "Chauffeur"]],
-      en: ["Prestige Auto", "Luxury Car Rental", "Carbon & crimson sporty layout for luxury auto rentals", "Modern luxury vehicle fleet with 24/7 airport & hotel delivery.", ["Luxury Fleet", "24/7 Airport", "Chauffeur"]],
-      bg: "linear-gradient(160deg,#1F2024 0%,#121316 60%,#08080A 100%)",
-      coverBg: "linear-gradient(135deg,#7A1019,#260508)", cardBg: "linear-gradient(135deg,#4A0D13,#141417)",
-      txt: "#FAFAFA", acc: "#EF4444", line: "rgba(239,68,68,0.42)", glassBg: "rgba(255,255,255,0.075)",
-      cta: "linear-gradient(135deg,#DC2626,#881313)", ctaT: "#FFFFFF"
-    },
-    {
-      code: "VIP-07", sector: { ar: "طب الجلد والتجميل", fr: "Dermatologie", en: "Dermatology" },
-      logo: "lotus", pat: "pat-marble", city: "الرباط • أكدال",
-      ar: ["د. سمية بنعلي", "طبيبة جلد وتجميل طبي", "واجهة عاجية وأزرق ملكي مخصصة لعيادات الجلد والليزر", "متخصصة في صحة الجلد، علاج الأمراض الجلدية، والتجميل الطبي غير الجراحي.", ["الليزر والتجديد", "العناية بالبشرة", "التجميل الطبي"]],
-      fr: ["Dr. Soumia Benali", "Dermatologie & Esthétique", "Charte bleu nuit & or pour cliniques dermatologiques", "Spécialiste en santé de la peau, laser et médecine esthétique.", ["Laser & Soins", "Dermatologie", "Esthétique"]],
-      en: ["Dr. Soumia Benali", "Dermatology & Aesthetics", "Royal navy & ivory profile for dermatology and laser clinics", "Specialist in clinical dermatology, laser care, and non-surgical aesthetics.", ["Laser Care", "Skincare", "Aesthetics"]],
-      bg: "linear-gradient(165deg,#FFFDF9 0%,#F5F1E9 60%,#EBE5DA 100%)",
-      coverBg: "linear-gradient(135deg,#0D2447,#061329)", cardBg: "linear-gradient(135deg,#0D2447,#061329)",
-      txt: "#0B1D3A", acc: "#B88938", line: "rgba(13,36,71,0.25)", glassBg: "rgba(13,36,71,0.06)",
-      cta: "linear-gradient(135deg,#B88938,#7D591B)", ctaT: "#FFFFFF"
-    },
-    {
-      code: "VIP-08", sector: { ar: "مطعم فاخر وضيافة", fr: "Gastronomie", en: "Fine Dining" },
-      logo: "food", pat: "pat-arch", city: "الدار البيضاء • أنفا",
-      ar: ["مطعم لو جاردان", "فن الطبخ والمائدة الراقية", "هوية خضراء داكنة وذهبية للمطاعم الفاخرة مع حجز الطاولات", "أطباق عالمية ومغربية عصرية، صالة خاصة للمناسبات، وحجز مباشر للمائدة.", ["قائمة الطعام", "حجز الطاولات", "مناسبات خاصة"]],
-      fr: ["Table Le Jardin", "Gastronomie & Réceptions", "Identité vert forêt & or pour restaurants gastronomiques", "Cuisine raffinée, salons privés et réservation de table instantanée.", ["La Carte", "Réservations", "Salon Privé"]],
-      en: ["Le Jardin Table", "Fine Dining & Lounge", "Deep forest green & gold editorial profile for fine dining", "Refined cuisine, private dining rooms, and instant table reservations.", ["Menu", "Reservations", "Private Dining"]],
-      bg: "linear-gradient(160deg,#0E382E 0%,#08221C 60%,#041410 100%)",
-      coverBg: "linear-gradient(135deg,#175244,#0A2922)", cardBg: "linear-gradient(135deg,#175244,#0A2922)",
-      txt: "#FAF7F0", acc: "#E5C17B", line: "rgba(229,193,123,0.42)", glassBg: "rgba(255,255,255,0.08)",
-      cta: "linear-gradient(135deg,#FFF2CE,#D4AF63,#9A742B)", ctaT: "#061713"
-    }
+    { code: "VIP-01", sector: { ar: "عيادة طبية متخصصة", fr: "Cabinet Médical", en: "Medical Clinic" }, logo: "medical", pat: "pat-marble", city: "فاس • المدينة الجديدة", ar: ["د. سلمى بنعلي", "طبيبة أخصائية — عيادة طبية", "واجهة طبية عاجية وزمردية مع تقييمات غوغل وحجز موعد", "تشخيص دقيق، متابعة طبية متكاملة، ورعاية صحية وفق أحدث البروتوكولات الطبية.", ["استشارات طبية", "تشخيص ومتابعة", "أوقات العمل"]], fr: ["Dr. Salma Benali", "Médecin Spécialiste", "Mini-site médical ivoire & émeraude avec Avis Google et RDV", "Consultations spécialisées, suivi personnalisé et prise en charge médicale moderne.", ["Consultations", "Diagnostic", "Horaires"]], en: ["Dr. Salma Benali", "Specialist Physician", "Ivory & emerald medical mini-site with Google Reviews & booking", "Accurate diagnostics, personalized patient care, and modern clinical follow-up.", ["Consultations", "Diagnostics", "Hours"]], bg: "linear-gradient(165deg,#FFFFFF 0%,#F2F8F6 60%,#E4F1ED 100%)", coverBg: "linear-gradient(135deg,#124E45,#0A2E29)", cardBg: "linear-gradient(135deg,#124E45,#0A2E29)", txt: "#0B2C27", acc: "#C5963E", line: "rgba(18,78,69,0.25)", glassBg: "rgba(18,78,69,0.06)", cta: "linear-gradient(135deg,#135248,#0A2F29)", ctaT: "#FFF5DB" },
+    { code: "VIP-02", sector: { ar: "طب وجراحة الأسنان", fr: "Clinique Dentaire", en: "Dental Clinic" }, logo: "dental", pat: "pat-grid", city: "الدار البيضاء • المعاريف", ar: ["د. يوسف الإدريسي", "جراح وتجميل الأسنان", "تصميم سماوي ولؤلؤي مخصص لعيادات الأسنان وتقويم الابتسامة", "زراعة الأسنان، تقويم الابتسامة الرقمي، وتبييض الأسنان بأحدث التقنيات.", ["زراعة الأسنان", "تقويم الأسنان", "تبييض الأسنان"]], fr: ["Dr. Youssef Idrissi", "Chirurgien-Dentiste", "Design cyan & perle sur-mesure pour cliniques dentaires", "Implantologie, esthétique du sourire et soins dentaires numériques.", ["Implants", "Orthodontie", "Blanchiment"]], en: ["Dr. Youssef Idrissi", "Cosmetic Dentist", "Bright cyan & pearl layout tailored for dental clinics", "Dental implants, digital smile design, and painless cosmetic care.", ["Implants", "Braces", "Whitening"]], bg: "linear-gradient(165deg,#F8FDFF 0%,#EBF7FB 60%,#D9EFF7 100%)", coverBg: "linear-gradient(135deg,#0B6A7A,#063F4A)", cardBg: "linear-gradient(135deg,#0B6A7A,#063F4A)", txt: "#082C36", acc: "#0B6A7A", line: "rgba(11,106,122,0.28)", glassBg: "rgba(11,106,122,0.07)", cta: "linear-gradient(135deg,#0B6A7A,#063F4A)", ctaT: "#FFFFFF" },
+    { code: "VIP-03", sector: { ar: "وكالة عقارية فاخرة", fr: "Immobilier Luxe", en: "Real Estate" }, logo: "estate", pat: "pat-arch", city: "مراكش • كليز", ar: ["إيمو بريستيج المغرب", "وكالة عقارية متخصصة", "هوية عاجية وذهبية للوكالات العقارية مع بطاقات العقارات", "بيع، شراء، كراء، واستثمار عقاري للفيلات والشقق الفاخرة في أبرز المدن.", ["فيلات فاخرة", "شقق راقية", "استثمار عقاري"]], fr: ["Immo Prestige Maroc", "Agence Immobilière", "Charte sable & or pour agences immobilières et promoteurs", "Vente, location et conseil en investissement pour biens d'exception.", ["Villas Luxe", "Appartements", "Investissement"]], en: ["Immo Prestige", "Luxury Real Estate", "Warm sand & gold agency mini-site with property services", "Premier brokerage for luxury villas, residences, and high-yield investments.", ["Luxury Villas", "Apartments", "Investments"]], bg: "linear-gradient(165deg,#FCF9F2 0%,#F5EDE0 60%,#EAE0CE 100%)", coverBg: "linear-gradient(135deg,#3A2717,#1E130A)", cardBg: "linear-gradient(135deg,#3A2717,#1E130A)", txt: "#21150B", acc: "#B88938", line: "rgba(184,137,56,0.42)", glassBg: "rgba(58,39,23,0.06)", cta: "linear-gradient(135deg,#134E42,#0A2E27)", ctaT: "#FAF7F2" },
+    { code: "VIP-04", sector: { ar: "تجميل وعناية وسبا", fr: "Beauté & Spa", en: "Beauty & Spa" }, logo: "lotus", pat: "pat-marble", city: "الدار البيضاء • غوتييه", ar: ["ميزون نور للتجميل والسبا", "جمالك • راحتك • أولويتنا", "أسلوب وردي ذهبي حريري مخصص لمراكز التجميل والسبا", "علاجات البشرة، تصفيف الشعر، وتجربة سبا فاخرة بأرقى المنتجات العالمية.", ["عناية بالبشرة", "شعر وتسريحات", "سبا واسترخاء"]], fr: ["Maison Nour Beauté", "Institut de Beauté & Spa", "Palette rose gold soyeuse pour instituts de beauté et spas", "Soins du visage, coiffure haut de gamme et rituels bien-être.", ["Soins Visage", "Coiffure", "Spa & Détente"]], en: ["Nour Beauty & Spa", "Beauty & Wellness Lounge", "Silky rose-gold layout tailored for salons and luxury spas", "Bespoke skincare treatments, hair styling, and tranquil spa rituals.", ["Skincare", "Hair Styling", "Luxury Spa"]], bg: "linear-gradient(165deg,#FFF8F6 0%,#FBECE7 60%,#F4DDD5 100%)", coverBg: "linear-gradient(135deg,#99545B,#613136)", cardBg: "linear-gradient(135deg,#99545B,#613136)", txt: "#3D1D20", acc: "#A4535B", line: "rgba(164,83,91,0.34)", glassBg: "rgba(164,83,91,0.075)", cta: "linear-gradient(135deg,#9E535A,#6E3338)", ctaT: "#FFF7F5" },
+    { code: "VIP-05", sector: { ar: "محاسبة وتدقيق مالي", fr: "Expertise Comptable", en: "Accounting Firm" }, logo: "finance", pat: "pat-arch", city: "الدار البيضاء • وسط المدينة", ar: ["مكتب الوفاق للاستشارة", "محاسبة وتدقيق مالي وضريبي", "تصميم عنابي وعاجي بوقار كلاسيكي للمحاسبين والخبراء الماليين", "مواكبة محاسبية شاملة، تدقيق مالي، وتأسيس الشركات وفق القوانين المغربية.", ["محاسبة وضرائب", "تدقيق مالي", "تأسيس شركات"]], fr: ["Cabinet Al Wifaq", "Expertise Comptable & Audit", "Style bordeaux & ivoire classique pour experts-comptables", "Tenue comptable, audit financier, conseil fiscal et création d'entreprise.", ["Comptabilité", "Audit Financier", "Création"]], en: ["Al Wifaq Advisory", "Accounting & Tax Audit", "Classic burgundy & ivory corporate profile for accountants", "Comprehensive accounting, financial auditing, and company formation.", ["Accounting", "Financial Audit", "Formation"]], bg: "linear-gradient(165deg,#FFFDFB 0%,#F8F1EC 60%,#EFE4DC 100%)", coverBg: "linear-gradient(135deg,#5E1524,#330912)", cardBg: "linear-gradient(135deg,#5E1524,#330912)", txt: "#2B0A11", acc: "#9C243C", line: "rgba(156,36,60,0.3)", glassBg: "rgba(94,21,36,0.06)", cta: "linear-gradient(135deg,#691728,#3B0A14)", ctaT: "#FFF5DB" },
+    { code: "VIP-06", sector: { ar: "كراء السيارات الفاخرة", fr: "Location Auto VIP", en: "Luxury Car Rental" }, logo: "auto", pat: "pat-grid", city: "مراكش • مطار المنارة", ar: ["بريستيج أوتو المغرب", "وكالة لكراء السيارات الفاخرة", "أسلوب كاربون أسود وأحمر ديناميكي لكراء السيارات وتوصيل المطار", "أسطول حديث من السيارات الفاخرة مع خدمة التوصيل للمطار والفنادق 24/7.", ["سيارات فاخرة", "توصيل المطار", "سائق خاص"]], fr: ["Prestige Auto Maroc", "Location Véhicules VIP", "Look carbone & rouge dynamique pour agences auto", "Flotte récente de véhicules premium avec livraison aéroport 24/7.", ["Véhicules VIP", "Aéroport 24/7", "Chauffeur"]], en: ["Prestige Auto", "Luxury Car Rental", "Carbon & crimson sporty layout for luxury auto rentals", "Modern luxury vehicle fleet with 24/7 airport & hotel delivery.", ["Luxury Fleet", "24/7 Airport", "Chauffeur"]], bg: "linear-gradient(160deg,#1F2024 0%,#121316 60%,#08080A 100%)", coverBg: "linear-gradient(135deg,#7A1019,#260508)", cardBg: "linear-gradient(135deg,#4A0D13,#141417)", txt: "#FAFAFA", acc: "#EF4444", line: "rgba(239,68,68,0.42)", glassBg: "rgba(255,255,255,0.075)", cta: "linear-gradient(135deg,#DC2626,#881313)", ctaT: "#FFFFFF" },
+    { code: "VIP-07", sector: { ar: "طب الجلد والتجميل", fr: "Dermatologie", en: "Dermatology" }, logo: "lotus", pat: "pat-marble", city: "الرباط • أكدال", ar: ["د. سمية بنعلي", "طبيبة جلد وتجميل طبي", "واجهة عاجية وأزرق ملكي مخصصة لعيادات الجلد والليزر", "متخصصة في صحة الجلد، علاج الأمراض الجلدية، والتجميل الطبي غير الجراحي.", ["الليزر والتجديد", "العناية بالبشرة", "التجميل الطبي"]], fr: ["Dr. Soumia Benali", "Dermatologie & Esthétique", "Charte bleu nuit & or pour cliniques dermatologiques", "Spécialiste en santé de la peau, laser et médecine esthétique.", ["Laser & Soins", "Dermatologie", "Esthétique"]], en: ["Dr. Soumia Benali", "Dermatology & Aesthetics", "Royal navy & ivory profile for dermatology and laser clinics", "Specialist in clinical dermatology, laser care, and non-surgical aesthetics.", ["Laser Care", "Skincare", "Aesthetics"]], bg: "linear-gradient(165deg,#FFFDF9 0%,#F5F1E9 60%,#EBE5DA 100%)", coverBg: "linear-gradient(135deg,#0D2447,#061329)", cardBg: "linear-gradient(135deg,#0D2447,#061329)", txt: "#0B1D3A", acc: "#B88938", line: "rgba(13,36,71,0.25)", glassBg: "rgba(13,36,71,0.06)", cta: "linear-gradient(135deg,#B88938,#7D591B)", ctaT: "#FFFFFF" },
+    { code: "VIP-08", sector: { ar: "مطعم فاخر وضيافة", fr: "Gastronomie", en: "Fine Dining" }, logo: "food", pat: "pat-arch", city: "الدار البيضاء • أنفا", ar: ["مطعم لو جاردان", "فن الطبخ والمائدة الراقية", "هوية خضراء داكنة وذهبية للمطاعم الفاخرة مع حجز الطاولات", "أطباق عالمية ومغربية عصرية، صالة خاصة للمناسبات، وحجز مباشر للمائدة.", ["قائمة الطعام", "حجز الطاولات", "مناسبات خاصة"]], fr: ["Table Le Jardin", "Gastronomie & Réceptions", "Identité vert forêt & or pour restaurants gastronomiques", "Cuisine raffinée, salons privés et réservation de table instantanée.", ["La Carte", "Réservations", "Salon Privé"]], en: ["Le Jardin Table", "Fine Dining & Lounge", "Deep forest green & gold editorial profile for fine dining", "Refined cuisine, private dining rooms, and instant table reservations.", ["Menu", "Reservations", "Private Dining"]], bg: "linear-gradient(160deg,#0E382E 0%,#08221C 60%,#041410 100%)", coverBg: "linear-gradient(135deg,#175244,#0A2922)", cardBg: "linear-gradient(135deg,#175244,#0A2922)", txt: "#FAF7F0", acc: "#E5C17B", line: "rgba(229,193,123,0.42)", glassBg: "rgba(255,255,255,0.08)", cta: "linear-gradient(135deg,#FFF2CE,#D4AF63,#9A742B)", ctaT: "#061713" }
   ],
-
   signature: [
-    {
-      code: "S3D-01", sector: { ar: "محاماة واستشارة دولية", fr: "Avocat au Barreau", en: "Attorney at Law" },
-      logo: "legal", pat: "pat-zellige", city: "مكناس • شارع الجيش الملكي",
-      ar: ["الأستاذ كريم المنصوري", "محامٍ بهيئة المحامين", "تجربة 3D قضائية بالأزرق الملكي والذهبي مع بطاقة NFC 3D عائمة", "استشارات قانونية، الترافع أمام المحاكم، ومرافقة الشركات والمستثمرين.", ["قضايا الشركات", "العقود والاتفاقيات", "القضايا التجارية"]],
-      fr: ["Me Karim Mansouri", "Avocat au Barreau", "Expérience 3D bleu royal & or avec carte NFC 3D flottante", "Conseil juridique, plaidoirie et accompagnement des entreprises.", ["Droit Sociétés", "Contrats", "Contentieux"]],
-      en: ["Karim Mansouri, Esq.", "Attorney at Law", "Royal sapphire & gold 3D legal profile with floating NFC card stage", "Legal representation, corporate advisory, and international arbitration.", ["Corporate Law", "Contracts", "Litigation"]],
-      bg: "linear-gradient(160deg,#0C2754 0%,#061530 60%,#030B1A 100%)",
-      cardBg: "linear-gradient(135deg,#174691,#071A3B)",
-      txt: "#FAF8F5", acc: "#E8C374", line: "rgba(232,195,116,0.45)", glassBg: "rgba(255,255,255,0.08)",
-      cta: "linear-gradient(135deg,#FFF2CE,#D8AE5C,#9A7225)", ctaT: "#040E21"
-    },
-    {
-      code: "S3D-02", sector: { ar: "هندسة معمارية فاخرة", fr: "Architecte DPLG", en: "Lead Architect" },
-      logo: "arch", pat: "pat-grid", city: "الرباط • حي الرياض",
-      ar: ["م. طارق بنجلون", "مهندس معماري DPLG", "فخامة الأسود الأوبسيديان والذهبي مع بطاقة 3D عائمة ومعرض المشاريع", "تصميم معماري حديث ومستدام، تتبع الأشغال، ودراسة المشاريع العقارية.", ["تصميم معماري", "تتبع الأوراش", "تطوير المشاريع"]],
-      fr: ["Tarik Benjelloun", "Architecte DPLG", "Noir obsidienne & or brossé 3D avec carte NFC flottante", "Conception architecturale durable, suivi de chantiers et design.", ["Architecture", "Chantiers", "Projets"]],
-      en: ["Tarik Benjelloun", "Lead Architect", "Matte obsidian & brushed gold 3D showcase with floating card", "Contemporary architecture, site supervision, and bespoke luxury spaces.", ["Architecture", "Supervision", "Developments"]],
-      bg: "linear-gradient(160deg,#1F2024 0%,#101113 60%,#070708 100%)",
-      cardBg: "linear-gradient(135deg,#2D2F36,#101113)",
-      txt: "#FAFAFA", acc: "#E6C17A", line: "rgba(230,193,122,0.44)", glassBg: "rgba(255,255,255,0.08)",
-      cta: "linear-gradient(135deg,#FFF1C9,#D9AE5B,#9E7527)", ctaT: "#0A0A0C"
-    },
-    {
-      code: "S3D-03", sector: { ar: "إدارة تنفيذية ومجموعات", fr: "Dirigeant & Holding", en: "CEO & Holding" },
-      logo: "crown", pat: "pat-zellige", city: "الدار البيضاء • أنفا",
-      ar: ["أمين العلمي", "رئيس مدير عام", "تجربة 3D ملكية بالزمردي والذهبي الشامباني مع التاج التنفيذي", "القيادة التنفيذية، تطوير الاستثمارات، وبناء الشراكات الاستراتيجية الكبرى.", ["القيادة والتطوير", "إدارة الفرق", "الاستثمارات"]],
-      fr: ["Amine Alami", "Président Directeur Général", "Prestige 3D émeraude royal & or champagne avec sceau exécutif", "Direction stratégique, développement d'investissements et partenariats.", ["Direction", "Développement", "Investissements"]],
-      en: ["Amine Alami", "Chief Executive Officer", "Royal emerald & champagne 3D executive stage with crown crest", "Executive leadership, strategic investments, and corporate alliances.", ["Leadership", "Growth", "Investments"]],
-      bg: "linear-gradient(160deg,#153E36 0%,#0B241F 60%,#051210 100%)",
-      cardBg: "linear-gradient(135deg,#1E574C,#0B241F)",
-      txt: "#FAF7F2", acc: "#ECC882", line: "rgba(236,200,130,0.46)", glassBg: "rgba(255,255,255,0.085)",
-      cta: "linear-gradient(135deg,#FFF3D1,#E0BD7A,#AA8036)", ctaT: "#071512"
-    },
-    {
-      code: "S3D-04", sector: { ar: "مصحة طبية متطورة", fr: "Clinique Privée VIP", en: "Private Clinic 3D" },
-      logo: "medical", pat: "pat-marble", city: "الدار البيضاء • أنفا العليا",
-      ar: ["مصحة النخبة الطبية", "رعاية طبية متكاملة وتجهيزات حديثة", "تصميم 3D بلاتيني ولؤلؤي فاخر للمصحات الكبرى مع بطاقة 3D عائمة", "فريق طبي متخصص، بيئة آمنة ومعقمة، وحجز مواعيد VIP لجميع التخصصات.", ["الطب العام", "طب العظام", "أمراض القلب"]],
-      fr: ["Clinique Ennokhba", "Clinique Médicale Privée", "Design 3D perle & platine doré pour cliniques d'excellence", "Équipe médicale pluridisciplinaire et prise en charge VIP.", ["Médecine", "Orthopédie", "Cardiologie"]],
-      en: ["Ennokhba Medical Clinic", "Private Medical Center", "Sculpted pearl & platinum gold 3D profile for premier clinics", "Multidisciplinary specialists, modern diagnostics, and VIP booking.", ["General Care", "Orthopedics", "Cardiology"]],
-      bg: "linear-gradient(165deg,#FFFFFF 0%,#F3F1EC 60%,#E5E1D8 100%)",
-      cardBg: "linear-gradient(135deg,#D6D2C9,#8C7853)",
-      txt: "#1A1917", acc: "#B88A36", line: "rgba(184,138,54,0.48)", glassBg: "rgba(26,25,23,0.055)",
-      cta: "linear-gradient(135deg,#FFF1C9,#D9AE5B,#9E7527)", ctaT: "#1A1407"
-    },
-    {
-      code: "S3D-05", sector: { ar: "قصر ضيافة وفندقة", fr: "Palais & Hôtellerie", en: "Royal Palace Hotel" },
-      logo: "crown", pat: "pat-zellige", city: "فاس • جنان السبيل",
-      ar: ["قصر الضيافة الملكي", "حفلات فاخرة • أجنحة • مطعم ملكي", "قرمزي مخملي وزليج ذهبي 3D للقصور والفنادق الفاخرة", "تجربة إقامة وضيافة مغربية استثنائية لحجوزات الأجنحة والمؤتمرات والسهرات.", ["الأجنحة الفاخرة", "المطعم الملكي", "تنظيم الحفلات"]],
-      fr: ["Palais d'Hospitalité Royal", "Suites • Gastronomie • Événements", "Velours pourpre & zellige or 3D pour palais et hôtels de luxe", "Hospitalité marocaine d'exception pour séjours, dîners et réceptions.", ["Suites Royales", "Gastronomie", "Réceptions"]],
-      en: ["Royal Palace Hospitality", "Suites • Dining • Banquets", "Imperial crimson & 24k gold zellige 3D palace experience", "Unrivaled Moroccan luxury hospitality for suites, fine dining, and events.", ["Royal Suites", "Fine Dining", "Banquets"]],
-      bg: "linear-gradient(160deg,#5C0E17 0%,#38070D 60%,#1F0306 100%)",
-      cardBg: "linear-gradient(135deg,#851623,#3D080E)",
-      txt: "#FFF8EC", acc: "#F2C879", line: "rgba(242,200,121,0.48)", glassBg: "rgba(255,248,236,0.085)",
-      cta: "linear-gradient(135deg,#FFF1C9,#E0B25A,#A87A24)", ctaT: "#240407"
-    },
-    {
-      code: "S3D-06", sector: { ar: "تحول رقمي وذكاء اصطناعي", fr: "Tech & IA Executive", en: "AI & Digital Tech" },
-      logo: "code", pat: "pat-waves", city: "الدار البيضاء • تكنوبارك",
-      ar: ["آدم الزياني", "خبير تحول رقمي وذكاء اصطناعي", "تجربة 3D مستقبلية بالنيلي والذهبي الهولوغرافي لشركات التكنولوجيا", "تطوير المواقع والتطبيقات، حلول الذكاء الاصطناعي، وأتمتة أعمال المقاولات.", ["الذكاء الاصطناعي", "تطوير التطبيقات", "الحوسبة السحابية"]],
-      fr: ["Adam Ziani", "Expert IA & Transformation", "Expérience 3D futuriste indigo & or holographique pour la tech", "Développement d'applications, IA et automatisation sur-mesure.", ["Intelligence IA", "Apps & Web", "Cloud & Data"]],
-      en: ["Adam Ziani", "AI & Digital Transformation", "Futuristic cyber indigo & holographic gold 3D tech profile", "Custom software engineering, AI workflows, and cloud automation.", ["AI Solutions", "App Engineering", "Cloud Systems"]],
-      bg: "radial-gradient(circle at 80% 15%,rgba(99,102,241,0.35),transparent 45%),linear-gradient(160deg,#12183B 0%,#090D24 60%,#040612 100%)",
-      cardBg: "linear-gradient(135deg,#24337A,#0D1336)",
-      txt: "#F2F5FF", acc: "#F4C97A", line: "rgba(129,140,248,0.45)", glassBg: "rgba(129,140,248,0.1)",
-      cta: "linear-gradient(135deg,#FFF1C9,#E0B25A,#A87A24)", ctaT: "#070A1A"
-    },
-    {
-      code: "S3D-07", sector: { ar: "طبيب عام — نسخة 3D", fr: "Médecin Executive 3D", en: "Executive Physician" },
-      logo: "medical", pat: "pat-zellige", city: "مراكش • جليز",
-      ar: ["د. ياسين العلوي", "طبيب عام وطب الأسرة", "نسخة 3D ليلية فاخرة للأطباء مع بطاقة NFC 3D عائمة والختم الطبي", "استشارة طبية، متابعة صحية شاملة، وتشخيص وعلاج للكبار والصغار.", ["الفحص الطبي", "الأمراض المزمنة", "صحة الأسرة"]],
-      fr: ["Dr. Yassine Alaoui", "Médecin Généraliste", "Édition 3D nocturne prestige pour médecins avec carte NFC 3D", "Consultations médicales, suivi familial et prévention globale.", ["Bilan Médical", "Suivi Chronique", "Médecine Famille"]],
-      en: ["Dr. Yassine Alaoui", "Family Physician", "Executive dark-mode 3D medical edition with floating NFC card", "Comprehensive family medicine, diagnostics, and preventive healthcare.", ["Checkups", "Chronic Care", "Family Health"]],
-      bg: "linear-gradient(160deg,#0E2433 0%,#071621 60%,#030B12 100%)",
-      cardBg: "linear-gradient(135deg,#183D54,#081926)",
-      txt: "#F4F9FC", acc: "#E8C374", line: "rgba(232,195,116,0.45)", glassBg: "rgba(255,255,255,0.08)",
-      cta: "linear-gradient(135deg,#FFF2CE,#D8AE5C,#9A7225)", ctaT: "#051018"
-    },
-    {
-      code: "S3D-08", sector: { ar: "ابتكار ووكالات رقمية", fr: "Agence Innovation 3D", en: "Innovation Agency" },
-      logo: "nexa", pat: "pat-waves", city: "طنجة • سيتي سنتر",
-      ar: ["نيكسا ديجيتال", "استراتيجية وابتكار رقمي", "تصميم 3D ليلي بلمسة أرجوانية وذهبية لوكالات الابتكار", "قيادة المشاريع الرقمية الكبرى، التسويق الإبداعي، وتجارب المستخدم المتقدمة.", ["الاستراتيجية", "التسويق الرقمي", "تجربة المستخدم"]],
-      fr: ["Nexa Digital", "Stratégie & Innovation", "Design 3D sombre aux reflets néon améthyste et or", "Pilotage digital, campagnes créatives et expériences UX avancées.", ["Stratégie", "Marketing", "Design UX"]],
-      en: ["Nexa Digital", "Digital Innovation Agency", "Sleek obsidian & neon-gold 3D profile for creative leaders", "Digital product strategy, growth campaigns, and next-gen UX.", ["Strategy", "Growth", "UX Design"]],
-      bg: "radial-gradient(circle at 20% 20%,rgba(168,85,247,0.3),transparent 45%),linear-gradient(160deg,#1A102B 0%,#0E0819 60%,#06030C 100%)",
-      cardBg: "linear-gradient(135deg,#351E59,#130A21)",
-      txt: "#FAF5FF", acc: "#D8B4FE", line: "rgba(216,180,254,0.42)", glassBg: "rgba(216,180,254,0.09)",
-      cta: "linear-gradient(135deg,#E9D5FF,#A855F7)", ctaT: "#12061F"
-    }
+    { code: "S3D-01", sector: { ar: "محاماة واستشارة دولية", fr: "Avocat au Barreau", en: "Attorney at Law" }, logo: "legal", pat: "pat-zellige", city: "مكناس • شارع الجيش الملكي", ar: ["الأستاذ كريم المنصوري", "محامٍ بهيئة المحامين", "تجربة 3D قضائية بالأزرق الملكي والذهبي مع بطاقة NFC 3D و QR", "استشارات قانونية، الترافع أمام المحاكم، ومرافقة الشركات والمستثمرين.", ["قضايا الشركات", "العقود والاتفاقيات", "القضايا التجارية"]], fr: ["Me Karim Mansouri", "Avocat au Barreau", "Expérience 3D bleu royal & or avec carte NFC 3D + QR", "Conseil juridique, plaidoirie et accompagnement des entreprises.", ["Droit Sociétés", "Contrats", "Contentieux"]], en: ["Karim Mansouri, Esq.", "Attorney at Law", "Royal sapphire & gold 3D legal profile with NFC + QR card", "Legal representation, corporate advisory, and international arbitration.", ["Corporate Law", "Contracts", "Litigation"]], bg: "linear-gradient(160deg,#0C2754 0%,#061530 60%,#030B1A 100%)", cardBg: "linear-gradient(135deg,#174691,#071A3B)", txt: "#FAF8F5", acc: "#E8C374", line: "rgba(232,195,116,0.45)", glassBg: "rgba(255,255,255,0.08)", cta: "linear-gradient(135deg,#FFF2CE,#D8AE5C,#9A7225)", ctaT: "#040E21" },
+    { code: "S3D-02", sector: { ar: "هندسة معمارية فاخرة", fr: "Architecte DPLG", en: "Lead Architect" }, logo: "arch", pat: "pat-grid", city: "الرباط • حي الرياض", ar: ["م. طارق بنجلون", "مهندس معماري DPLG", "فخامة الأسود الأوبسيديان والذهبي مع بطاقة 3D و QR ومعرض المشاريع", "تصميم معماري حديث ومستدام، تتبع الأشغال، ودراسة المشاريع العقارية.", ["تصميم معماري", "تتبع الأوراش", "تطوير المشاريع"]], fr: ["Tarik Benjelloun", "Architecte DPLG", "Noir obsidienne & or brossé 3D avec carte NFC + QR", "Conception architecturale durable, suivi de chantiers et design.", ["Architecture", "Chantiers", "Projets"]], en: ["Tarik Benjelloun", "Lead Architect", "Matte obsidian & brushed gold 3D showcase with NFC + QR card", "Contemporary architecture, site supervision, and bespoke luxury spaces.", ["Architecture", "Supervision", "Developments"]], bg: "linear-gradient(160deg,#1F2024 0%,#101113 60%,#070708 100%)", cardBg: "linear-gradient(135deg,#2D2F36,#101113)", txt: "#FAFAFA", acc: "#E6C17A", line: "rgba(230,193,122,0.44)", glassBg: "rgba(255,255,255,0.08)", cta: "linear-gradient(135deg,#FFF1C9,#D9AE5B,#9E7527)", ctaT: "#0A0A0C" },
+    { code: "S3D-03", sector: { ar: "إدارة تنفيذية ومجموعات", fr: "Dirigeant & Holding", en: "CEO & Holding" }, logo: "crown", pat: "pat-zellige", city: "الدار البيضاء • أنفا", ar: ["أمين العلمي", "رئيس مدير عام", "تجربة 3D ملكية بالزمردي والذهبي الشامباني مع بطاقة 3D و QR", "القيادة التنفيذية، تطوير الاستثمارات، وبناء الشراكات الاستراتيجية الكبرى.", ["القيادة والتطوير", "إدارة الفرق", "الاستثمارات"]], fr: ["Amine Alami", "Président Directeur Général", "Prestige 3D émeraude royal & or champagne avec NFC + QR", "Direction stratégique, développement d'investissements et partenariats.", ["Direction", "Développement", "Investissements"]], en: ["Amine Alami", "Chief Executive Officer", "Royal emerald & champagne 3D executive stage with NFC + QR", "Executive leadership, strategic investments, and corporate alliances.", ["Leadership", "Growth", "Investments"]], bg: "linear-gradient(160deg,#153E36 0%,#0B241F 60%,#051210 100%)", cardBg: "linear-gradient(135deg,#1E574C,#0B241F)", txt: "#FAF7F2", acc: "#ECC882", line: "rgba(236,200,130,0.46)", glassBg: "rgba(255,255,255,0.085)", cta: "linear-gradient(135deg,#FFF3D1,#E0BD7A,#AA8036)", ctaT: "#071512" },
+    { code: "S3D-04", sector: { ar: "مصحة طبية متطورة", fr: "Clinique Privée VIP", en: "Private Clinic 3D" }, logo: "medical", pat: "pat-marble", city: "الدار البيضاء • أنفا العليا", ar: ["مصحة النخبة الطبية", "رعاية طبية متكاملة وتجهيزات حديثة", "تصميم 3D بلاتيني ولؤلؤي فاخر للمصحات الكبرى مع بطاقة 3D و QR", "فريق طبي متخصص، بيئة آمنة ومعقمة، وحجز مواعيد VIP لجميع التخصصات.", ["الطب العام", "طب العظام", "أمراض القلب"]], fr: ["Clinique Ennokhba", "Clinique Médicale Privée", "Design 3D perle & platine doré avec carte NFC + QR", "Équipe médicale pluridisciplinaire et prise en charge VIP.", ["Médecine", "Orthopédie", "Cardiologie"]], en: ["Ennokhba Medical Clinic", "Private Medical Center", "Sculpted pearl & platinum gold 3D profile with NFC + QR", "Multidisciplinary specialists, modern diagnostics, and VIP booking.", ["General Care", "Orthopedics", "Cardiology"]], bg: "linear-gradient(165deg,#FFFFFF 0%,#F3F1EC 60%,#E5E1D8 100%)", cardBg: "linear-gradient(135deg,#D6D2C9,#8C7853)", txt: "#1A1917", acc: "#B88A36", line: "rgba(184,138,54,0.48)", glassBg: "rgba(26,25,23,0.055)", cta: "linear-gradient(135deg,#FFF1C9,#D9AE5B,#9E7527)", ctaT: "#1A1407" },
+    { code: "S3D-05", sector: { ar: "قصر ضيافة وفندقة", fr: "Palais & Hôtellerie", en: "Royal Palace Hotel" }, logo: "crown", pat: "pat-zellige", city: "فاس • جنان السبيل", ar: ["قصر الضيافة الملكي", "حفلات فاخرة • أجنحة • مطعم ملكي", "قرمزي مخملي وزليج ذهبي 3D للقصور والفنادق الفاخرة مع QR", "تجربة إقامة وضيافة مغربية استثنائية لحجوزات الأجنحة والمؤتمرات والسهرات.", ["الأجنحة الفاخرة", "المطعم الملكي", "تنظيم الحفلات"]], fr: ["Palais d'Hospitalité Royal", "Suites • Gastronomie • Événements", "Velours pourpre & zellige or 3D + QR pour palais et hôtels", "Hospitalité marocaine d'exception pour séjours, dîners et réceptions.", ["Suites Royales", "Gastronomie", "Réceptions"]], en: ["Royal Palace Hospitality", "Suites • Dining • Banquets", "Imperial crimson & 24k gold zellige 3D + QR palace experience", "Unrivaled Moroccan luxury hospitality for suites, fine dining, and events.", ["Royal Suites", "Fine Dining", "Banquets"]], bg: "linear-gradient(160deg,#5C0E17 0%,#38070D 60%,#1F0306 100%)", cardBg: "linear-gradient(135deg,#851623,#3D080E)", txt: "#FFF8EC", acc: "#F2C879", line: "rgba(242,200,121,0.48)", glassBg: "rgba(255,248,236,0.085)", cta: "linear-gradient(135deg,#FFF1C9,#E0B25A,#A87A24)", ctaT: "#240407" },
+    { code: "S3D-06", sector: { ar: "تحول رقمي وذكاء اصطناعي", fr: "Tech & IA Executive", en: "AI & Digital Tech" }, logo: "code", pat: "pat-waves", city: "الدار البيضاء • تكنوبارك", ar: ["آدم الزياني", "خبير تحول رقمي وذكاء اصطناعي", "تجربة 3D مستقبلية بالنيلي والذهبي الهولوغرافي مع بطاقة 3D و QR", "تطوير المواقع والتطبيقات، حلول الذكاء الاصطناعي، وأتمتة أعمال المقاولات.", ["الذكاء الاصطناعي", "تطوير التطبيقات", "الحوسبة السحابية"]], fr: ["Adam Ziani", "Expert IA & Transformation", "Expérience 3D futuriste indigo & or + QR pour la tech", "Développement d'applications, IA et automatisation sur-mesure.", ["Intelligence IA", "Apps & Web", "Cloud & Data"]], en: ["Adam Ziani", "AI & Digital Transformation", "Futuristic cyber indigo & holographic gold 3D + QR profile", "Custom software engineering, AI workflows, and cloud automation.", ["AI Solutions", "App Engineering", "Cloud Systems"]], bg: "radial-gradient(circle at 80% 15%,rgba(99,102,241,0.35),transparent 45%),linear-gradient(160deg,#12183B 0%,#090D24 60%,#040612 100%)", cardBg: "linear-gradient(135deg,#24337A,#0D1336)", txt: "#F2F5FF", acc: "#F4C97A", line: "rgba(129,140,248,0.45)", glassBg: "rgba(129,140,248,0.1)", cta: "linear-gradient(135deg,#FFF1C9,#E0B25A,#A87A24)", ctaT: "#070A1A" },
+    { code: "S3D-07", sector: { ar: "طبيب عام — نسخة 3D", fr: "Médecin Executive 3D", en: "Executive Physician" }, logo: "medical", pat: "pat-zellige", city: "مراكش • جليز", ar: ["د. ياسين العلوي", "طبيب عام وطب الأسرة", "نسخة 3D ليلية فاخرة للأطباء مع بطاقة NFC 3D و QR", "استشارة طبية، متابعة صحية شاملة، وتشخيص وعلاج للكبار والصغار.", ["الفحص الطبي", "الأمراض المزمنة", "صحة الأسرة"]], fr: ["Dr. Yassine Alaoui", "Médecin Généraliste", "Édition 3D nocturne prestige avec carte NFC 3D + QR", "Consultations médicales, suivi familial et prévention globale.", ["Bilan Médical", "Suivi Chronique", "Médecine Famille"]], en: ["Dr. Yassine Alaoui", "Family Physician", "Executive dark-mode 3D medical edition with NFC + QR card", "Comprehensive family medicine, diagnostics, and preventive healthcare.", ["Checkups", "Chronic Care", "Family Health"]], bg: "linear-gradient(160deg,#0E2433 0%,#071621 60%,#030B12 100%)", cardBg: "linear-gradient(135deg,#183D54,#081926)", txt: "#F4F9FC", acc: "#E8C374", line: "rgba(232,195,116,0.45)", glassBg: "rgba(255,255,255,0.08)", cta: "linear-gradient(135deg,#FFF2CE,#D8AE5C,#9A7225)", ctaT: "#051018" },
+    { code: "S3D-08", sector: { ar: "ابتكار ووكالات رقمية", fr: "Agence Innovation 3D", en: "Innovation Agency" }, logo: "nexa", pat: "pat-waves", city: "طنجة • سيتي سنتر", ar: ["نيكسا ديجيتال", "استراتيجية وابتكار رقمي", "تصميم 3D ليلي بلمسة أرجوانية وذهبية مع بطاقة 3D و QR", "قيادة المشاريع الرقمية الكبرى، التسويق الإبداعي، وتجارب المستخدم المتقدمة.", ["الاستراتيجية", "التسويق الرقمي", "تجربة المستخدم"]], fr: ["Nexa Digital", "Stratégie & Innovation", "Design 3D sombre aux reflets néon améthyste et or + QR", "Pilotage digital, campagnes créatives et expériences UX avancées.", ["Stratégie", "Marketing", "Design UX"]], en: ["Nexa Digital", "Digital Innovation Agency", "Sleek obsidian & neon-gold 3D + QR profile for leaders", "Digital product strategy, growth campaigns, and next-gen UX.", ["Strategy", "Growth", "UX Design"]], bg: "radial-gradient(circle at 20% 20%,rgba(168,85,247,0.3),transparent 45%),linear-gradient(160deg,#1A102B 0%,#0E0819 60%,#06030C 100%)", cardBg: "linear-gradient(135deg,#351E59,#130A21)", txt: "#FAF5FF", acc: "#D8B4FE", line: "rgba(216,180,254,0.42)", glassBg: "rgba(216,180,254,0.09)", cta: "linear-gradient(135deg,#E9D5FF,#A855F7)", ctaT: "#12061F" }
   ]
 };
 
@@ -1232,11 +847,12 @@ function esc(s) {
   return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 }
 
-function getModelTexts(m) {
-  const d = m[currentLang];
-  const cn = document.getElementById("customName").value.trim();
-  const cr = document.getElementById("customRole").value.trim();
-  return { name: cn || d[0], role: cr || d[1], desc: d[2], bio: d[3] || "", services: d[4] || [] };
+function getEmblemHTML(logoKey, nameStr) {
+  if (logoKey === "monogram") {
+    const ch = (nameStr.trim().replace(/^[^\p{L}\p{N}]+/u, "")[0] || "C").toUpperCase();
+    return `<span class="mono-txt">${esc(ch)}</span>`;
+  }
+  return LOGOS[logoKey] || LOGOS.diamond;
 }
 
 function socialsHTML(interactive) {
@@ -1251,41 +867,164 @@ function socialsHTML(interactive) {
     </div>`;
 }
 
+// RENDER SMART PERSONALIZED LAB PHONE (ADAPTS TO CHOSEN PROFESSION + STYLE + TIER)
+function renderLab() {
+  const ui = UI[currentLang].sim;
+  const profObj = PROFESSIONS.find(p => p.id === document.getElementById("labProf").value) || PROFESSIONS[0];
+  const st = LAB_STYLES[currentStyleIdx] || LAB_STYLES[0];
+  const customNm = document.getElementById("labName").value.trim();
+  const pData = profObj[currentLang] || profObj.ar;
+  const displayName = customNm || pData[0];
+  const displayRole = pData[0];
+  const services = pData[1];
+  const emb = getEmblemHTML(profObj.logo, displayName);
+  const vars = `background:${st.bg};color:${st.txt};--acc:${st.acc};--line:${st.line};--glass:${st.glass};--cta:${st.cta};--ctaT:${st.ctaT};--cardBg:${st.cardBg};--coverBg:${st.coverBg};`;
+
+  let inner = "";
+  if (currentTier === "essential") {
+    inner = `
+      <div>
+        <div class="dyn-island"></div>
+        <div class="es-arch-hdr"><div style="font-size:8.5px;font-weight:900;color:#F8E6BD;">ESSENTIAL • 249 DH</div></div>
+        <div class="emblem-circle" style="margin-top:-28px;width:58px;height:58px;">${emb}</div>
+        <div class="p-nm" style="font-size:19px;">${esc(displayName)}</div>
+        <div class="p-rl">${esc(displayRole)}</div>
+        <div class="act-3">
+          <div class="act-tile">${SVG.phone}<span>${ui.call}</span></div>
+          <div class="act-tile">${SVG.wa}<span>${ui.wa}</span></div>
+          <div class="act-tile">${SVG.mail}<span>${ui.mail}</span></div>
+        </div>
+        <div class="map-bar"><span style="display:flex;align-items:center;gap:5px;">${SVG.map}<span>${ui.loc}</span></span><span>›</span></div>
+      </div>
+      <div>
+        <div class="cta-pill">${SVG.vcard}<span>${ui.save}</span></div>
+        ${socialsHTML(false)}
+      </div>`;
+  } else if (currentTier === "vip") {
+    inner = `
+      <div>
+        <div class="vip-cover"><div class="dyn-island" style="margin-bottom:5px;"></div><div style="font-size:8px;font-weight:800;color:#F8E6BD;">BUSINESS VIP • 399 DH</div></div>
+        <div class="emblem-circle" style="margin-top:-26px;width:56px;height:56px;">${emb}</div>
+        <div class="vip-live-pill"><span class="vip-live-dot"></span><span>${ui.live}</span></div>
+        <div class="p-nm" style="font-size:19px;">${esc(displayName)}</div>
+        <div class="p-rl">${esc(displayRole)}</div>
+        <div class="vip-gg-widget" style="padding:6px 8px;">
+          <div style="display:flex;align-items:center;gap:5px;">${SVG.ggLogo}<span class="gg-stars">★★★★★</span></div>
+          <span class="gg-badge">5.0 ★</span>
+        </div>
+        <div class="bento-3">${services.map(s => `<div class="bento-box">${SVG.check}<span>${esc(s)}</span></div>`).join("")}</div>
+      </div>
+      <div>
+        <div class="cta-pill">${SVG.cal}<span>${ui.book}</span></div>
+        ${socialsHTML(false)}
+      </div>`;
+  } else {
+    inner = `
+      <div>
+        <div class="dyn-island"></div>
+        <div class="s3d-stage" style="height:98px;">
+          <div class="s3d-card-back" style="width:124px;height:76px;">
+            <div><div style="font-weight:900;color:${st.acc};">NFC + QR</div><div style="opacity:.85;">cartepro.ma</div></div>
+            <div class="qr-svg-box">${QR_SVG}</div>
+          </div>
+          <div class="s3d-card-front" style="width:136px;height:82px;">
+            <div style="font-size:7px;font-weight:900;color:${st.acc};">SIGNATURE 3D</div>
+            <div style="font-size:10px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(displayName)}</div>
+          </div>
+        </div>
+        <div class="s3d-pedestal-wrap" style="width:54px;height:54px;margin-top:-18px;">
+          <div class="s3d-halo"></div>
+          <div class="s3d-pedestal-emblem" style="width:44px;height:44px;">${emb}</div>
+        </div>
+        <div class="p-nm" style="font-size:18.5px;">${esc(displayName)}</div>
+        <div class="p-rl" style="margin-bottom:5px;">${esc(displayRole)}</div>
+        <div class="bento-3" style="margin-bottom:6px;">${services.map(s => `<div class="bento-box">${SVG.check}<span>${esc(s)}</span></div>`).join("")}</div>
+      </div>
+      <div>
+        <div class="cta-pill spot-3d" style="margin-bottom:6px;">${SVG.vcard}<span>${ui.save}</span></div>
+        <div class="s3d-mini-dock"><span>${ui.dock[0]}</span><span>${ui.dock[1]}</span><span>${ui.dock[2]}</span><span class="g">${ui.dock[3]}</span></div>
+      </div>`;
+  }
+
+  document.getElementById("labPhoneFrame").innerHTML = `
+    <div class="screen-mini" style="min-height:445px;${vars}">
+      <div class="bg-pat ${st.pat}"></div>
+      <div class="scr-in">${inner}</div>
+    </div>`;
+}
+
+function renderStylePills() {
+  document.getElementById("stylePills").innerHTML = LAB_STYLES.map((s, idx) =>
+    `<button type="button" class="st-pill ${idx === currentStyleIdx ? 'active' : ''}" onclick="currentStyleIdx=${idx};renderStylePills();renderLab();">
+      <span class="st-dot" style="background:${s.dot};"></span><span>${s.name[currentLang]}</span>
+    </button>`
+  ).join("");
+}
+
+function populateProfSelect() {
+  const sel = document.getElementById("labProf");
+  const prev = sel.value || "barber";
+  sel.innerHTML = PROFESSIONS.map(p => `<option value="${p.id}">${(p[currentLang] || p.ar)[0]}</option>`).join("");
+  sel.value = prev;
+}
+
+function resetLab() {
+  document.getElementById("labName").value = "";
+  document.getElementById("labProf").value = "barber";
+  currentStyleIdx = 0;
+  renderStylePills();
+  renderLab();
+}
+
+function orderLabDesign() {
+  const tierInfo = UI[currentLang].tiers[currentTier];
+  const profObj = PROFESSIONS.find(p => p.id === document.getElementById("labProf").value) || PROFESSIONS[0];
+  const st = LAB_STYLES[currentStyleIdx] || LAB_STYLES[0];
+  const nm = document.getElementById("labName").value.trim();
+  const pName = (profObj[currentLang] || profObj.ar)[0];
+  const sName = st.name[currentLang];
+
+  let msg = "";
+  if (currentLang === "ar") {
+    msg = `السلام عليكم CartePro Maroc،\n\nجرّبت مختبر المعاينة الخاصة وأعجبني هذا التصور:\n• العرض: ${tierInfo.name} (${tierInfo.price})\n• المجال: ${pName}\n• الستايل / الألوان: ${sName}`;
+    if (nm) msg += `\n• الاسم / العلامة: ${nm}`;
+    msg += `\n\nأود طلب معاينة حقيقية بشعاري وهويتي قبل الطباعة.`;
+  } else if (currentLang === "fr") {
+    msg = `Bonjour CartePro Maroc,\n\nJ'ai testé le Labo Perso et j'aime ce concept :\n• Offre : ${tierInfo.name} (${tierInfo.price})\n• Métier : ${pName}\n• Style : ${sName}`;
+    if (nm) msg += `\n• Nom / Marque : ${nm}`;
+    msg += `\n\nMerci pour un aperçu avant impression.`;
+  } else {
+    msg = `Hello CartePro Maroc,\n\nI tested the Personal Lab and liked this look:\n• Tier: ${tierInfo.name} (${tierInfo.price})\n• Profession: ${pName}\n• Style: ${sName}`;
+    if (nm) msg += `\n• Name / Brand: ${nm}`;
+    msg += `\n\nPlease send a free preview before printing.`;
+  }
+  openWA(msg);
+}
+
+// STATIC GALLERY MOCKUPS (NEVER MUTATED BY USER INPUT)
 function renderMiniScreen(m, tier) {
   const ui = UI[currentLang].sim;
-  const t = getModelTexts(m);
+  const d = m[currentLang];
+  const [name, role, , , services = []] = d;
   const logoSvg = LOGOS[m.logo] || LOGOS.diamond;
   const vars = `background:${m.bg};color:${m.txt};--acc:${m.acc};--line:${m.line};--glass:${m.glassBg};--cta:${m.cta};--ctaT:${m.ctaT};--cardBg:${m.cardBg};--coverBg:${m.coverBg || m.cardBg};`;
 
   if (tier === "essential") {
     const core = `
       <div class="emblem-circle" style="${m.arch ? 'margin-top:-30px;' : ''}">${logoSvg}</div>
-      <div class="p-nm">${esc(t.name)}</div>
-      <div class="p-rl">${esc(t.role)}</div>
+      <div class="p-nm">${esc(name)}</div>
+      <div class="p-rl">${esc(role)}</div>
       <div class="orn-line"></div>
       <div class="act-3">
         <div class="act-tile">${SVG.phone}<span>${ui.call}</span></div>
         <div class="act-tile">${SVG.wa}<span>${ui.wa}</span></div>
         <div class="act-tile">${SVG.mail}<span>${ui.mail}</span></div>
       </div>
-      <div class="map-bar">
-        <span style="display:flex;align-items:center;gap:6px;">${SVG.map}<span>${ui.loc}</span></span><span>›</span>
-      </div>
+      <div class="map-bar"><span style="display:flex;align-items:center;gap:6px;">${SVG.map}<span>${ui.loc}</span></span><span>›</span></div>
       <div class="cta-pill">${SVG.vcard}<span>${ui.save}</span></div>
       ${socialsHTML(false)}
     `;
-    return `
-      <div class="screen-mini" style="${vars}">
-        <div class="bg-pat ${m.pat}"></div>
-        <div class="scr-in">
-          <div>
-            <div class="dyn-island"></div>
-            ${m.arch ? `<div class="es-arch-hdr"><div style="font-size:9px;font-weight:900;color:#F8E6BD;letter-spacing:0.08em;">CARTEPRO • ${m.code}</div></div>`
-              : `<div class="cp-mini-hdr"><span>CARTEPRO MAROC</span><span>${m.code}</span></div>`}
-          </div>
-          ${m.glass ? `<div class="es-glass-box">${core}</div>` : `<div>${core}</div>`}
-        </div>
-      </div>`;
+    return `<div class="screen-mini" style="${vars}"><div class="bg-pat ${m.pat}"></div><div class="scr-in"><div><div class="dyn-island"></div>${m.arch ? `<div class="es-arch-hdr"><div style="font-size:9px;font-weight:900;color:#F8E6BD;">CARTEPRO • ${m.code}</div></div>` : `<div class="cp-mini-hdr"><span>CARTEPRO MAROC</span><span>${m.code}</span></div>`}</div>${m.glass ? `<div class="es-glass-box">${core}</div>` : `<div>${core}</div>`}</div></div>`;
   }
 
   if (tier === "vip") {
@@ -1294,34 +1033,21 @@ function renderMiniScreen(m, tier) {
         <div class="bg-pat ${m.pat}"></div>
         <div class="scr-in">
           <div>
-            <div class="vip-cover">
-              <div class="dyn-island" style="margin-bottom:6px;"></div>
-              <div style="display:flex;justify-content:space-between;font-size:8.5px;font-weight:800;color:#F8E6BD;">
-                <span>BUSINESS VIP • ${m.code}</span><span>AR | FR | EN</span>
-              </div>
-            </div>
-            <div class="emblem-circle" style="width:62px;height:62px;margin-top:-28px;">${logoSvg}</div>
+            <div class="vip-cover"><div class="dyn-island" style="margin-bottom:6px;"></div><div style="display:flex;justify-content:space-between;font-size:8.5px;font-weight:800;color:#F8E6BD;"><span>BUSINESS VIP • ${m.code}</span><span>AR | FR | EN</span></div></div>
+            <div class="emblem-circle" style="width:60px;height:60px;margin-top:-26px;">${logoSvg}</div>
             <div class="vip-live-pill"><span class="vip-live-dot"></span><span>${ui.live}</span></div>
-            <div class="p-nm">${esc(t.name)}</div>
-            <div class="p-rl">${esc(t.role)}</div>
+            <div class="p-nm">${esc(name)}</div>
+            <div class="p-rl">${esc(role)}</div>
             <div class="act-3">
               <div class="act-tile">${SVG.phone}<span>${ui.call}</span></div>
               <div class="act-tile">${SVG.wa}<span>${ui.wa}</span></div>
               <div class="act-tile">${SVG.mail}<span>${ui.mail}</span></div>
             </div>
             <div class="vip-gg-widget">
-              <div style="display:flex;align-items:center;gap:6px;">
-                ${SVG.ggLogo}
-                <div style="text-align:start;">
-                  <div style="font-size:8.5px;font-weight:900;">${ui.ggTitle}</div>
-                  <div class="gg-stars">★★★★★</div>
-                </div>
-              </div>
+              <div style="display:flex;align-items:center;gap:6px;">${SVG.ggLogo}<div style="text-align:start;"><div style="font-size:8.5px;font-weight:900;">${ui.ggTitle}</div><div class="gg-stars">★★★★★</div></div></div>
               <span class="gg-badge">5.0 ★</span>
             </div>
-            <div class="bento-3">
-              ${t.services.map(s => `<div class="bento-box">${SVG.check}<span>${esc(s)}</span></div>`).join("")}
-            </div>
+            <div class="bento-3">${services.map(s => `<div class="bento-box">${SVG.check}<span>${esc(s)}</span></div>`).join("")}</div>
           </div>
           <div>
             <div class="cta-pill">${SVG.cal}<span>${ui.book}</span></div>
@@ -1337,36 +1063,22 @@ function renderMiniScreen(m, tier) {
       <div class="scr-in">
         <div>
           <div class="dyn-island"></div>
-          <div class="cp-mini-hdr">
-            <span style="color:${m.acc};">SIGNATURE 3D • ${m.code}</span>
-            <span>AR | FR | EN</span>
-          </div>
+          <div class="cp-mini-hdr"><span style="color:${m.acc};">SIGNATURE 3D • ${m.code}</span><span>AR | FR | EN</span></div>
           <div class="s3d-stage">
             <div class="s3d-card-back">
-              <div style="font-weight:900;color:${m.acc};">QR + NFC</div>
-              <div style="opacity:0.85;">+212 6 12 34 56 78<br>cartepro.ma</div>
+              <div><div style="font-weight:900;color:${m.acc};">QR + NFC</div><div style="opacity:.85;margin-top:2px;">+212 6 12 34 56 78<br>cartepro.ma</div></div>
+              <div class="qr-svg-box">${QR_SVG}</div>
             </div>
             <div class="s3d-card-front">
-              <div style="display:flex;justify-content:space-between;font-size:7.5px;font-weight:900;">
-                <span style="color:${m.acc};">VIP NFC 3D</span><span>((( NFC )))</span>
-              </div>
-              <div>
-                <div style="font-size:10.5px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(t.name)}</div>
-                <div style="font-size:7.5px;color:${m.acc};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(t.role)}</div>
-              </div>
+              <div style="display:flex;justify-content:space-between;font-size:7.5px;font-weight:900;"><span style="color:${m.acc};">VIP NFC 3D</span><span>((( NFC )))</span></div>
+              <div><div style="font-size:10.5px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(name)}</div><div style="font-size:7.5px;color:${m.acc};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(role)}</div></div>
             </div>
           </div>
-          <div class="s3d-pedestal-wrap">
-            <div class="s3d-halo"></div>
-            <div class="s3d-pedestal-emblem">${logoSvg}</div>
-          </div>
-          <div class="p-nm" style="font-size:19.5px;">${esc(t.name)}</div>
-          <div class="p-rl" style="margin-bottom:6px;">${esc(t.role)}</div>
+          <div class="s3d-pedestal-wrap"><div class="s3d-halo"></div><div class="s3d-pedestal-emblem">${logoSvg}</div></div>
+          <div class="p-nm" style="font-size:19.5px;">${esc(name)}</div>
+          <div class="p-rl" style="margin-bottom:6px;">${esc(role)}</div>
           <div class="vip-gg-widget" style="padding:6px 9px;margin-bottom:7px;">
-            <div style="display:flex;align-items:center;gap:6px;">
-              ${SVG.ggLogo}
-              <div class="gg-stars">★★★★★</div>
-            </div>
+            <div style="display:flex;align-items:center;gap:6px;">${SVG.ggLogo}<div class="gg-stars">★★★★★</div></div>
             <span class="gg-badge">5.0 ★</span>
           </div>
           <div class="s3d-split">
@@ -1376,9 +1088,7 @@ function renderMiniScreen(m, tier) {
         </div>
         <div>
           <div class="cta-pill spot-3d" style="margin-bottom:7px;">${SVG.vcard}<span>${ui.save}</span></div>
-          <div class="s3d-mini-dock">
-            <span>${ui.dock[0]}</span><span>${ui.dock[1]}</span><span>${ui.dock[2]}</span><span class="g">${ui.dock[3]}</span>
-          </div>
+          <div class="s3d-mini-dock"><span>${ui.dock[0]}</span><span>${ui.dock[1]}</span><span>${ui.dock[2]}</span><span class="g">${ui.dock[3]}</span></div>
         </div>
       </div>
     </div>`;
@@ -1386,7 +1096,7 @@ function renderMiniScreen(m, tier) {
 
 function renderFullModalScreen(m, tier) {
   const ui = UI[currentLang].sim;
-  const t = getModelTexts(m);
+  const [name, role, , bio = "", services = []] = m[currentLang];
   const logoSvg = LOGOS[m.logo] || LOGOS.diamond;
   const vars = `background:${m.bg};color:${m.txt};--acc:${m.acc};--line:${m.line};--glass:${m.glassBg};--cta:${m.cta};--ctaT:${m.ctaT};--cardBg:${m.cardBg};--coverBg:${m.coverBg || m.cardBg};`;
   const isVip = tier === "vip";
@@ -1395,41 +1105,27 @@ function renderFullModalScreen(m, tier) {
   return `
     <div class="full-prof ${is3d ? 'has-dock' : ''}" style="${vars}">
       <div class="bg-pat ${m.pat}"></div>
-      <div class="fp-nav">
-        <span>${esc(t.name)}</span>
-        <span class="fp-pill">${m.code} • ${tier === 'essential' ? 'ESSENTIAL' : 'AR | FR | EN'}</span>
-      </div>
+      <div class="fp-nav"><span>${esc(name)}</span><span class="fp-pill">${m.code} • ${tier === 'essential' ? 'ESSENTIAL' : 'AR | FR | EN'}</span></div>
       ${is3d ? `
         <div class="fp-3d-wrap">
           <div class="fp-3d-card" onclick="this.classList.toggle('flipped')">
             <div class="fp-3d-face">
-              <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:800;">
-                <span style="color:${m.acc};">SIGNATURE 3D • NFC</span><span>((( NFC )))</span>
-              </div>
-              <div>
-                <div style="font-family:'Amiri','Playfair Display',serif;font-size:20px;font-weight:700;">${esc(t.name)}</div>
-                <div style="font-size:11px;color:${m.acc};font-weight:700;">${esc(t.role)}</div>
-              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:800;"><span style="color:${m.acc};">SIGNATURE 3D • NFC</span><span>((( NFC )))</span></div>
+              <div><div style="font-family:'Amiri','Playfair Display',serif;font-size:20px;font-weight:700;">${esc(name)}</div><div style="font-size:11px;color:${m.acc};font-weight:700;">${esc(role)}</div></div>
             </div>
             <div class="fp-3d-face back">
-              <div style="width:52px;height:52px;border-radius:10px;background:#fff;color:#061210;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;margin-bottom:7px;">QR</div>
-              <div style="font-size:12.5px;font-weight:900;color:${m.acc};">${ui.backTitle}</div>
-              <div style="font-size:10px;opacity:.85;margin-top:3px;">${ui.backSub}</div>
+              <div class="qr-svg-box" style="width:74px;height:74px;padding:6px;border-radius:10px;">${QR_SVG}</div>
+              <div style="font-size:13px;font-weight:900;color:${m.acc};">${ui.backTitle}</div>
+              <div style="font-size:10.5px;opacity:.85;">${ui.backSub}</div>
             </div>
           </div>
           <div style="font-size:10px;font-weight:800;color:${m.acc};margin-top:6px;">↻ ${ui.flipHint}</div>
         </div>` : ""}
       <div class="fp-tilt-wrap" onmousemove="tiltLogo(event, this)" onmouseleave="resetLogo(this)">
-        <div class="fp-tilt-box">
-          <div class="emblem-circle" style="width:78px;height:78px;margin-bottom:4px;">${logoSvg}</div>
-        </div>
+        <div class="fp-tilt-box"><div class="emblem-circle" style="width:76px;height:76px;margin-bottom:4px;">${logoSvg}</div></div>
       </div>
-      <div style="position:relative;z-index:2;">
-        <div class="p-nm" style="font-size:24px;">${esc(t.name)}</div>
-        <div class="p-rl" style="font-size:12.5px;">${esc(t.role)}</div>
-        <div class="orn-line"></div>
-      </div>
-      ${(isVip || is3d) ? `<p class="fp-bio">${esc(t.bio)}</p>` : ""}
+      <div style="position:relative;z-index:2;"><div class="p-nm" style="font-size:23.5px;">${esc(name)}</div><div class="p-rl" style="font-size:12px;">${esc(role)}</div><div class="orn-line"></div></div>
+      ${(isVip || is3d) ? `<p class="fp-bio">${esc(bio)}</p>` : ""}
       <div class="act-3" style="margin-bottom:0;position:relative;z-index:2;">
         <button type="button" class="act-tile" style="cursor:pointer;color:inherit;" onclick="showToast(UI[currentLang].sim.tCall)">${SVG.phone}<span>${ui.call}</span></button>
         <button type="button" class="act-tile" style="cursor:pointer;color:inherit;" onclick="showToast(UI[currentLang].sim.tWa)">${SVG.wa}<span>${ui.wa}</span></button>
@@ -1437,128 +1133,62 @@ function renderFullModalScreen(m, tier) {
       </div>
       ${(isVip || is3d) ? `
         <button type="button" class="vip-gg-widget" style="cursor:pointer;color:inherit;position:relative;z-index:2;width:100%;" onclick="showToast(UI[currentLang].sim.tGg)">
-          <div style="display:flex;align-items:center;gap:8px;">
-            ${SVG.ggLogo}
-            <div style="text-align:start;">
-              <div style="font-size:11px;font-weight:900;">${ui.ggTitle}</div>
-              <div class="gg-stars">★★★★★ (5.0)</div>
-            </div>
-          </div>
+          <div style="display:flex;align-items:center;gap:8px;">${SVG.ggLogo}<div style="text-align:start;"><div style="font-size:11px;font-weight:900;">${ui.ggTitle}</div><div class="gg-stars">★★★★★ (5.0)</div></div></div>
           <span class="gg-badge">5.0 ★</span>
         </button>
-        <div class="bento-3" style="position:relative;z-index:2;margin-bottom:0;">
-          ${t.services.map(s => `<div class="bento-box" style="padding:10px 6px;font-size:10px;">${SVG.check}<span>${esc(s)}</span></div>`).join("")}
-        </div>
-        <button type="button" class="fp-btn" onclick="showToast(UI[currentLang].sim.tBook)">
-          <span class="fp-btn-l">${SVG.cal}<span>${ui.book}</span></span><span>›</span>
-        </button>` : ""}
-      <button type="button" class="fp-btn" onclick="showToast(UI[currentLang].sim.tLoc)">
-        <span class="fp-btn-l">${SVG.map}<span>${ui.loc}${m.city ? ' (' + m.city + ')' : ''}</span></span><span>›</span>
-      </button>
-      <button type="button" class="fp-save-cta ${is3d ? 'spot-3d' : ''}" onclick="showToast(UI[currentLang].sim.tSave)">
-        ${SVG.vcard}<span>${ui.save}</span>
-      </button>
+        <div class="bento-3" style="position:relative;z-index:2;margin-bottom:0;">${services.map(s => `<div class="bento-box" style="padding:10px 6px;font-size:10px;">${SVG.check}<span>${esc(s)}</span></div>`).join("")}</div>
+        <button type="button" class="fp-btn" onclick="showToast(UI[currentLang].sim.tBook)"><span class="fp-btn-l">${SVG.cal}<span>${ui.book}</span></span><span>›</span></button>` : ""}
+      <button type="button" class="fp-btn" onclick="showToast(UI[currentLang].sim.tLoc)"><span class="fp-btn-l">${SVG.map}<span>${ui.loc}${m.city ? ' (' + m.city + ')' : ''}</span></span><span>›</span></button>
+      <button type="button" class="fp-save-cta ${is3d ? 'spot-3d' : ''}" onclick="showToast(UI[currentLang].sim.tSave)">${SVG.vcard}<span>${ui.save}</span></button>
       ${is3d ? `<div class="fp-trust-row">${ui.trust.map(x => `<span class="fp-trust-pill">✓ ${x}</span>`).join("")}</div>` : ""}
       <div style="position:relative;z-index:2;">${socialsHTML(true)}</div>
-      ${is3d ? `
-        <div class="fp-vip-dock">
-          <button type="button" class="fp-dock-btn" onclick="showToast(UI[currentLang].sim.tCall)">${ui.dock[0]}</button>
-          <button type="button" class="fp-dock-btn" onclick="showToast(UI[currentLang].sim.tBook)">${ui.dock[1]}</button>
-          <button type="button" class="fp-dock-btn" onclick="showToast(UI[currentLang].sim.tWa)">${ui.dock[2]}</button>
-          <button type="button" class="fp-dock-btn gold" onclick="showToast(UI[currentLang].sim.tSave)">${ui.dock[3]}</button>
-        </div>` : ""}
+      ${is3d ? `<div class="fp-vip-dock"><button type="button" class="fp-dock-btn" onclick="showToast(UI[currentLang].sim.tCall)">${ui.dock[0]}</button><button type="button" class="fp-dock-btn" onclick="showToast(UI[currentLang].sim.tBook)">${ui.dock[1]}</button><button type="button" class="fp-dock-btn" onclick="showToast(UI[currentLang].sim.tWa)">${ui.dock[2]}</button><button type="button" class="fp-dock-btn gold" onclick="showToast(UI[currentLang].sim.tSave)">${ui.dock[3]}</button></div>` : ""}
     </div>`;
 }
 
-function tiltLogo(e, wrap) {
-  const box = wrap.querySelector(".fp-tilt-box");
-  if (!box) return;
-  const r = wrap.getBoundingClientRect();
-  const x = (e.clientX - r.left) / r.width - 0.5;
-  const y = (e.clientY - r.top) / r.height - 0.5;
-  box.style.transform = `rotateY(${x * 24}deg) rotateX(${-y * 24}deg)`;
-}
-function resetLogo(wrap) {
-  const box = wrap.querySelector(".fp-tilt-box");
-  if (box) box.style.transform = "rotateY(0deg) rotateX(0deg)";
-}
-
-function openWA(msg) {
-  window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent(msg)}`, "_blank");
-}
+function tiltLogo(e, wrap) { const box = wrap.querySelector(".fp-tilt-box"); if (!box) return; const r = wrap.getBoundingClientRect(); box.style.transform = `rotateY(${((e.clientX - r.left) / r.width - 0.5) * 24}deg) rotateX(${-((e.clientY - r.top) / r.height - 0.5) * 24}deg)`; }
+function resetLogo(wrap) { const box = wrap.querySelector(".fp-tilt-box"); if (box) box.style.transform = "rotateY(0deg) rotateX(0deg)"; }
+function openWA(msg) { window.open(`https://wa.me/${WA_NUM}?text=${encodeURIComponent(msg)}`, "_blank"); }
 
 function orderWhatsApp(idx) {
   const m = CATALOG[currentTier][idx];
   const tierInfo = UI[currentLang].tiers[currentTier];
-  const cn = document.getElementById("customName").value.trim();
-  const cr = document.getElementById("customRole").value.trim();
-  let msg = "";
-  if (currentLang === "ar") {
-    msg = `السلام عليكم CartePro Maroc،\n\nأود طلب هذا النموذج من معرض الديمو:\n• العرض: ${tierInfo.name} (${tierInfo.price})\n• رمز النموذج: ${m.code}\n• اسم النموذج: ${m.ar[0]}`;
-    if (cn) msg += `\n• الاسم / العلامة: ${cn}`;
-    if (cr) msg += `\n• المهنة / النشاط: ${cr}`;
-    msg += `\n\nأرغب في تخصيصه بشعاري وهويتي البصرية مع معاينة قبل الطباعة.`;
-  } else if (currentLang === "fr") {
-    msg = `Bonjour CartePro Maroc,\n\nJe souhaite commander ce modèle :\n• Offre : ${tierInfo.name} (${tierInfo.price})\n• Code : ${m.code}\n• Modèle : ${m.fr[0]}`;
-    if (cn) msg += `\n• Nom / Marque : ${cn}`;
-    if (cr) msg += `\n• Profession : ${cr}`;
-    msg += `\n\nJe souhaite le personnaliser avec mon logo et mes couleurs (aperçu avant impression).`;
-  } else {
-    msg = `Hello CartePro Maroc,\n\nI would like to order this template:\n• Package: ${tierInfo.name} (${tierInfo.price})\n• Model Code: ${m.code}\n• Template: ${m.en[0]}`;
-    if (cn) msg += `\n• Name / Brand: ${cn}`;
-    if (cr) msg += `\n• Profession: ${cr}`;
-    msg += `\n\nPlease customize it with my brand identity (free preview before printing).`;
-  }
+  const msg = currentLang === "ar"
+    ? `السلام عليكم CartePro Maroc،\n\nأود طلب هذا النموذج:\n• العرض: ${tierInfo.name} (${tierInfo.price})\n• الرمز: ${m.code}\n• النموذج: ${m.ar[0]}\n\nأرغب في تخصيصه بشعاري وهويتي مع معاينة قبل الطباعة.`
+    : currentLang === "fr"
+    ? `Bonjour CartePro Maroc,\n\nJe souhaite commander :\n• Offre : ${tierInfo.name} (${tierInfo.price})\n• Code : ${m.code}\n• Modèle : ${m.fr[0]}\n\nAvec aperçu gratuit avant impression.`
+    : `Hello CartePro Maroc,\n\nI would like to order:\n• Tier: ${tierInfo.name} (${tierInfo.price})\n• Code: ${m.code}\n• Template: ${m.en[0]}\n\nWith free preview before printing.`;
   openWA(msg);
 }
 
 function orderCustomDesign() {
   const tierInfo = UI[currentLang].tiers[currentTier];
-  const cn = document.getElementById("customName").value.trim();
-  const cr = document.getElementById("customRole").value.trim();
-  let msg = "";
-  if (currentLang === "ar") {
-    msg = `السلام عليكم CartePro Maroc،\n\nأرغب في تصميم بروفيل خاص ومخصص لعملي:\n• العرض المختار: ${tierInfo.name} (${tierInfo.price})`;
-    if (cn) msg += `\n• الاسم / العلامة: ${cn}`;
-    if (cr) msg += `\n• المهنة / النشاط: ${cr}`;
-    msg += `\n\nأود الحصول على معاينة مجانية بشعاري وألواني قبل الطباعة.`;
-  } else if (currentLang === "fr") {
-    msg = `Bonjour CartePro Maroc,\n\nJe souhaite un profil personnalisé sur-mesure :\n• Offre : ${tierInfo.name} (${tierInfo.price})`;
-    if (cn) msg += `\n• Nom / Marque : ${cn}`;
-    if (cr) msg += `\n• Profession : ${cr}`;
-    msg += `\n\nMerci de me préparer un aperçu gratuit avant impression.`;
-  } else {
-    msg = `Hello CartePro Maroc,\n\nI would like a bespoke custom-designed profile:\n• Package: ${tierInfo.name} (${tierInfo.price})`;
-    if (cn) msg += `\n• Name / Brand: ${cn}`;
-    if (cr) msg += `\n• Profession: ${cr}`;
-    msg += `\n\nI'd love a free preview with my logo and colors before printing.`;
-  }
+  const msg = currentLang === "ar"
+    ? `السلام عليكم CartePro Maroc،\n\nأرغب في تصميم بروفيل خاص ومخصص لعملي:\n• العرض: ${tierInfo.name} (${tierInfo.price})\n\nأود الحصول على معاينة مجانية بشعاري وألواني قبل الطباعة.`
+    : currentLang === "fr"
+    ? `Bonjour CartePro Maroc,\n\nJe souhaite un profil sur-mesure (${tierInfo.name} — ${tierInfo.price}) avec aperçu gratuit avant impression.`
+    : `Hello CartePro Maroc,\n\nI'd like a bespoke custom profile (${tierInfo.name} — ${tierInfo.price}) with a free preview before printing.`;
   openWA(msg);
 }
 
 function orderConsultation() {
-  const cn = document.getElementById("customName").value.trim();
-  const cr = document.getElementById("customRole").value.trim();
-  let msg = currentLang === "ar"
-    ? `السلام عليكم CartePro Maroc، أحتاج مساعدة لاختيار أفضل عرض وتصميم يناسب نشاطي.${cn ? '\n• الاسم: ' + cn : ''}${cr ? '\n• المهنة: ' + cr : ''}`
+  const msg = currentLang === "ar"
+    ? `السلام عليكم CartePro Maroc، أحتاج مساعدة لاختيار أفضل عرض وتصميم يناسب نشاطي.`
     : currentLang === "fr"
-    ? `Bonjour CartePro Maroc, j'aimerais un conseil gratuit pour choisir la meilleure offre pour mon activité.${cn ? '\n• Nom : ' + cn : ''}${cr ? '\n• Métier : ' + cr : ''}`
-    : `Hello CartePro Maroc, I'd like a free recommendation on the best tier and design for my business.${cn ? '\n• Name: ' + cn : ''}${cr ? '\n• Profession: ' + cr : ''}`;
+    ? `Bonjour CartePro Maroc, j'aimerais un conseil gratuit pour choisir la meilleure offre.`
+    : `Hello CartePro Maroc, I'd like a free recommendation on the best tier and design for my business.`;
   openWA(msg);
 }
 
 function openPreview(idx) {
   const m = CATALOG[currentTier][idx];
-  const t = getModelTexts(m);
   const tierInfo = UI[currentLang].tiers[currentTier];
-
   document.getElementById("liveScreen").innerHTML = renderFullModalScreen(m, currentTier);
   document.getElementById("mCode").textContent = `${m.code} • ${tierInfo.price}`;
   document.getElementById("mTitle").textContent = m[currentLang][0];
-  document.getElementById("mDesc").textContent = t.desc;
+  document.getElementById("mDesc").textContent = m[currentLang][2];
   document.getElementById("mNote").textContent = tierInfo.note;
   document.getElementById("mFeats").innerHTML = tierInfo.chips.map(c => `<li><span>✓</span><span>${c}</span></li>`).join("");
-
   const btn = document.getElementById("mOrderBtn");
   btn.textContent = `${UI[currentLang].btnOrderFull} (${tierInfo.price})`;
   btn.onclick = () => orderWhatsApp(idx);
@@ -1566,15 +1196,12 @@ function openPreview(idx) {
   document.getElementById("previewModal").classList.add("open");
 }
 
-function closePreview() {
-  document.getElementById("previewModal").classList.remove("open");
-}
+function closePreview() { document.getElementById("previewModal").classList.remove("open"); }
 
 function updateTierCards() {
   const d = UI[currentLang];
   ["essential", "vip", "signature"].forEach(k => {
-    const isAct = k === currentTier;
-    const t = d.tiers[k];
+    const isAct = k === currentTier, t = d.tiers[k];
     document.getElementById("tab-" + k).classList.toggle("active", isAct);
     document.getElementById("tag-" + k).textContent = t.tag;
     document.getElementById("name-" + k).textContent = t.name;
@@ -1584,31 +1211,17 @@ function updateTierCards() {
 }
 
 function renderGrid() {
-  const list = CATALOG[currentTier];
-  const ui = UI[currentLang];
-  const tierInfo = ui.tiers[currentTier];
-
-  const cardsHTML = list.map((m, i) => {
-    const t = getModelTexts(m);
-    return `
-      <article class="g-card panel">
-        <div class="gc-head">
-          <span class="gc-code">${m.code}</span>
-          <span class="gc-sector">${m.sector[currentLang]}</span>
-        </div>
-        <div class="iphone-mini" onclick="openPreview(${i})">
-          ${renderMiniScreen(m, currentTier)}
-        </div>
-        <div>
-          <h3 class="gc-title">${m[currentLang][0]}</h3>
-          <p class="gc-desc">${t.desc}</p>
-        </div>
-        <div class="gc-btns">
-          <button type="button" class="btn btn-out" onclick="openPreview(${i})">${ui.btnPreview}</button>
-          <button type="button" class="btn btn-wa" onclick="orderWhatsApp(${i})">${ui.btnOrder}</button>
-        </div>
-      </article>`;
-  }).join("");
+  const list = CATALOG[currentTier], ui = UI[currentLang], tierInfo = ui.tiers[currentTier];
+  const cardsHTML = list.map((m, i) => `
+    <article class="g-card panel">
+      <div class="gc-head"><span class="gc-code">${m.code}</span><span class="gc-sector">${m.sector[currentLang]}</span></div>
+      <div class="iphone-mini" onclick="openPreview(${i})">${renderMiniScreen(m, currentTier)}</div>
+      <div><h3 class="gc-title">${m[currentLang][0]}</h3><p class="gc-desc">${m[currentLang][2]}</p></div>
+      <div class="gc-btns">
+        <button type="button" class="btn btn-out" onclick="openPreview(${i})">${ui.btnPreview}</button>
+        <button type="button" class="btn btn-wa" onclick="orderWhatsApp(${i})">${ui.btnOrder}</button>
+      </div>
+    </article>`).join("");
 
   const customCardHTML = `
     <article class="g-card custom-gold-card">
@@ -1617,12 +1230,8 @@ function renderGrid() {
         <span class="cgc-badge">${tierInfo.customBadge}</span>
         <h3 class="cgc-title">${tierInfo.customTitle}</h3>
         <p class="cgc-desc">${tierInfo.customDesc}</p>
-        <ul class="cgc-list">
-          ${tierInfo.customList.map(x => `<li><span>✓</span><span>${x}</span></li>`).join("")}
-        </ul>
-        <button type="button" class="btn btn-gold spot-3d" style="width:100%;padding:13px 16px;font-size:13px;" onclick="orderCustomDesign()">
-          ${tierInfo.customBtn}
-        </button>
+        <ul class="cgc-list">${tierInfo.customList.map(x => `<li><span>✓</span><span>${x}</span></li>`).join("")}</ul>
+        <button type="button" class="btn btn-gold spot-3d" style="width:100%;padding:13px 16px;font-size:13px;" onclick="orderCustomDesign()">${tierInfo.customBtn}</button>
       </div>
     </article>`;
 
@@ -1630,29 +1239,16 @@ function renderGrid() {
 }
 
 function renderComparison() {
-  const ui = UI[currentLang];
-  const keys = ["essential", "vip", "signature"];
+  const ui = UI[currentLang], keys = ["essential", "vip", "signature"];
   document.getElementById("cmpSection").innerHTML = `
-    <h2>${ui.cmpTitle}</h2>
-    <p class="sub">${ui.cmpSub}</p>
+    <h2>${ui.cmpTitle}</h2><p class="sub">${ui.cmpSub}</p>
     <div class="cmp-grid">
       ${keys.map(k => {
-        const t = ui.tiers[k];
-        const isAct = k === currentTier;
-        return `
-          <div class="tier-box t-${k} ${isAct ? 'active' : ''}" onclick="setTier('${k}');window.scrollTo({top:220,behavior:'smooth'})">
-            <div>
-              <div class="tt-top">
-                <span class="tt-tag">${t.tag}</span>
-                <span class="tt-price">${t.price}</span>
-              </div>
-              <div class="tt-name">${t.name}</div>
-              <ul class="tt-pts">
-                ${t.chips.map(c => `<li><span>✓</span><span>${c}</span></li>`).join("")}
-              </ul>
-            </div>
-            <div class="tt-action">${isAct ? ui.activeLbl : t.switchLbl}</div>
-          </div>`;
+        const t = ui.tiers[k], isAct = k === currentTier;
+        return `<div class="tier-box t-${k} ${isAct ? 'active' : ''}" onclick="setTier('${k}');window.scrollTo({top:200,behavior:'smooth'})">
+          <div><div class="tt-top"><span class="tt-tag">${t.tag}</span><span class="tt-price">${t.price}</span></div><div class="tt-name">${t.name}</div><ul class="tt-pts">${t.chips.map(c => `<li><span>✓</span><span>${c}</span></li>`).join("")}</ul></div>
+          <div class="tt-action">${isAct ? ui.activeLbl : t.switchLbl}</div>
+        </div>`;
       }).join("")}
     </div>`;
 }
@@ -1660,65 +1256,50 @@ function renderComparison() {
 function setTier(t) {
   if (!["essential", "vip", "signature"].includes(t)) return;
   currentTier = t;
-  const u = new URL(window.location);
-  u.searchParams.set("tier", t);
-  window.history.replaceState({}, "", u);
-  updateTierCards();
-  renderGrid();
-  renderComparison();
+  const u = new URL(window.location); u.searchParams.set("tier", t); window.history.replaceState({}, "", u);
+  updateTierCards(); renderGrid(); renderComparison(); renderLab();
 }
 
 function setLang(l) {
   if (!UI[l]) return;
   currentLang = l;
-  document.documentElement.lang = l;
-  document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+  document.documentElement.lang = l; document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
   ["ar", "fr", "en"].forEach(k => document.getElementById("btn-" + k).classList.toggle("active", k === l));
-
   const d = UI[l];
   document.getElementById("lblBack").textContent = d.back;
   document.getElementById("lblTheme").querySelector("span").textContent = d.theme;
   document.getElementById("lblBadge").textContent = d.badge;
   document.getElementById("lblTitle").innerHTML = d.title;
   document.getElementById("lblSub").textContent = d.sub;
-  document.getElementById("lblNameInp").textContent = d.nameInp;
-  document.getElementById("customName").placeholder = d.namePh;
-  document.getElementById("lblRoleInp").textContent = d.roleInp;
-  document.getElementById("customRole").placeholder = d.rolePh;
-  document.getElementById("btnTryOrder").textContent = d.tryOrder;
+  document.getElementById("labTitle").textContent = d.labTitle;
+  document.getElementById("labSub").textContent = d.labSub;
+  document.getElementById("lblLabName").textContent = d.labName;
+  document.getElementById("labName").placeholder = d.labNamePh;
+  document.getElementById("lblLabProf").textContent = d.labProf;
+  document.getElementById("lblLabStyle").textContent = d.labStyle;
+  document.getElementById("btnLabOrder").textContent = d.labOrder;
+  document.getElementById("btnLabReset").textContent = d.labReset;
+  document.getElementById("labHint").textContent = d.labHint;
+  document.getElementById("catTitle").textContent = d.catTitle;
+  document.getElementById("catSub").textContent = d.catSub;
   document.getElementById("consTitle").textContent = d.consTitle;
   document.getElementById("consSub").textContent = d.consSub;
   document.getElementById("consBtn").textContent = d.consBtn;
   document.getElementById("waFloatBtn").querySelector("span").textContent = d.waFloat;
   document.getElementById("lblFooter").innerHTML = d.footer;
+  document.getElementById("trustStrip").innerHTML = d.trust.map(x => `<span class="trust-item"><span>✓</span><span>${x}</span></span>`).join("");
 
-  document.getElementById("stepsBar").innerHTML = d.steps.map((s, idx) =>
-    `<span class="step-chip"><span class="step-num">${idx + 1}</span><span>${s}</span></span>`
-  ).join("");
-
-  document.getElementById("trustStrip").innerHTML = d.trust.map(x =>
-    `<span class="trust-item"><span>✓</span><span>${x}</span></span>`
-  ).join("");
-
+  populateProfSelect();
+  renderStylePills();
   updateTierCards();
   renderGrid();
   renderComparison();
+  renderLab();
 }
 
-function toggleTheme() {
-  document.body.classList.toggle("theme-ivory");
-}
-
-function showToast(msg) {
-  const el = document.getElementById("toast");
-  el.textContent = msg;
-  el.classList.add("show");
-  setTimeout(() => el.classList.remove("show"), 2500);
-}
-
-document.getElementById("previewModal").addEventListener("click", e => {
-  if (e.target.id === "previewModal") closePreview();
-});
+function toggleTheme() { document.body.classList.toggle("theme-ivory"); }
+function showToast(msg) { const el = document.getElementById("toast"); el.textContent = msg; el.classList.add("show"); setTimeout(() => el.classList.remove("show"), 2500); }
+document.getElementById("previewModal").addEventListener("click", e => { if (e.target.id === "previewModal") closePreview(); });
 
 (function init() {
   const q = (new URLSearchParams(window.location.search).get("tier") || "").toLowerCase();
