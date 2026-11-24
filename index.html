@@ -12,19 +12,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #071311;
-      --bg2: #0F2622;
-      --pan: linear-gradient(145deg, rgba(18, 45, 41, 0.96), rgba(7, 19, 17, 0.99));
+      --bg: #061210;
+      --bg2: #0E2521;
+      --pan: linear-gradient(145deg, rgba(19, 48, 43, 0.92), rgba(7, 19, 17, 0.98));
       --sub: rgba(255, 255, 255, 0.045);
       --gold: #E0BD7A;
-      --gold-hi: #F8E6BD;
+      --gold-hi: #FFF2CE;
       --gold-dk: #A97F36;
-      --bdr: rgba(224, 189, 122, 0.3);
+      --bdr: rgba(224, 189, 122, 0.28);
       --bdr-hi: rgba(248, 230, 189, 0.85);
       --txt: #FAF7F2;
-      --txt2: #DDE6E3;
+      --txt2: #DDE8E5;
       --mut: #9FB5B0;
-      --shd: 0 24px 54px -14px rgba(0, 0, 0, 0.78), inset 0 1px 1px rgba(255, 255, 255, 0.14);
+      --shd: 0 26px 58px -14px rgba(0, 0, 0, 0.82), inset 0 1px 1px rgba(255, 255, 255, 0.16);
     }
 
     body.theme-ivory {
@@ -32,7 +32,7 @@
       --bg2: #EAE4D7;
       --pan: linear-gradient(145deg, #FFFFFF, #F7F3EA);
       --sub: rgba(24, 58, 54, 0.05);
-      --bdr: rgba(176, 134, 59, 0.38);
+      --bdr: rgba(176, 134, 59, 0.36);
       --bdr-hi: rgba(169, 127, 54, 0.88);
       --txt: #102825;
       --txt2: #244742;
@@ -48,227 +48,250 @@
       color: var(--txt);
       font-family: "Cairo", sans-serif;
       background-image:
-        radial-gradient(circle at 84% 5%, rgba(224, 189, 122, 0.16), transparent 40%),
-        radial-gradient(circle at 12% 24%, rgba(28, 78, 70, 0.24), transparent 44%),
+        radial-gradient(circle at 86% 4%, rgba(224, 189, 122, 0.18), transparent 38%),
+        radial-gradient(circle at 12% 20%, rgba(24, 88, 76, 0.28), transparent 44%),
+        radial-gradient(circle at 50% 60%, rgba(224, 189, 122, 0.06), transparent 50%),
         url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23E0BD7A' stroke-width='.5' stroke-opacity='.09'%3E%3Cpath d='M36 0L72 36L36 72L0 36Z'/%3E%3Ccircle cx='36' cy='36' r='18'/%3E%3C/g%3E%3C/svg%3E");
-      background-size: 100% 100%, 100% 100%, 72px 72px;
+      background-size: 100% 100%, 100% 100%, 100% 100%, 72px 72px;
       overflow-x: hidden;
       transition: background-color 0.3s, color 0.3s;
     }
     html[dir="ltr"] body { font-family: "Plus Jakarta Sans", system-ui, sans-serif; }
-    .ct { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
-    .panel { background: var(--pan); border: 1.5px solid var(--bdr); box-shadow: var(--shd); }
+    .ct { max-width: 1280px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2; }
+    .panel { background: var(--pan); border: 1.5px solid var(--bdr); box-shadow: var(--shd); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
     .t-gold {
-      background: linear-gradient(135deg, #FFF5DB, #E6C78A 50%, #C29648);
+      background: linear-gradient(135deg, #FFF7DF 0%, #E6C78A 48%, #C29648 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 12px rgba(224, 189, 122, 0.25));
     }
     body.theme-ivory .t-gold {
       background: linear-gradient(135deg, #8F651D, #C5953D 50%, #7C5615);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      filter: none;
     }
 
-    /* Sheen Animation */
+    /* LUXURY ANIMATIONS (Matching Main Profile Energy) */
+    @keyframes sheen3d { 0%, 38% { transform: translateX(0) skewX(-22deg); } 74%, 100% { transform: translateX(460%) skewX(-22deg); } }
+    @keyframes aura3d { 0%, 100% { box-shadow: 0 8px 22px rgba(224,189,122,0.35); } 50% { box-shadow: 0 12px 34px rgba(224,189,122,0.78), 0 0 0 5px rgba(248,230,189,0.22); } }
+    @keyframes floatFront { 0%, 100% { transform: rotateY(15deg) rotateZ(-4deg) translateY(0px); } 50% { transform: rotateY(20deg) rotateZ(-2deg) translateY(-7px); } }
+    @keyframes floatBack { 0%, 100% { transform: rotateY(-18deg) rotateZ(5deg) translateY(0px); } 50% { transform: rotateY(-13deg) rotateZ(7deg) translateY(5px); } }
+    @keyframes spinHalo { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes pulseDot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.6; } }
+    @keyframes floatBadge { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
+
     .spot-3d { position: relative; overflow: hidden; animation: aura3d 2.8s infinite ease-in-out; }
     .spot-3d::before {
       content: ""; position: absolute; top: 0; left: -120%; width: 65%; height: 100%;
-      background: linear-gradient(110deg, transparent, rgba(255,255,255,0.68), transparent);
-      transform: skewX(-22deg); animation: sheen3d 3.1s infinite ease-in-out; pointer-events: none;
+      background: linear-gradient(110deg, transparent, rgba(255,255,255,0.72), transparent);
+      transform: skewX(-22deg); animation: sheen3d 3s infinite ease-in-out; pointer-events: none;
     }
-    @keyframes sheen3d { 0%, 40% { transform: translateX(0) skewX(-22deg); } 75%, 100% { transform: translateX(440%) skewX(-22deg); } }
-    @keyframes aura3d { 0%, 100% { box-shadow: 0 8px 22px rgba(224,189,122,0.35); } 50% { box-shadow: 0 12px 32px rgba(224,189,122,0.72), 0 0 0 5px rgba(248,230,189,0.2); } }
 
     /* Navbar */
     .nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(7, 19, 17, 0.94);
-      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      background: rgba(6, 18, 16, 0.92);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       border-bottom: 1.5px solid var(--bdr);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
     }
-    .nav-in {
-      max-width: 1280px; margin: 0 auto; padding: 10px 20px;
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    }
+    .nav-in { max-width: 1280px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; direction: ltr; }
-    .wm { font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; font-size: 23px; line-height: 1; color: #fff; }
+    .wm { font-family: "Playfair Display", serif; font-style: italic; font-weight: 700; font-size: 24px; line-height: 1; color: #fff; }
     .wm span { color: #E0BD7A; }
-    .wm-s { font-size: 9px; color: #E0BD7A; letter-spacing: 0.16em; font-weight: 700; display: block; text-align: center; margin-top: 2px; }
+    .wm-s { font-size: 9px; color: #E0BD7A; letter-spacing: 0.18em; font-weight: 700; display: block; text-align: center; margin-top: 2px; }
     .nav-acts { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .pill {
       display: inline-flex; align-items: center; justify-content: center; gap: 6px;
-      padding: 6px 12px; border-radius: 999px;
+      padding: 7px 14px; border-radius: 999px;
       background: rgba(224, 189, 122, 0.13); border: 1px solid var(--bdr-hi);
-      color: var(--gold-hi); font-size: 11.5px; font-weight: 700;
+      color: var(--gold-hi); font-size: 11.5px; font-weight: 800;
       cursor: pointer; font-family: inherit; text-decoration: none; white-space: nowrap; transition: 0.2s;
     }
-    .pill:hover { background: var(--gold); color: #071311; }
+    .pill:hover { background: var(--gold); color: #061210; transform: translateY(-1px); }
     .pill svg { width: 14px; height: 14px; stroke: currentColor; fill: none; }
     .lsw { display: inline-flex; background: rgba(15, 39, 36, 0.95); border: 1px solid var(--bdr); border-radius: 999px; padding: 2.5px; direction: ltr; }
-    .lsw button { border: none; background: transparent; color: #C5D6D2; padding: 5px 10px; border-radius: 999px; cursor: pointer; font-weight: 700; font-size: 11px; transition: 0.2s; }
-    .lsw button.active { background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036); color: #071311; }
+    .lsw button { border: none; background: transparent; color: #C5D6D2; padding: 5px 10px; border-radius: 999px; cursor: pointer; font-weight: 800; font-size: 11px; transition: 0.2s; }
+    .lsw button.active { background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036); color: #061210; box-shadow: 0 2px 10px rgba(224,189,122,0.4); }
 
     /* Hero */
-    .hero { padding: 34px 0 20px; text-align: center; }
+    .hero { padding: 38px 0 22px; text-align: center; }
     .hero-tag {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 15px; border-radius: 999px;
-      background: linear-gradient(90deg, #143530, #1F5149);
+      padding: 7px 18px; border-radius: 999px;
+      background: linear-gradient(90deg, rgba(20,53,48,0.9), rgba(31,81,73,0.9));
       border: 1px solid var(--gold-hi); color: var(--gold-hi);
-      font-size: 11.5px; font-weight: 800; margin-bottom: 12px;
+      font-size: 12px; font-weight: 800; margin-bottom: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 18px rgba(224,189,122,0.2);
+      animation: floatBadge 3.5s infinite ease-in-out;
     }
-    .hero h1 { font-size: clamp(26px, 4vw, 44px); font-weight: 900; margin: 0 0 10px; line-height: 1.2; }
-    .hero p { font-size: 15px; color: var(--txt2); max-width: 780px; margin: 0 auto 20px; line-height: 1.75; }
+    .hero h1 { font-size: clamp(28px, 4.2vw, 46px); font-weight: 900; margin: 0 0 12px; line-height: 1.2; letter-spacing: -0.01em; }
+    .hero p { font-size: 15.5px; color: var(--txt2); max-width: 790px; margin: 0 auto 22px; line-height: 1.8; }
 
     /* Guided 3-Step Bar */
-    .steps-bar {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
-      margin: 0 auto 24px; max-width: 980px;
-    }
+    .steps-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 auto 28px; max-width: 980px; }
     .step-chip {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 7px 14px; border-radius: 999px;
-      background: var(--sub); border: 1px solid var(--bdr);
-      font-size: 12px; font-weight: 700; color: var(--txt2);
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--bdr);
+      font-size: 12.5px; font-weight: 800; color: var(--txt2);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
     .step-num {
-      width: 21px; height: 21px; border-radius: 50%;
-      background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #071311;
-      font-size: 11px; font-weight: 900; display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #061210;
+      font-size: 11.5px; font-weight: 900; display: inline-flex; align-items: center; justify-content: center;
     }
 
-    /* DISTINCT TIER SWITCHER CARDS */
-    .tier-tabs {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
-      max-width: 1140px; margin: 0 auto 18px; align-items: stretch;
+    /* =====================================================================
+       3 COMPLETELY DISTINCT TIER PERSONALITIES (SHARED BY TOP & BOTTOM)
+       ===================================================================== */
+    .tier-tabs, .cmp-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      max-width: 1160px; margin: 0 auto 20px; align-items: stretch;
     }
-    .tier-tab {
+    .tier-box {
       position: relative; overflow: hidden;
-      border-radius: 24px; padding: 20px 18px 18px;
-      color: var(--txt); cursor: pointer; font-family: inherit; text-align: start;
-      display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
-      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      border-radius: 26px; padding: 22px 20px 20px;
+      cursor: pointer; font-family: inherit; text-align: start;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s, box-shadow 0.25s;
     }
-    .tier-tab:hover { transform: translateY(-4px); }
+    .tier-box:hover { transform: translateY(-6px); }
 
-    /* 1. Essential Card Personality (Clean & Practical) */
-    .tier-tab.t-essential {
-      background: var(--pan);
-      border: 1.5px solid var(--bdr);
+    /* TIER 1: ESSENTIAL (Clean Matte Slate / Practical Silver) */
+    .tier-box.t-essential {
+      background: linear-gradient(155deg, rgba(27, 36, 40, 0.94), rgba(14, 19, 22, 0.98));
+      border: 1.5px solid rgba(203, 213, 225, 0.3);
+      color: #F1F5F9;
+      box-shadow: 0 18px 40px -12px rgba(0,0,0,0.65);
     }
-    .tier-tab.t-essential.active {
-      border: 2px solid var(--gold-hi);
-      box-shadow: 0 20px 44px -10px rgba(0, 0, 0, 0.55), 0 0 20px rgba(224, 189, 122, 0.22);
+    body.theme-ivory .tier-box.t-essential {
+      background: linear-gradient(155deg, #FFFFFF, #F1F5F9);
+      border-color: rgba(100, 116, 139, 0.35);
+      color: #0F172A;
+    }
+    .tier-box.t-essential .tt-tag { background: rgba(203, 213, 225, 0.14); border: 1px solid rgba(203, 213, 225, 0.35); color: #E2E8F0; }
+    body.theme-ivory .tier-box.t-essential .tt-tag { background: rgba(15, 23, 42, 0.08); color: #334155; }
+    .tier-box.t-essential .tt-price { color: #E2E8F0; }
+    body.theme-ivory .tier-box.t-essential .tt-price { color: #0F172A; }
+    .tier-box.t-essential .tt-pts { color: #CBD5E1; }
+    body.theme-ivory .tier-box.t-essential .tt-pts { color: #334155; }
+    .tier-box.t-essential .tt-pts li span:first-child { color: #94A3B8; }
+    .tier-box.t-essential.active {
+      border: 2.2px solid #E2E8F0;
+      box-shadow: 0 22px 48px -10px rgba(0,0,0,0.75), 0 0 24px rgba(226, 232, 240, 0.25);
     }
 
-    /* 2. Business VIP Card Personality (Elevated Emerald & Gold Popular) */
-    .tier-tab.t-vip {
-      background: linear-gradient(155deg, #16443C 0%, #0C2824 62%, #071714 100%);
-      border: 1.8px solid rgba(224, 189, 122, 0.55);
+    /* TIER 2: BUSINESS VIP (Rich Royal Emerald + Glowing Gold Popular) */
+    .tier-box.t-vip {
+      background: radial-gradient(circle at 85% 10%, rgba(16, 185, 129, 0.22), transparent 52%), linear-gradient(155deg, #164C43 0%, #0C2E28 58%, #061A17 100%);
+      border: 1.8px solid rgba(224, 189, 122, 0.65);
       color: #FAF7F2;
+      box-shadow: 0 22px 48px -12px rgba(0,0,0,0.75), inset 0 1px 1px rgba(255,255,255,0.2);
     }
-    .tier-tab.t-vip .tt-pts { color: #D8EAE6; }
-    .tier-tab.t-vip.active {
-      border: 2.2px solid #FFF2CE;
-      box-shadow: 0 24px 52px -10px rgba(0, 0, 0, 0.72), 0 0 28px rgba(224, 189, 122, 0.34);
+    .tier-box.t-vip .tt-tag {
+      background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #061A17;
+      border: 1px solid #FFF7E0; box-shadow: 0 4px 14px rgba(224,189,122,0.35);
+    }
+    .tier-box.t-vip .tt-price { color: #F8E6BD; }
+    .tier-box.t-vip .tt-pts { color: #D7ECE7; }
+    .tier-box.t-vip .tt-pts li span:first-child { color: #34D399; }
+    .tier-box.t-vip.active {
+      border: 2.4px solid #FFF2CE;
+      box-shadow: 0 26px 56px -10px rgba(0,0,0,0.82), 0 0 32px rgba(224, 189, 122, 0.36);
     }
 
-    /* 3. Signature 3D Card Personality (Obsidian Luxury + Gold Sheen) */
-    .tier-tab.t-signature {
-      background: radial-gradient(circle at 90% 10%, rgba(224, 189, 122, 0.22), transparent 50%), linear-gradient(155deg, #181715 0%, #0D0D0C 60%, #050505 100%);
-      border: 1.8px solid rgba(248, 230, 189, 0.65);
+    /* TIER 3: SIGNATURE 3D (Obsidian Black + 24K Liquid Gold Sheen) */
+    .tier-box.t-signature {
+      background: radial-gradient(circle at 90% 8%, rgba(245, 200, 110, 0.26), transparent 48%), linear-gradient(155deg, #1B1813 0%, #0E0D0B 55%, #040404 100%);
+      border: 2px solid rgba(248, 230, 189, 0.78);
       color: #FFF9EC;
+      box-shadow: 0 24px 54px -12px rgba(0,0,0,0.88), inset 0 1px 1px rgba(248,230,189,0.3);
     }
-    .tier-tab.t-signature::after {
+    .tier-box.t-signature::after {
       content: ""; position: absolute; top: 0; left: -120%; width: 55%; height: 100%;
-      background: linear-gradient(110deg, transparent, rgba(248,230,189,0.14), transparent);
-      transform: skewX(-22deg); animation: sheen3d 4.2s infinite ease-in-out; pointer-events: none;
+      background: linear-gradient(110deg, transparent, rgba(248,230,189,0.16), transparent);
+      transform: skewX(-22deg); animation: sheen3d 3.8s infinite ease-in-out; pointer-events: none;
     }
-    .tier-tab.t-signature .tt-pts { color: #EBE2CE; }
-    .tier-tab.t-signature.active {
-      border: 2.2px solid #FFF4D2;
-      box-shadow: 0 26px 56px -10px rgba(0, 0, 0, 0.85), 0 0 32px rgba(248, 230, 189, 0.38);
+    .tier-box.t-signature .tt-tag {
+      background: linear-gradient(135deg, #FFF5DB, #D4A244); color: #090806;
+      border: 1px solid #FFF7E0; box-shadow: 0 4px 16px rgba(248,230,189,0.4);
+    }
+    .tier-box.t-signature .tt-price {
+      background: linear-gradient(135deg, #FFF7DF, #E6C78A 50%, #C29648);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .tier-box.t-signature .tt-pts { color: #EFE5CF; }
+    .tier-box.t-signature .tt-pts li span:first-child { color: #F8E6BD; }
+    .tier-box.t-signature.active {
+      border: 2.5px solid #FFF6DC;
+      box-shadow: 0 28px 60px -10px rgba(0,0,0,0.92), 0 0 38px rgba(248, 230, 189, 0.44);
     }
 
     .tt-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
-    .tt-tag {
-      font-size: 10.5px; font-weight: 800; padding: 4px 11px; border-radius: 999px;
-      background: rgba(224, 189, 122, 0.14); border: 1px solid var(--bdr); color: var(--gold-hi);
-    }
-    body.theme-ivory .tier-tab.t-essential .tt-tag { color: #8F651D; }
-    .tier-tab.t-vip .tt-tag { background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #071311; border-color: #FFF7E0; }
-    .tier-tab.t-signature .tt-tag { background: linear-gradient(135deg, #F8E6BD, #C5953D); color: #090806; border-color: #FFF7E0; }
+    .tt-tag { font-size: 11px; font-weight: 900; padding: 4px 12px; border-radius: 999px; }
+    .tt-price { font-size: 27px; font-weight: 900; line-height: 1; }
+    .tt-name { font-size: 19px; font-weight: 900; margin: 0 0 10px; }
+    .tt-pts { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; font-size: 12.5px; line-height: 1.5; }
+    .tt-pts li { display: flex; align-items: flex-start; gap: 8px; }
+    .tt-pts li span:first-child { font-weight: 900; }
 
-    .tt-price { font-size: 25px; font-weight: 900; color: var(--gold-hi); line-height: 1; }
-    body.theme-ivory .tier-tab.t-essential .tt-price { color: #8F651D; }
-    .tt-name { font-size: 18px; font-weight: 900; margin: 0 0 8px; }
-
-    .tt-pts {
-      list-style: none; padding: 0; margin: 0;
-      display: flex; flex-direction: column; gap: 6px;
-      font-size: 12.2px; color: var(--txt2); line-height: 1.45;
-    }
-    .tt-pts li { display: flex; align-items: flex-start; gap: 7px; }
-    .tt-pts li span:first-child { color: var(--gold); font-weight: 900; }
-
-    /* Clear Interactive Switch Indicator at Bottom of Each Tier Card */
+    /* Interactive Action Bar Inside Tier Card */
     .tt-action {
-      margin-top: 4px; padding: 9px 12px; border-radius: 12px;
-      font-size: 12px; font-weight: 800; text-align: center;
-      display: flex; align-items: center; justify-content: center; gap: 6px;
-      border: 1px dashed rgba(224, 189, 122, 0.45);
-      background: rgba(255, 255, 255, 0.05); color: var(--gold-hi);
+      margin-top: 4px; padding: 10px 14px; border-radius: 13px;
+      font-size: 12.5px; font-weight: 900; text-align: center;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      border: 1.2px dashed rgba(248, 230, 189, 0.45);
+      background: rgba(255, 255, 255, 0.06); color: #F8E6BD;
       transition: 0.2s;
     }
-    body.theme-ivory .tier-tab.t-essential:not(.active) .tt-action {
-      color: #8F651D; background: rgba(176, 134, 59, 0.08);
-    }
-    .tier-tab:hover:not(.active) .tt-action {
-      background: rgba(224, 189, 122, 0.18); border-style: solid;
-    }
-    .tier-tab.active .tt-action {
+    .tier-box.t-essential .tt-action { color: #E2E8F0; border-color: rgba(203,213,225,0.4); }
+    body.theme-ivory .tier-box.t-essential:not(.active) .tt-action { color: #0F172A; background: rgba(15,23,42,0.06); border-color: rgba(15,23,42,0.25); }
+    .tier-box:hover:not(.active) .tt-action { background: rgba(255, 255, 255, 0.14); border-style: solid; }
+    .tier-box.active .tt-action {
       background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036);
-      color: #071311; border: 1px solid #FFF7E0;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      color: #061210; border: 1px solid #FFF7E0;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
     }
 
     /* Single-Line Risk Reversal Strip */
     .trust-strip {
-      max-width: 1140px; margin: 0 auto 20px; border-radius: 16px; padding: 11px 16px;
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px;
-      background: rgba(224, 189, 122, 0.08); border: 1px solid var(--bdr);
-      font-size: 12px; font-weight: 800; color: var(--txt2);
+      max-width: 1160px; margin: 0 auto 22px; border-radius: 16px; padding: 12px 18px;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px;
+      background: rgba(224, 189, 122, 0.09); border: 1px solid var(--bdr);
+      font-size: 12.5px; font-weight: 800; color: var(--txt2);
     }
     .trust-item { display: inline-flex; align-items: center; gap: 6px; }
     .trust-item span:first-child { color: var(--gold); font-weight: 900; }
 
     /* Personalization Bar */
     .controls {
-      border-radius: 22px; padding: 16px 18px; margin-bottom: 26px;
-      display: grid; grid-template-columns: 1.15fr 1fr auto; gap: 12px; align-items: end;
+      border-radius: 24px; padding: 18px 20px; margin-bottom: 28px;
+      display: grid; grid-template-columns: 1.15fr 1fr auto; gap: 14px; align-items: end;
     }
-    .lbl { display: block; font-size: 11.5px; font-weight: 800; color: var(--gold); margin-bottom: 5px; }
+    .lbl { display: block; font-size: 12px; font-weight: 800; color: var(--gold); margin-bottom: 6px; }
     .inp {
-      width: 100%; padding: 10px 14px; border-radius: 12px; background: var(--bg);
+      width: 100%; padding: 11px 15px; border-radius: 13px; background: var(--bg);
       border: 1.5px solid var(--bdr); color: var(--txt); font-family: inherit;
-      font-size: 13.5px; font-weight: 700; outline: none;
+      font-size: 14px; font-weight: 700; outline: none; transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .inp:focus { border-color: var(--gold-hi); }
+    .inp:focus { border-color: var(--gold-hi); box-shadow: 0 0 0 3px rgba(224,189,122,0.18); }
 
     /* Gallery Grid (3x3 = 8 Models + 1 Golden Custom Card) */
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 44px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-bottom: 48px; }
     .g-card {
-      border-radius: 28px; padding: 15px; display: flex; flex-direction: column;
-      justify-content: space-between; gap: 14px; transition: transform 0.25s, border-color 0.25s;
+      border-radius: 30px; padding: 16px; display: flex; flex-direction: column;
+      justify-content: space-between; gap: 14px; transition: transform 0.28s, border-color 0.25s, box-shadow 0.25s;
     }
-    .g-card:hover { transform: translateY(-6px); border-color: var(--gold-hi); }
+    .g-card:hover { transform: translateY(-7px); border-color: var(--gold-hi); box-shadow: 0 30px 60px -14px rgba(0,0,0,0.85), 0 0 24px rgba(224,189,122,0.16); }
     .gc-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 2px 4px; }
     .gc-code {
-      font-size: 11px; font-weight: 900; padding: 4px 10px; border-radius: 999px;
-      background: rgba(224, 189, 122, 0.15); border: 1px solid var(--bdr); color: var(--gold-hi); direction: ltr;
+      font-size: 11px; font-weight: 900; padding: 4px 11px; border-radius: 999px;
+      background: rgba(224, 189, 122, 0.16); border: 1px solid var(--bdr); color: var(--gold-hi); direction: ltr;
     }
     body.theme-ivory .gc-code { color: #8F651D; }
-    .gc-sector { font-size: 11.5px; font-weight: 700; color: var(--mut); }
+    .gc-sector { font-size: 12px; font-weight: 700; color: var(--mut); }
 
     /* Card #9: Golden Custom Design Card */
     .g-card.custom-gold-card {
@@ -279,40 +302,34 @@
     }
     .g-card.custom-gold-card::before {
       content: ""; position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(circle at 50% 0%, rgba(248,230,189,0.22), transparent 60%);
+      background: radial-gradient(circle at 50% 0%, rgba(248,230,189,0.24), transparent 60%);
     }
     .cgc-icon {
-      width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 14px;
+      width: 74px; height: 74px; border-radius: 50%; margin: 0 auto 14px;
       background: linear-gradient(135deg, #FFF3D1, #E0BD7A 55%, #AA8036);
-      color: #071311; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 14px 32px rgba(0,0,0,0.5);
+      color: #061210; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.5), 0 0 24px rgba(248,230,189,0.35);
+      animation: floatBadge 3.2s infinite ease-in-out;
     }
     .cgc-icon svg { width: 34px; height: 34px; stroke: currentColor; fill: none; stroke-width: 2; }
-    .cgc-badge {
-      display: inline-block; padding: 4px 12px; border-radius: 999px;
-      background: rgba(248,230,189,0.16); border: 1px solid var(--gold-hi);
-      color: #F8E6BD; font-size: 11px; font-weight: 800; margin-bottom: 12px;
-    }
+    .cgc-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(248,230,189,0.16); border: 1px solid var(--gold-hi); color: #F8E6BD; font-size: 11px; font-weight: 800; margin-bottom: 12px; }
     .cgc-title { font-size: 22px; font-weight: 900; margin: 0 0 10px; color: #FFF6DF; line-height: 1.3; }
     .cgc-desc { font-size: 13.5px; color: #D4E4E0; line-height: 1.75; margin: 0 0 18px; }
-    .cgc-list {
-      list-style: none; padding: 0; margin: 0 0 22px; text-align: start;
-      display: flex; flex-direction: column; gap: 8px; font-size: 12.5px; color: #EFE7D6;
-    }
+    .cgc-list { list-style: none; padding: 0; margin: 0 0 22px; text-align: start; display: flex; flex-direction: column; gap: 8px; font-size: 12.5px; color: #EFE7D6; }
     .cgc-list li { display: flex; align-items: center; gap: 8px; }
     .cgc-list li span:first-child { color: #E0BD7A; font-weight: 900; }
 
     /* Realistic iPhone Shell in Gallery */
     .iphone-mini {
-      border-radius: 34px; padding: 7px;
-      background: linear-gradient(145deg, #685C46, #171D1B 48%, #070A09);
-      border: 1.5px solid rgba(248, 230, 189, 0.68);
-      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.62);
-      cursor: pointer; transition: transform 0.25s;
+      border-radius: 36px; padding: 7px;
+      background: linear-gradient(145deg, #75674E, #171D1B 48%, #070A09);
+      border: 1.5px solid rgba(248, 230, 189, 0.72);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.68);
+      cursor: pointer; transition: transform 0.3s;
     }
-    .iphone-mini:hover { transform: scale(1.015); }
+    .iphone-mini:hover { transform: scale(1.018); }
     .screen-mini {
-      border-radius: 27px; overflow: hidden; min-height: 495px;
+      border-radius: 29px; overflow: hidden; min-height: 505px;
       position: relative; display: flex; flex-direction: column; justify-content: space-between;
       text-align: center;
     }
@@ -327,7 +344,7 @@
 
     .scr-in { position: relative; z-index: 2; padding: 12px 12px 13px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
     .dyn-island { width: 66px; height: 12px; background: #000; border-radius: 99px; margin: 0 auto 8px; }
-    .cp-mini-hdr { display: flex; justify-content: space-between; align-items: center; font-size: 8.5px; font-weight: 800; opacity: 0.9; margin-bottom: 8px; }
+    .cp-mini-hdr { display: flex; justify-content: space-between; align-items: center; font-size: 8.5px; font-weight: 800; opacity: 0.92; margin-bottom: 8px; }
 
     /* ESSENTIAL */
     .es-arch-hdr { margin: 0 -12px 10px; padding: 14px 12px 24px; background: var(--coverBg); border-bottom: 2px solid var(--acc); border-radius: 0 0 50% 50% / 0 0 26px 26px; position: relative; }
@@ -352,6 +369,13 @@
 
     /* BUSINESS VIP */
     .vip-cover { margin: -12px -12px 0; padding: 12px 12px 26px; background: var(--coverBg); border-bottom: 2px solid var(--acc); border-radius: 0 0 50% 50% / 0 0 22px 22px; position: relative; }
+    .vip-live-pill {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 2px 8px; border-radius: 999px; font-size: 8.5px; font-weight: 800;
+      background: rgba(16, 185, 129, 0.16); border: 1px solid rgba(52, 211, 153, 0.5); color: #10B981;
+      margin-bottom: 5px;
+    }
+    .vip-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #10B981; animation: pulseDot 1.8s infinite; }
     .vip-gg-widget { padding: 8px 10px; border-radius: 13px; border: 1.5px solid var(--acc); background: var(--glass); display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.14); }
     .gg-stars { color: #F59E0B; font-size: 11px; letter-spacing: 1px; }
     .gg-badge { padding: 3px 8px; border-radius: 999px; font-size: 9.5px; font-weight: 900; background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #071311; }
@@ -359,57 +383,90 @@
     .bento-box { padding: 7px 4px; border-radius: 10px; border: 1px solid var(--line); background: var(--glass); font-size: 8.5px; font-weight: 800; line-height: 1.3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; }
     .bento-box svg { width: 13px; height: 13px; stroke: var(--acc); fill: none; stroke-width: 2; }
 
-    /* SIGNATURE 3D */
-    .s3d-stage { position: relative; height: 108px; margin: 2px 0 8px; display: flex; align-items: center; justify-content: center; perspective: 700px; }
-    .s3d-card-back { position: absolute; width: 132px; height: 80px; border-radius: 10px; right: 12px; top: 4px; padding: 8px; background: var(--cardBg); border: 1.4px solid var(--acc); color: #FAF7F2; transform: rotateY(-18deg) rotateZ(5deg); opacity: 0.92; box-shadow: 0 12px 24px rgba(0,0,0,0.55); text-align: start; font-size: 7px; display: flex; flex-direction: column; justify-content: space-between; }
-    .s3d-card-front { position: absolute; width: 146px; height: 88px; border-radius: 11px; left: 12px; top: 8px; padding: 9px 10px; background: var(--cardBg); border: 1.8px solid var(--acc); color: #FAF7F2; transform: rotateY(14deg) rotateZ(-4deg); box-shadow: 0 16px 32px rgba(0,0,0,0.68), 0 0 16px rgba(224,189,122,0.22); text-align: start; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
-    .s3d-card-front::after { content: ""; position: absolute; inset: 0; background: linear-gradient(125deg, transparent 25%, rgba(255,255,255,0.22) 50%, transparent 75%); pointer-events: none; }
-    .s3d-pedestal-emblem { position: relative; z-index: 5; width: 54px; height: 54px; border-radius: 50%; margin: -22px auto 6px; border: 2px solid var(--acc); background: var(--cardBg); color: var(--acc); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 26px rgba(0,0,0,0.7), 0 0 18px rgba(224,189,122,0.35); }
-    .s3d-pedestal-emblem svg { width: 25px; height: 25px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+    /* SIGNATURE 3D (REAL FLOATING 3D MOTION + SPINNING HALO) */
+    .s3d-stage { position: relative; height: 114px; margin: 2px 0 8px; display: flex; align-items: center; justify-content: center; perspective: 800px; }
+    .s3d-card-back {
+      position: absolute; width: 134px; height: 82px; border-radius: 11px;
+      right: 10px; top: 4px; padding: 8px;
+      background: var(--cardBg); border: 1.4px solid var(--acc); color: #FAF7F2;
+      opacity: 0.92; box-shadow: 0 14px 26px rgba(0,0,0,0.6); text-align: start; font-size: 7px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      animation: floatBack 4.6s infinite ease-in-out;
+    }
+    .s3d-card-front {
+      position: absolute; width: 148px; height: 90px; border-radius: 12px;
+      left: 10px; top: 8px; padding: 9px 10px;
+      background: var(--cardBg); border: 1.8px solid var(--acc); color: #FAF7F2;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.75), 0 0 20px rgba(224,189,122,0.28);
+      text-align: start; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden;
+      animation: floatFront 4.2s infinite ease-in-out;
+    }
+    .s3d-card-front::after {
+      content: ""; position: absolute; top: 0; left: -120%; width: 65%; height: 100%;
+      background: linear-gradient(115deg, transparent, rgba(255,255,255,0.34), transparent);
+      transform: skewX(-22deg); animation: sheen3d 3.6s infinite ease-in-out; pointer-events: none;
+    }
+    .s3d-pedestal-wrap { position: relative; width: 64px; height: 64px; margin: -24px auto 6px; z-index: 5; display: flex; align-items: center; justify-content: center; }
+    .s3d-halo {
+      position: absolute; inset: 0; border-radius: 50%;
+      border: 1.5px dashed var(--acc); opacity: 0.85;
+      animation: spinHalo 12s linear infinite;
+    }
+    .s3d-pedestal-emblem {
+      width: 52px; height: 52px; border-radius: 50%;
+      border: 2px solid var(--acc); background: var(--cardBg); color: var(--acc);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 12px 26px rgba(0,0,0,0.75), 0 0 20px rgba(224,189,122,0.38);
+    }
+    .s3d-pedestal-emblem svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.8; }
     .s3d-split { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
-    .s3d-mini-dock { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 5px; border-radius: 999px; background: rgba(5, 13, 18, 0.9); border: 1.2px solid var(--acc); font-size: 7.5px; font-weight: 800; color: #FAF7F2; }
-    .s3d-mini-dock span { padding: 4px 2px; border-radius: 999px; background: rgba(255,255,255,0.08); }
+    .s3d-mini-dock {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px;
+      padding: 5px; border-radius: 999px;
+      background: rgba(5, 13, 18, 0.92); border: 1.3px solid var(--acc);
+      font-size: 7.5px; font-weight: 800; color: #FAF7F2;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6), 0 0 12px rgba(224,189,122,0.2);
+    }
+    .s3d-mini-dock span { padding: 4px 2px; border-radius: 999px; background: rgba(255,255,255,0.09); }
     .s3d-mini-dock span.g { background: var(--cta); color: var(--ctaT); }
 
-    /* Card Footer */
-    .gc-title { font-size: 16.5px; font-weight: 900; margin: 0 0 3px; }
+    /* Card Footer & Tactile Buttons */
+    .gc-title { font-size: 17px; font-weight: 900; margin: 0 0 3px; }
     .gc-desc { font-size: 12.5px; color: var(--mut); margin: 0; line-height: 1.55; }
     .gc-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 12px; border-radius: 12px; font-family: inherit; font-size: 12px; font-weight: 800; cursor: pointer; text-decoration: none; border: none; transition: transform 0.2s, filter 0.2s; }
-    .btn:hover { transform: translateY(-2px); filter: brightness(1.06); }
-    .btn-gold { background: linear-gradient(135deg, #FFF3D1, #E0BD7A 52%, #AA8036); color: #071311; border: 1px solid #FFF7E0; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 11px 14px; border-radius: 13px; font-family: inherit;
+      font-size: 12.5px; font-weight: 800; cursor: pointer; text-decoration: none;
+      border: none; transition: transform 0.2s, filter 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .btn-gold { background: linear-gradient(135deg, #FFF5DB, #E0BD7A 52%, #AA8036); color: #061210; border: 1px solid #FFF7E0; box-shadow: 0 8px 20px rgba(224,189,122,0.28); }
     .btn-out { background: var(--sub); color: var(--txt); border: 1.5px solid var(--bdr-hi); }
-    .btn-wa { background: linear-gradient(135deg, #136B48, #0B3F2A); color: #fff; border: 1px solid rgba(110, 231, 183, 0.5); }
+    .btn-wa { background: linear-gradient(135deg, #14754F, #0B412C); color: #fff; border: 1px solid rgba(110, 231, 183, 0.55); box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2); }
 
-    /* Compact Comparison Section */
-    .cmp-sec { border-radius: 26px; padding: 26px 24px; margin-bottom: 28px; }
-    .cmp-sec h2 { font-size: clamp(20px, 2.8vw, 28px); font-weight: 900; margin: 0 0 6px; text-align: center; }
-    .cmp-sec p.sub { font-size: 13.5px; color: var(--mut); text-align: center; margin: 0 0 20px; }
-    .cmp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .cmp-col { border-radius: 20px; padding: 18px; background: var(--sub); border: 1px solid var(--bdr); display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
-    .cmp-col.hl { border: 1.8px solid var(--gold-hi); background: rgba(224,189,122,0.08); }
-    .cmp-col h3 { font-size: 17px; font-weight: 900; margin: 0 0 4px; }
-    .cmp-price { font-size: 22px; font-weight: 900; color: var(--gold); margin-bottom: 8px; }
-    .cmp-ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; font-size: 12.5px; color: var(--txt2); }
-    .cmp-ul li { display: flex; gap: 7px; align-items: flex-start; }
-    .cmp-ul li span:first-child { color: var(--gold); font-weight: 900; }
+    /* Compact Comparison Section (Uses Same 3 Distinct Tier Personalities) */
+    .cmp-sec { border-radius: 28px; padding: 30px 24px; margin-bottom: 30px; }
+    .cmp-sec h2 { font-size: clamp(21px, 3vw, 30px); font-weight: 900; margin: 0 0 6px; text-align: center; }
+    .cmp-sec p.sub { font-size: 14px; color: var(--mut); text-align: center; margin: 0 0 24px; }
 
     /* Consultation CTA Banner */
     .consult-box {
-      border-radius: 24px; padding: 26px 24px; margin-bottom: 48px;
-      background: linear-gradient(135deg, #173E37, #0B201D);
+      border-radius: 26px; padding: 28px 26px; margin-bottom: 50px;
+      background: radial-gradient(circle at 85% 20%, rgba(224,189,122,0.2), transparent 50%), linear-gradient(135deg, #16443B, #091E1B);
       border: 1.8px solid var(--gold-hi); color: #FAF7F2;
       display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;
+      box-shadow: 0 24px 50px -12px rgba(0,0,0,0.75);
     }
-    .consult-box h3 { font-size: 21px; font-weight: 900; margin: 0 0 5px; color: #FFF5DB; }
-    .consult-box p { font-size: 13.5px; color: #D4E4E0; margin: 0; max-width: 640px; line-height: 1.65; }
+    .consult-box h3 { font-size: 22px; font-weight: 900; margin: 0 0 6px; color: #FFF5DB; }
+    .consult-box p { font-size: 14px; color: #D4E4E0; margin: 0; max-width: 650px; line-height: 1.7; }
 
     /* FULL INTERACTIVE PREVIEW MODAL */
-    .mb { position: fixed; inset: 0; z-index: 200; background: rgba(4, 11, 10, 0.92); backdrop-filter: blur(10px); display: none; align-items: center; justify-content: center; padding: 14px; }
+    .mb { position: fixed; inset: 0; z-index: 200; background: rgba(4, 11, 10, 0.92); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; padding: 14px; }
     .mb.open { display: flex; }
     .modal-shell { width: 100%; max-width: 1020px; max-height: 94vh; overflow-y: auto; border-radius: 28px; padding: 24px; border: 2px solid var(--gold-hi); background: #0B1F1C; color: #FAF7F2; position: relative; display: grid; grid-template-columns: 390px 1fr; gap: 28px; align-items: start; }
     .m-close { position: absolute; top: 14px; inset-inline-end: 14px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); border: 1px solid var(--bdr); color: #fff; font-size: 16px; cursor: pointer; z-index: 10; }
-    .device-frame { width: 100%; max-width: 380px; margin: 0 auto; border-radius: 42px; padding: 10px; background: linear-gradient(145deg, #685C46, #121817 48%, #070A09); border: 2px solid rgba(248, 230, 189, 0.78); box-shadow: 0 30px 64px rgba(0, 0, 0, 0.82); }
+    .device-frame { width: 100%; max-width: 380px; margin: 0 auto; border-radius: 42px; padding: 10px; background: linear-gradient(145deg, #75674E, #121817 48%, #070A09); border: 2px solid rgba(248, 230, 189, 0.78); box-shadow: 0 30px 64px rgba(0, 0, 0, 0.82); }
     .device-screen { border-radius: 32px; height: 645px; overflow-y: auto; position: relative; scrollbar-width: thin; }
     .full-prof { padding: 16px 15px 22px; min-height: 100%; position: relative; display: flex; flex-direction: column; gap: 12px; text-align: center; }
     .full-prof.has-dock { padding-bottom: 76px; }
@@ -445,17 +502,17 @@
     /* Floating Sticky WhatsApp Button */
     .wa-float {
       position: fixed; bottom: 20px; inset-inline-end: 20px; z-index: 150;
-      display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 999px;
+      display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px;
       background: linear-gradient(135deg, #168055, #0B462E); color: #fff;
-      border: 1.5px solid rgba(110, 231, 183, 0.65); font-family: inherit; font-size: 12.5px; font-weight: 800;
-      cursor: pointer; box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6); transition: transform 0.2s;
+      border: 1.5px solid rgba(110, 231, 183, 0.7); font-family: inherit; font-size: 13px; font-weight: 800;
+      cursor: pointer; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65); transition: transform 0.2s;
     }
     .wa-float:hover { transform: translateY(-3px); }
     .wa-float svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.2; }
 
     /* Footer & Toast */
-    .ft { background: #05100E; border-top: 1.5px solid var(--bdr); padding: 32px 20px 80px; text-align: center; color: #A9BEB9; font-size: 13px; }
-    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #071311; font-weight: 800; font-size: 12.5px; padding: 10px 22px; border-radius: 999px; z-index: 300; opacity: 0; pointer-events: none; transition: 0.25s; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65); text-align: center; max-width: 92%; }
+    .ft { background: #040D0B; border-top: 1.5px solid var(--bdr); padding: 34px 20px 84px; text-align: center; color: #A9BEB9; font-size: 13px; }
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: linear-gradient(135deg, #FFF3D1, #E0BD7A); color: #061210; font-weight: 800; font-size: 12.5px; padding: 10px 22px; border-radius: 999px; z-index: 300; opacity: 0; pointer-events: none; transition: 0.25s; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65); text-align: center; max-width: 92%; }
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     @media (max-width: 1060px) {
@@ -516,9 +573,9 @@
 
     <div class="steps-bar" id="stepsBar"></div>
 
-    <!-- 3 DISTINCT TIER CARDS WITH CLEAR CLICK INDICATORS -->
+    <!-- TOP 3 DISTINCT TIER SWITCHER CARDS -->
     <div class="tier-tabs">
-      <button type="button" class="tier-tab t-essential active" id="tab-essential" onclick="setTier('essential')">
+      <button type="button" class="tier-box t-essential active" id="tab-essential" onclick="setTier('essential')">
         <div>
           <div class="tt-top">
             <span class="tt-tag" id="tag-essential">للبداية العملية</span>
@@ -530,7 +587,7 @@
         <div class="tt-action" id="act-essential">✓ نماذج هذا العرض معروضة الآن</div>
       </button>
 
-      <button type="button" class="tier-tab t-vip" id="tab-vip" onclick="setTier('vip')">
+      <button type="button" class="tier-box t-vip" id="tab-vip" onclick="setTier('vip')">
         <div>
           <div class="tt-top">
             <span class="tt-tag" id="tag-vip">★ الأكثر طلباً</span>
@@ -542,7 +599,7 @@
         <div class="tt-action" id="act-vip">اضغط لعرض نماذج VIP ←</div>
       </button>
 
-      <button type="button" class="tier-tab t-signature" id="tab-signature" onclick="setTier('signature')">
+      <button type="button" class="tier-box t-signature" id="tab-signature" onclick="setTier('signature')">
         <div>
           <div class="tt-top">
             <span class="tt-tag" id="tag-signature">✦ القمة التنفيذية 3D</span>
@@ -567,12 +624,12 @@
       <label class="lbl" for="customRole" id="lblRoleInp">مهنتك أو تخصصك (اختياري):</label>
       <input type="text" id="customRole" class="inp" oninput="renderGrid()" placeholder="مثلاً: محامي، طبيبة أسنان، مهندس معماري، وكالة عقارية...">
     </div>
-    <button type="button" class="btn btn-gold" style="padding:11px 18px;" onclick="orderCustomDesign()" id="btnTryOrder">اطلب معاينة حقيقية باسمك</button>
+    <button type="button" class="btn btn-gold spot-3d" style="padding:12px 20px;" onclick="orderCustomDesign()" id="btnTryOrder">اطلب معاينة حقيقية باسمك</button>
   </section>
 
   <section class="grid" id="demoGrid"></section>
 
-  <!-- Compact 30-Second Comparison -->
+  <!-- BOTTOM COMPARISON SECTION (MATCHING THE 3 DISTINCT PERSONALITIES) -->
   <section class="cmp-sec panel" id="cmpSection"></section>
 
   <!-- Free Consultation CTA -->
@@ -581,7 +638,7 @@
       <h3 id="consTitle">محتار شمن عرض أو تصميم غادي يليق بمهنتك؟</h3>
       <p id="consSub">صيفط لينا غير مهنتك واللوغو ديالك (إلا كان عندك) في واتساب، وغادي نقترحو عليك أحسن فكرة وتصميم يناسب نشاطك في أقل من 5 دقائق — بدون أي التزام.</p>
     </div>
-    <button type="button" class="btn btn-gold" style="padding:13px 22px;font-size:13.5px;" onclick="orderConsultation()" id="consBtn">استشارة مجانية عبر واتساب</button>
+    <button type="button" class="btn btn-gold spot-3d" style="padding:14px 24px;font-size:14px;" onclick="orderConsultation()" id="consBtn">استشارة مجانية عبر واتساب</button>
   </section>
 </main>
 
@@ -606,7 +663,7 @@
       <ul class="m-feats" id="mFeats"></ul>
 
       <div style="display:flex;flex-direction:column;gap:9px;margin-top:4px;">
-        <button type="button" class="btn btn-gold" style="padding:13px 16px;font-size:13.5px;" id="mOrderBtn">اطلب هذا النموذج عبر واتساب</button>
+        <button type="button" class="btn btn-gold spot-3d" style="padding:13px 16px;font-size:13.5px;" id="mOrderBtn">اطلب هذا النموذج عبر واتساب</button>
         <button type="button" class="btn btn-out" style="padding:11px 16px;" onclick="closePreview()" id="mCloseBtn">العودة لتصفح النماذج</button>
       </div>
     </div>
@@ -619,7 +676,7 @@
 </button>
 
 <footer class="ft">
-  <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:#fff;margin-bottom:6px;">
+  <div style="font-family:'Playfair Display',serif;font-style:italic;font-size:23px;color:#fff;margin-bottom:6px;">
     Carte<span style="color:#E0BD7A">Pro</span> Maroc
   </div>
   <div id="lblFooter">بطاقات NFC ذكية وملفات رقمية احترافية — دفعة واحدة مدى الحياة بدون اشتراكات • واتساب: <span dir="ltr">+212 669 256 706</span></div>
@@ -696,7 +753,6 @@ const UI = {
     consBtn: "استشارة مجانية عبر واتساب",
     cmpTitle: "مقارنة سريعة في 30 ثانية: أي عرض يناسبك؟",
     cmpSub: "جميع العروض تشمل بطاقة NFC مخصصة، دفعة واحدة مدى الحياة، وإمكانية تعديل معلوماتك في أي وقت.",
-    cmpBtn: "عرض النماذج",
     footer: 'بطاقات NFC ذكية وملفات رقمية احترافية — دفعة واحدة مدى الحياة بدون اشتراكات • واتساب: <span dir="ltr">+212 669 256 706</span>',
     tiers: {
       essential: {
@@ -726,7 +782,7 @@ const UI = {
       signature: {
         price: "599 DH", tag: "✦ القمة التنفيذية 3D", name: "عرض Signature 3D",
         switchLbl: "اضغط لعرض نماذج 3D ←",
-        pts: ["بطاقة NFC 3D تفاعلية (وجه وخلف) داخل البروفيل", "منصة شعار 3D + شريط تحكم VIP Dock سفلي", "تخصيص 100% + كل مزايا Business VIP"],
+        pts: ["بطاقة NFC 3D عائمة (وجه وخلف) داخل البروفيل", "منصة شعار 3D دوّارة + شريط تحكم VIP Dock", "تخصيص 100% + كل مزايا Business VIP"],
         note: "ملاحظة مهمة: هذه النماذج أمثلة تعريفية فقط — في عرض القمة Signature 3D نبتكر لك تجربة 3D حصرية مصممة خصيصاً لهويتك البصرية الفاخرة مع معاينة قبل الطباعة.",
         customBadge: "هندسة 3D حصرية على مقاسك",
         customTitle: "بغيتي تجربة 3D حصرية تبهر زبناءك؟",
@@ -737,7 +793,7 @@ const UI = {
       }
     },
     sim: {
-      call: "اتصال", wa: "واتساب", mail: "بريد", loc: "الموقع على Google Maps",
+      live: "متاح الآن", call: "اتصال", wa: "واتساب", mail: "بريد", loc: "الموقع على Google Maps",
       save: "حفظ جهة الاتصال +", ggTitle: "تقييمات عملائنا على Google",
       book: "حجز موعد / استشارة عبر واتساب", flipHint: "اضغط على البطاقة لقلبها 3D (الوجه / الخلف)",
       backTitle: "بطاقة NFC + رمز QR مدمج", backSub: "توافق 100% مع iPhone و Android",
@@ -771,7 +827,6 @@ const UI = {
     consBtn: "Conseil gratuit sur WhatsApp",
     cmpTitle: "Comparatif rapide en 30 secondes",
     cmpSub: "Toutes nos offres incluent une carte NFC personnalisée, un paiement unique à vie et la modification à tout moment.",
-    cmpBtn: "Voir les modèles",
     footer: 'Cartes NFC & Profils Digitaux Sur-Mesure — Paiement unique à vie • WhatsApp : <span dir="ltr">+212 669 256 706</span>',
     tiers: {
       essential: {
@@ -801,7 +856,7 @@ const UI = {
       signature: {
         price: "599 DH", tag: "✦ Prestige Exécutif 3D", name: "Offre Signature 3D",
         switchLbl: "Voir les modèles 3D →",
-        pts: ["Carte NFC 3D interactive (Recto/Verso)", "Scène Logo 3D + VIP Dock flottant", "100% sur-mesure + tout Business VIP"],
+        pts: ["Carte NFC 3D flottante (Recto/Verso)", "Scène Logo 3D + VIP Dock flottant", "100% sur-mesure + tout Business VIP"],
         note: "Note importante : En Signature 3D, nous créons une expérience 3D exclusive dédiée à votre image de marque haut standing avec aperçu gratuit avant impression.",
         customBadge: "Expérience 3D Exclusive",
         customTitle: "Envie d'un profil 3D qui marque les esprits ?",
@@ -812,7 +867,7 @@ const UI = {
       }
     },
     sim: {
-      call: "Appel", wa: "WhatsApp", mail: "E-mail", loc: "Localisation Google Maps",
+      live: "Disponible", call: "Appel", wa: "WhatsApp", mail: "E-mail", loc: "Localisation Google Maps",
       save: "Enregistrer le contact +", ggTitle: "Avis Clients sur Google",
       book: "Réserver / Consultation WhatsApp", flipHint: "Cliquez pour retourner la carte en 3D",
       backTitle: "Carte NFC + QR Code Intégré", backSub: "Compatible 100% iPhone & Android",
@@ -846,7 +901,6 @@ const UI = {
     consBtn: "Free WhatsApp Consultation",
     cmpTitle: "30-Second Quick Comparison",
     cmpSub: "Every tier includes a custom PVC NFC card, one-time lifetime payment, and anytime info updates.",
-    cmpBtn: "View Models",
     footer: 'Smart NFC Cards & Custom Digital Profiles — One-time lifetime payment • WhatsApp: <span dir="ltr">+212 669 256 706</span>',
     tiers: {
       essential: {
@@ -876,7 +930,7 @@ const UI = {
       signature: {
         price: "599 DH", tag: "✦ Executive 3D", name: "Signature 3D Package",
         switchLbl: "View 3D Models →",
-        pts: ["Interactive 3D NFC Card (Front/Back)", "3D Tilt Logo Stage + Floating VIP Dock", "100% bespoke + all Business VIP features"],
+        pts: ["Floating 3D NFC Card (Front/Back)", "3D Spinning Halo + Floating VIP Dock", "100% bespoke + all Business VIP features"],
         note: "Note: In Signature 3D, we craft an exclusive 3D executive showcase tailored 100% to your luxury brand identity with a free preview before printing.",
         customBadge: "Exclusive 3D Craftsmanship",
         customTitle: "Ready for a 3D showcase that wows?",
@@ -887,7 +941,7 @@ const UI = {
       }
     },
     sim: {
-      call: "Call", wa: "WhatsApp", mail: "Email", loc: "Location on Google Maps",
+      live: "Available", call: "Call", wa: "WhatsApp", mail: "Email", loc: "Location on Google Maps",
       save: "Save Contact +", ggTitle: "Customer Reviews on Google",
       book: "Book Appointment via WhatsApp", flipHint: "Tap the card to flip in 3D (Front / Back)",
       backTitle: "NFC + Built-in QR Code", backSub: "100% compatible with iPhone & Android",
@@ -908,8 +962,7 @@ const CATALOG = {
       fr: ["Dar Al Founoun Fès", "Artisanat & Objets d'Art", "Style fassi authentique au zellige bleu et or"],
       en: ["Dar Al Founoun Fes", "Traditional Crafts & Art", "Authentic Fassi zellige blue & gold aesthetic"],
       bg: "linear-gradient(165deg,#FBF3E2 0%,#EFE0C2 60%,#E3CCA3 100%)",
-      coverBg: "linear-gradient(135deg,#0D2E5E,#071A38)",
-      cardBg: "linear-gradient(135deg,#0E2F61,#071A38)",
+      coverBg: "linear-gradient(135deg,#0D2E5E,#071A38)", cardBg: "linear-gradient(135deg,#0E2F61,#071A38)",
       txt: "#13233A", acc: "#C59438", line: "rgba(197,148,56,0.52)", glassBg: "rgba(14,46,92,0.08)",
       cta: "linear-gradient(135deg,#F8DF9F,#D4A244,#A67922)", ctaT: "#121E33"
     },
@@ -920,8 +973,7 @@ const CATALOG = {
       fr: ["Argan Bio Maroc", "Produits Naturels Authentiques", "Style organique ivoire et vert émeraude apaisant"],
       en: ["Argan Bio Morocco", "Authentic Organic Products", "Serene botanical ivory and deep forest green arch"],
       bg: "linear-gradient(165deg,#FBF8F0 0%,#F3EBDC 60%,#E6D9C0 100%)",
-      coverBg: "linear-gradient(135deg,#184A2F,#0C2919)",
-      cardBg: "linear-gradient(135deg,#14452B,#0A2919)",
+      coverBg: "linear-gradient(135deg,#184A2F,#0C2919)", cardBg: "linear-gradient(135deg,#14452B,#0A2919)",
       txt: "#0E2D1D", acc: "#C5963E", line: "rgba(197,150,62,0.48)", glassBg: "rgba(20,69,43,0.075)",
       cta: "linear-gradient(135deg,#14452B,#092416)", ctaT: "#F8E5BC"
     },
@@ -932,8 +984,7 @@ const CATALOG = {
       fr: ["Dar Al Assala", "Riad d'Hospitalité Marocaine", "Marbre blanc veiné d'or et vert émeraude royal"],
       en: ["Dar Al Assala", "Authentic Moroccan Riad", "Gold-veined white marble with royal emerald accents"],
       bg: "linear-gradient(165deg,#FFFFFF 0%,#F7F3EA 58%,#ECE4D3 100%)",
-      coverBg: "linear-gradient(135deg,#183A36,#0B211E)",
-      cardBg: "linear-gradient(135deg,#183A36,#0B211E)",
+      coverBg: "linear-gradient(135deg,#183A36,#0B211E)", cardBg: "linear-gradient(135deg,#183A36,#0B211E)",
       txt: "#0F2623", acc: "#B88E40", line: "rgba(184,142,64,0.46)", glassBg: "rgba(15,38,35,0.06)",
       cta: "linear-gradient(135deg,#1A453F,#0C2420)", ctaT: "#F7E4B8"
     },
@@ -944,8 +995,7 @@ const CATALOG = {
       fr: ["Studio Atlas", "Design Intérieur & Décor", "Glassmorphism sombre aux finitions or champagne"],
       en: ["Atlas Studio", "Interior Design & Decor", "Midnight frosted glass with warm gold framing"],
       bg: "radial-gradient(circle at 80% 15%,rgba(224,189,122,0.25),transparent 45%),linear-gradient(160deg,#162436 0%,#0C1624 58%,#060B14 100%)",
-      coverBg: "linear-gradient(135deg,#1E334D,#0C1726)",
-      cardBg: "linear-gradient(135deg,#1F3652,#0B1624)",
+      coverBg: "linear-gradient(135deg,#1E334D,#0C1726)", cardBg: "linear-gradient(135deg,#1F3652,#0B1624)",
       txt: "#FAF7F2", acc: "#F2CF84", line: "rgba(242,207,132,0.45)", glassBg: "rgba(255,255,255,0.09)",
       cta: "linear-gradient(135deg,#FFF2CE,#E5B962,#B0802A)", ctaT: "#091321"
     },
@@ -956,8 +1006,7 @@ const CATALOG = {
       fr: ["Café & Table Yasmine", "Saveurs Marocaines & Café", "Palette espresso bronze et or chaleureuse"],
       en: ["Yasmine Cafe & Table", "Moroccan Cuisine & Coffee", "Warm espresso bronze and gold Moroccan ambiance"],
       bg: "linear-gradient(160deg,#4A2416 0%,#2E150C 60%,#1C0C07 100%)",
-      coverBg: "linear-gradient(135deg,#6E3620,#381A0E)",
-      cardBg: "linear-gradient(135deg,#66311D,#2E150C)",
+      coverBg: "linear-gradient(135deg,#6E3620,#381A0E)", cardBg: "linear-gradient(135deg,#66311D,#2E150C)",
       txt: "#FFF8F2", acc: "#F2C085", line: "rgba(242,192,133,0.44)", glassBg: "rgba(255,248,242,0.09)",
       cta: "linear-gradient(135deg,#FBD6A8,#D99B58)", ctaT: "#240E09"
     },
@@ -968,8 +1017,7 @@ const CATALOG = {
       fr: ["Studio Safa", "Design Intérieur Contemporain", "Style perle minimaliste blanc et anthracite"],
       en: ["Safa Studio", "Modern Interior & Decor", "Ultra-clean pearl white and matte charcoal minimalism"],
       bg: "linear-gradient(165deg,#FFFFFF 0%,#F4F2EE 60%,#E7E3DC 100%)",
-      coverBg: "linear-gradient(135deg,#27272A,#18181B)",
-      cardBg: "linear-gradient(135deg,#2B2B2E,#141416)",
+      coverBg: "linear-gradient(135deg,#27272A,#18181B)", cardBg: "linear-gradient(135deg,#2B2B2E,#141416)",
       txt: "#18181B", acc: "#3F3F46", line: "rgba(24,24,27,0.22)", glassBg: "rgba(24,24,27,0.055)",
       cta: "linear-gradient(135deg,#27272A,#09090B)", ctaT: "#FFFFFF"
     },
@@ -980,8 +1028,7 @@ const CATALOG = {
       fr: ["Maison Diamond", "Joaillerie & Horlogerie", "Ondes lumineuses violettes et finitions or"],
       en: ["Maison Diamond", "Fine Jewelry & Watches", "Luminous violet light waves with metallic gold trim"],
       bg: "radial-gradient(circle at 80% 20%,rgba(192,38,211,0.34),transparent 46%),linear-gradient(160deg,#2A083E 0%,#150321 60%,#0A0112 100%)",
-      coverBg: "linear-gradient(135deg,#4A106E,#1E0530)",
-      cardBg: "linear-gradient(135deg,#4A106E,#1E0530)",
+      coverBg: "linear-gradient(135deg,#4A106E,#1E0530)", cardBg: "linear-gradient(135deg,#4A106E,#1E0530)",
       txt: "#FDF4FF", acc: "#F3C776", line: "rgba(243,199,118,0.48)", glassBg: "rgba(255,255,255,0.09)",
       cta: "linear-gradient(135deg,#FFF1C9,#E5B962,#B0802A)", ctaT: "#150321"
     },
@@ -992,8 +1039,7 @@ const CATALOG = {
       fr: ["Atlas Investment", "Conseil & Projets Stratégiques", "Carte verre dépoli avec reflets or chaleureux"],
       en: ["Atlas Investment", "Strategic Venture Advisory", "Frosted glassmorphism card with warm sunset gold glow"],
       bg: "radial-gradient(circle at 50% 10%,rgba(245,158,11,0.32),transparent 46%),linear-gradient(160deg,#1F3654 0%,#112238 55%,#091321 100%)",
-      coverBg: "linear-gradient(135deg,#274469,#102036)",
-      cardBg: "linear-gradient(135deg,#274469,#102036)",
+      coverBg: "linear-gradient(135deg,#274469,#102036)", cardBg: "linear-gradient(135deg,#274469,#102036)",
       txt: "#FAF7F2", acc: "#F5CE82", line: "rgba(245,206,130,0.48)", glassBg: "rgba(255,255,255,0.12)",
       cta: "linear-gradient(135deg,#FFF2CE,#E5B962,#B0802A)", ctaT: "#091321"
     }
@@ -1007,8 +1053,7 @@ const CATALOG = {
       fr: ["Dr. Salma Benali", "Médecin Spécialiste", "Mini-site médical ivoire & émeraude avec Avis Google et RDV", "Consultations spécialisées, suivi personnalisé et prise en charge médicale moderne.", ["Consultations", "Diagnostic", "Horaires"]],
       en: ["Dr. Salma Benali", "Specialist Physician", "Ivory & emerald medical mini-site with Google Reviews & booking", "Accurate diagnostics, personalized patient care, and modern clinical follow-up.", ["Consultations", "Diagnostics", "Hours"]],
       bg: "linear-gradient(165deg,#FFFFFF 0%,#F2F8F6 60%,#E4F1ED 100%)",
-      coverBg: "linear-gradient(135deg,#124E45,#0A2E29)",
-      cardBg: "linear-gradient(135deg,#124E45,#0A2E29)",
+      coverBg: "linear-gradient(135deg,#124E45,#0A2E29)", cardBg: "linear-gradient(135deg,#124E45,#0A2E29)",
       txt: "#0B2C27", acc: "#C5963E", line: "rgba(18,78,69,0.25)", glassBg: "rgba(18,78,69,0.06)",
       cta: "linear-gradient(135deg,#135248,#0A2F29)", ctaT: "#FFF5DB"
     },
@@ -1019,8 +1064,7 @@ const CATALOG = {
       fr: ["Dr. Youssef Idrissi", "Chirurgien-Dentiste", "Design cyan & perle sur-mesure pour cliniques dentaires", "Implantologie, esthétique du sourire et soins dentaires numériques.", ["Implants", "Orthodontie", "Blanchiment"]],
       en: ["Dr. Youssef Idrissi", "Cosmetic Dentist", "Bright cyan & pearl layout tailored for dental clinics", "Dental implants, digital smile design, and painless cosmetic care.", ["Implants", "Braces", "Whitening"]],
       bg: "linear-gradient(165deg,#F8FDFF 0%,#EBF7FB 60%,#D9EFF7 100%)",
-      coverBg: "linear-gradient(135deg,#0B6A7A,#063F4A)",
-      cardBg: "linear-gradient(135deg,#0B6A7A,#063F4A)",
+      coverBg: "linear-gradient(135deg,#0B6A7A,#063F4A)", cardBg: "linear-gradient(135deg,#0B6A7A,#063F4A)",
       txt: "#082C36", acc: "#0B6A7A", line: "rgba(11,106,122,0.28)", glassBg: "rgba(11,106,122,0.07)",
       cta: "linear-gradient(135deg,#0B6A7A,#063F4A)", ctaT: "#FFFFFF"
     },
@@ -1031,8 +1075,7 @@ const CATALOG = {
       fr: ["Immo Prestige Maroc", "Agence Immobilière", "Charte sable & or pour agences immobilières et promoteurs", "Vente, location et conseil en investissement pour biens d'exception.", ["Villas Luxe", "Appartements", "Investissement"]],
       en: ["Immo Prestige", "Luxury Real Estate", "Warm sand & gold agency mini-site with property services", "Premier brokerage for luxury villas, residences, and high-yield investments.", ["Luxury Villas", "Apartments", "Investments"]],
       bg: "linear-gradient(165deg,#FCF9F2 0%,#F5EDE0 60%,#EAE0CE 100%)",
-      coverBg: "linear-gradient(135deg,#3A2717,#1E130A)",
-      cardBg: "linear-gradient(135deg,#3A2717,#1E130A)",
+      coverBg: "linear-gradient(135deg,#3A2717,#1E130A)", cardBg: "linear-gradient(135deg,#3A2717,#1E130A)",
       txt: "#21150B", acc: "#B88938", line: "rgba(184,137,56,0.42)", glassBg: "rgba(58,39,23,0.06)",
       cta: "linear-gradient(135deg,#134E42,#0A2E27)", ctaT: "#FAF7F2"
     },
@@ -1043,8 +1086,7 @@ const CATALOG = {
       fr: ["Maison Nour Beauté", "Institut de Beauté & Spa", "Palette rose gold soyeuse pour instituts de beauté et spas", "Soins du visage, coiffure haut de gamme et rituels bien-être.", ["Soins Visage", "Coiffure", "Spa & Détente"]],
       en: ["Nour Beauty & Spa", "Beauty & Wellness Lounge", "Silky rose-gold layout tailored for salons and luxury spas", "Bespoke skincare treatments, hair styling, and tranquil spa rituals.", ["Skincare", "Hair Styling", "Luxury Spa"]],
       bg: "linear-gradient(165deg,#FFF8F6 0%,#FBECE7 60%,#F4DDD5 100%)",
-      coverBg: "linear-gradient(135deg,#99545B,#613136)",
-      cardBg: "linear-gradient(135deg,#99545B,#613136)",
+      coverBg: "linear-gradient(135deg,#99545B,#613136)", cardBg: "linear-gradient(135deg,#99545B,#613136)",
       txt: "#3D1D20", acc: "#A4535B", line: "rgba(164,83,91,0.34)", glassBg: "rgba(164,83,91,0.075)",
       cta: "linear-gradient(135deg,#9E535A,#6E3338)", ctaT: "#FFF7F5"
     },
@@ -1055,8 +1097,7 @@ const CATALOG = {
       fr: ["Cabinet Al Wifaq", "Expertise Comptable & Audit", "Style bordeaux & ivoire classique pour experts-comptables", "Tenue comptable, audit financier, conseil fiscal et création d'entreprise.", ["Comptabilité", "Audit Financier", "Création"]],
       en: ["Al Wifaq Advisory", "Accounting & Tax Audit", "Classic burgundy & ivory corporate profile for accountants", "Comprehensive accounting, financial auditing, and company formation.", ["Accounting", "Financial Audit", "Formation"]],
       bg: "linear-gradient(165deg,#FFFDFB 0%,#F8F1EC 60%,#EFE4DC 100%)",
-      coverBg: "linear-gradient(135deg,#5E1524,#330912)",
-      cardBg: "linear-gradient(135deg,#5E1524,#330912)",
+      coverBg: "linear-gradient(135deg,#5E1524,#330912)", cardBg: "linear-gradient(135deg,#5E1524,#330912)",
       txt: "#2B0A11", acc: "#9C243C", line: "rgba(156,36,60,0.3)", glassBg: "rgba(94,21,36,0.06)",
       cta: "linear-gradient(135deg,#691728,#3B0A14)", ctaT: "#FFF5DB"
     },
@@ -1067,8 +1108,7 @@ const CATALOG = {
       fr: ["Prestige Auto Maroc", "Location Véhicules VIP", "Look carbone & rouge dynamique pour agences auto", "Flotte récente de véhicules premium avec livraison aéroport 24/7.", ["Véhicules VIP", "Aéroport 24/7", "Chauffeur"]],
       en: ["Prestige Auto", "Luxury Car Rental", "Carbon & crimson sporty layout for luxury auto rentals", "Modern luxury vehicle fleet with 24/7 airport & hotel delivery.", ["Luxury Fleet", "24/7 Airport", "Chauffeur"]],
       bg: "linear-gradient(160deg,#1F2024 0%,#121316 60%,#08080A 100%)",
-      coverBg: "linear-gradient(135deg,#7A1019,#260508)",
-      cardBg: "linear-gradient(135deg,#4A0D13,#141417)",
+      coverBg: "linear-gradient(135deg,#7A1019,#260508)", cardBg: "linear-gradient(135deg,#4A0D13,#141417)",
       txt: "#FAFAFA", acc: "#EF4444", line: "rgba(239,68,68,0.42)", glassBg: "rgba(255,255,255,0.075)",
       cta: "linear-gradient(135deg,#DC2626,#881313)", ctaT: "#FFFFFF"
     },
@@ -1079,8 +1119,7 @@ const CATALOG = {
       fr: ["Dr. Soumia Benali", "Dermatologie & Esthétique", "Charte bleu nuit & or pour cliniques dermatologiques", "Spécialiste en santé de la peau, laser et médecine esthétique.", ["Laser & Soins", "Dermatologie", "Esthétique"]],
       en: ["Dr. Soumia Benali", "Dermatology & Aesthetics", "Royal navy & ivory profile for dermatology and laser clinics", "Specialist in clinical dermatology, laser care, and non-surgical aesthetics.", ["Laser Care", "Skincare", "Aesthetics"]],
       bg: "linear-gradient(165deg,#FFFDF9 0%,#F5F1E9 60%,#EBE5DA 100%)",
-      coverBg: "linear-gradient(135deg,#0D2447,#061329)",
-      cardBg: "linear-gradient(135deg,#0D2447,#061329)",
+      coverBg: "linear-gradient(135deg,#0D2447,#061329)", cardBg: "linear-gradient(135deg,#0D2447,#061329)",
       txt: "#0B1D3A", acc: "#B88938", line: "rgba(13,36,71,0.25)", glassBg: "rgba(13,36,71,0.06)",
       cta: "linear-gradient(135deg,#B88938,#7D591B)", ctaT: "#FFFFFF"
     },
@@ -1091,8 +1130,7 @@ const CATALOG = {
       fr: ["Table Le Jardin", "Gastronomie & Réceptions", "Identité vert forêt & or pour restaurants gastronomiques", "Cuisine raffinée, salons privés et réservation de table instantanée.", ["La Carte", "Réservations", "Salon Privé"]],
       en: ["Le Jardin Table", "Fine Dining & Lounge", "Deep forest green & gold editorial profile for fine dining", "Refined cuisine, private dining rooms, and instant table reservations.", ["Menu", "Reservations", "Private Dining"]],
       bg: "linear-gradient(160deg,#0E382E 0%,#08221C 60%,#041410 100%)",
-      coverBg: "linear-gradient(135deg,#175244,#0A2922)",
-      cardBg: "linear-gradient(135deg,#175244,#0A2922)",
+      coverBg: "linear-gradient(135deg,#175244,#0A2922)", cardBg: "linear-gradient(135deg,#175244,#0A2922)",
       txt: "#FAF7F0", acc: "#E5C17B", line: "rgba(229,193,123,0.42)", glassBg: "rgba(255,255,255,0.08)",
       cta: "linear-gradient(135deg,#FFF2CE,#D4AF63,#9A742B)", ctaT: "#061713"
     }
@@ -1102,9 +1140,9 @@ const CATALOG = {
     {
       code: "S3D-01", sector: { ar: "محاماة واستشارة دولية", fr: "Avocat au Barreau", en: "Attorney at Law" },
       logo: "legal", pat: "pat-zellige", city: "مكناس • شارع الجيش الملكي",
-      ar: ["الأستاذ كريم المنصوري", "محامٍ بهيئة المحامين", "تجربة 3D قضائية بالأزرق الملكي والذهبي مع بطاقة NFC 3D مزدوجة", "استشارات قانونية، الترافع أمام المحاكم، ومرافقة الشركات والمستثمرين.", ["قضايا الشركات", "العقود والاتفاقيات", "القضايا التجارية"]],
-      fr: ["Me Karim Mansouri", "Avocat au Barreau", "Expérience 3D bleu royal & or avec carte NFC 3D Recto/Verso", "Conseil juridique, plaidoirie et accompagnement des entreprises.", ["Droit Sociétés", "Contrats", "Contentieux"]],
-      en: ["Karim Mansouri, Esq.", "Attorney at Law", "Royal sapphire & gold 3D legal profile with dual NFC card stage", "Legal representation, corporate advisory, and international arbitration.", ["Corporate Law", "Contracts", "Litigation"]],
+      ar: ["الأستاذ كريم المنصوري", "محامٍ بهيئة المحامين", "تجربة 3D قضائية بالأزرق الملكي والذهبي مع بطاقة NFC 3D عائمة", "استشارات قانونية، الترافع أمام المحاكم، ومرافقة الشركات والمستثمرين.", ["قضايا الشركات", "العقود والاتفاقيات", "القضايا التجارية"]],
+      fr: ["Me Karim Mansouri", "Avocat au Barreau", "Expérience 3D bleu royal & or avec carte NFC 3D flottante", "Conseil juridique, plaidoirie et accompagnement des entreprises.", ["Droit Sociétés", "Contrats", "Contentieux"]],
+      en: ["Karim Mansouri, Esq.", "Attorney at Law", "Royal sapphire & gold 3D legal profile with floating NFC card stage", "Legal representation, corporate advisory, and international arbitration.", ["Corporate Law", "Contracts", "Litigation"]],
       bg: "linear-gradient(160deg,#0C2754 0%,#061530 60%,#030B1A 100%)",
       cardBg: "linear-gradient(135deg,#174691,#071A3B)",
       txt: "#FAF8F5", acc: "#E8C374", line: "rgba(232,195,116,0.45)", glassBg: "rgba(255,255,255,0.08)",
@@ -1113,9 +1151,9 @@ const CATALOG = {
     {
       code: "S3D-02", sector: { ar: "هندسة معمارية فاخرة", fr: "Architecte DPLG", en: "Lead Architect" },
       logo: "arch", pat: "pat-grid", city: "الرباط • حي الرياض",
-      ar: ["م. طارق بنجلون", "مهندس معماري DPLG", "فخامة الأسود الأوبسيديان والذهبي مع بطاقة 3D ومعرض المشاريع", "تصميم معماري حديث ومستدام، تتبع الأشغال، ودراسة المشاريع العقارية.", ["تصميم معماري", "تتبع الأوراش", "تطوير المشاريع"]],
-      fr: ["Tarik Benjelloun", "Architecte DPLG", "Noir obsidienne & or brossé 3D avec carte NFC interactive", "Conception architecturale durable, suivi de chantiers et design.", ["Architecture", "Chantiers", "Projets"]],
-      en: ["Tarik Benjelloun", "Lead Architect", "Matte obsidian & brushed gold 3D showcase with interactive card", "Contemporary architecture, site supervision, and bespoke luxury spaces.", ["Architecture", "Supervision", "Developments"]],
+      ar: ["م. طارق بنجلون", "مهندس معماري DPLG", "فخامة الأسود الأوبسيديان والذهبي مع بطاقة 3D عائمة ومعرض المشاريع", "تصميم معماري حديث ومستدام، تتبع الأشغال، ودراسة المشاريع العقارية.", ["تصميم معماري", "تتبع الأوراش", "تطوير المشاريع"]],
+      fr: ["Tarik Benjelloun", "Architecte DPLG", "Noir obsidienne & or brossé 3D avec carte NFC flottante", "Conception architecturale durable, suivi de chantiers et design.", ["Architecture", "Chantiers", "Projets"]],
+      en: ["Tarik Benjelloun", "Lead Architect", "Matte obsidian & brushed gold 3D showcase with floating card", "Contemporary architecture, site supervision, and bespoke luxury spaces.", ["Architecture", "Supervision", "Developments"]],
       bg: "linear-gradient(160deg,#1F2024 0%,#101113 60%,#070708 100%)",
       cardBg: "linear-gradient(135deg,#2D2F36,#101113)",
       txt: "#FAFAFA", acc: "#E6C17A", line: "rgba(230,193,122,0.44)", glassBg: "rgba(255,255,255,0.08)",
@@ -1135,7 +1173,7 @@ const CATALOG = {
     {
       code: "S3D-04", sector: { ar: "مصحة طبية متطورة", fr: "Clinique Privée VIP", en: "Private Clinic 3D" },
       logo: "medical", pat: "pat-marble", city: "الدار البيضاء • أنفا العليا",
-      ar: ["مصحة النخبة الطبية", "رعاية طبية متكاملة وتجهيزات حديثة", "تصميم 3D بلاتيني ولؤلؤي فاخر للمصحات الكبرى مع بطاقة 3D", "فريق طبي متخصص، بيئة آمنة ومعقمة، وحجز مواعيد VIP لجميع التخصصات.", ["الطب العام", "طب العظام", "أمراض القلب"]],
+      ar: ["مصحة النخبة الطبية", "رعاية طبية متكاملة وتجهيزات حديثة", "تصميم 3D بلاتيني ولؤلؤي فاخر للمصحات الكبرى مع بطاقة 3D عائمة", "فريق طبي متخصص، بيئة آمنة ومعقمة، وحجز مواعيد VIP لجميع التخصصات.", ["الطب العام", "طب العظام", "أمراض القلب"]],
       fr: ["Clinique Ennokhba", "Clinique Médicale Privée", "Design 3D perle & platine doré pour cliniques d'excellence", "Équipe médicale pluridisciplinaire et prise en charge VIP.", ["Médecine", "Orthopédie", "Cardiologie"]],
       en: ["Ennokhba Medical Clinic", "Private Medical Center", "Sculpted pearl & platinum gold 3D profile for premier clinics", "Multidisciplinary specialists, modern diagnostics, and VIP booking.", ["General Care", "Orthopedics", "Cardiology"]],
       bg: "linear-gradient(165deg,#FFFFFF 0%,#F3F1EC 60%,#E5E1D8 100%)",
@@ -1168,9 +1206,9 @@ const CATALOG = {
     {
       code: "S3D-07", sector: { ar: "طبيب عام — نسخة 3D", fr: "Médecin Executive 3D", en: "Executive Physician" },
       logo: "medical", pat: "pat-zellige", city: "مراكش • جليز",
-      ar: ["د. ياسين العلوي", "طبيب عام وطب الأسرة", "نسخة 3D ليلية فاخرة للأطباء مع بطاقة NFC 3D والختم الطبي", "استشارة طبية، متابعة صحية شاملة، وتشخيص وعلاج للكبار والصغار.", ["الفحص الطبي", "الأمراض المزمنة", "صحة الأسرة"]],
+      ar: ["د. ياسين العلوي", "طبيب عام وطب الأسرة", "نسخة 3D ليلية فاخرة للأطباء مع بطاقة NFC 3D عائمة والختم الطبي", "استشارة طبية، متابعة صحية شاملة، وتشخيص وعلاج للكبار والصغار.", ["الفحص الطبي", "الأمراض المزمنة", "صحة الأسرة"]],
       fr: ["Dr. Yassine Alaoui", "Médecin Généraliste", "Édition 3D nocturne prestige pour médecins avec carte NFC 3D", "Consultations médicales, suivi familial et prévention globale.", ["Bilan Médical", "Suivi Chronique", "Médecine Famille"]],
-      en: ["Dr. Yassine Alaoui", "Family Physician", "Executive dark-mode 3D medical edition with dual NFC card", "Comprehensive family medicine, diagnostics, and preventive healthcare.", ["Checkups", "Chronic Care", "Family Health"]],
+      en: ["Dr. Yassine Alaoui", "Family Physician", "Executive dark-mode 3D medical edition with floating NFC card", "Comprehensive family medicine, diagnostics, and preventive healthcare.", ["Checkups", "Chronic Care", "Family Health"]],
       bg: "linear-gradient(160deg,#0E2433 0%,#071621 60%,#030B12 100%)",
       cardBg: "linear-gradient(135deg,#183D54,#081926)",
       txt: "#F4F9FC", acc: "#E8C374", line: "rgba(232,195,116,0.45)", glassBg: "rgba(255,255,255,0.08)",
@@ -1263,6 +1301,7 @@ function renderMiniScreen(m, tier) {
               </div>
             </div>
             <div class="emblem-circle" style="width:62px;height:62px;margin-top:-28px;">${logoSvg}</div>
+            <div class="vip-live-pill"><span class="vip-live-dot"></span><span>${ui.live}</span></div>
             <div class="p-nm">${esc(t.name)}</div>
             <div class="p-rl">${esc(t.role)}</div>
             <div class="act-3">
@@ -1317,7 +1356,10 @@ function renderMiniScreen(m, tier) {
               </div>
             </div>
           </div>
-          <div class="s3d-pedestal-emblem">${logoSvg}</div>
+          <div class="s3d-pedestal-wrap">
+            <div class="s3d-halo"></div>
+            <div class="s3d-pedestal-emblem">${logoSvg}</div>
+          </div>
           <div class="p-nm" style="font-size:19.5px;">${esc(t.name)}</div>
           <div class="p-rl" style="margin-bottom:6px;">${esc(t.role)}</div>
           <div class="vip-gg-widget" style="padding:6px 9px;margin-bottom:7px;">
@@ -1370,7 +1412,7 @@ function renderFullModalScreen(m, tier) {
               </div>
             </div>
             <div class="fp-3d-face back">
-              <div style="width:52px;height:52px;border-radius:10px;background:#fff;color:#071311;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;margin-bottom:7px;">QR</div>
+              <div style="width:52px;height:52px;border-radius:10px;background:#fff;color:#061210;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;margin-bottom:7px;">QR</div>
               <div style="font-size:12.5px;font-weight:900;color:${m.acc};">${ui.backTitle}</div>
               <div style="font-size:10px;opacity:.85;margin-top:3px;">${ui.backSub}</div>
             </div>
@@ -1596,18 +1638,20 @@ function renderComparison() {
     <div class="cmp-grid">
       ${keys.map(k => {
         const t = ui.tiers[k];
+        const isAct = k === currentTier;
         return `
-          <div class="cmp-col ${k === 'vip' ? 'hl' : ''}">
+          <div class="tier-box t-${k} ${isAct ? 'active' : ''}" onclick="setTier('${k}');window.scrollTo({top:220,behavior:'smooth'})">
             <div>
-              <h3>${t.name}</h3>
-              <div class="cmp-price">${t.price}</div>
-              <ul class="cmp-ul">
+              <div class="tt-top">
+                <span class="tt-tag">${t.tag}</span>
+                <span class="tt-price">${t.price}</span>
+              </div>
+              <div class="tt-name">${t.name}</div>
+              <ul class="tt-pts">
                 ${t.chips.map(c => `<li><span>✓</span><span>${c}</span></li>`).join("")}
               </ul>
             </div>
-            <button type="button" class="btn ${k === currentTier ? 'btn-gold' : 'btn-out'}" onclick="setTier('${k}');window.scrollTo({top:220,behavior:'smooth'})">
-              ${ui.cmpBtn} (${t.price})
-            </button>
+            <div class="tt-action">${isAct ? ui.activeLbl : t.switchLbl}</div>
           </div>`;
       }).join("")}
     </div>`;
